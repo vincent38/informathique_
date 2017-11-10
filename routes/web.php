@@ -15,12 +15,17 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/profil', function () {
+    echo "profil";
+    //return view('profil');
+})->name('profil');
+
 Route::get('/mathematiques', function () {
-    echo "oui";
+    echo "maths";
     //return view('mathematiques');
 })->name('mathematiques');
 
 Route::get('/informatique', function () {
-    echo "oui2";
+    echo "info";
     //return view('informatique');
 })->name('informatique');
