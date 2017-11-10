@@ -1,7 +1,11 @@
+
 var heros;
 var dessins = new Array();
 
+
+
 function startGame(){
+
   scene.start();
   var fond = new Fond();
   dessins.push(fond);
@@ -9,18 +13,30 @@ function startGame(){
   dessins.push(heros);
 }
 
+
 var scene = {
-  canvas : document.createElement("canvas"),
+  /*canvas : document.createElement("canvas"),
   start : function(){
     this.canvas.width = 600/2;
     this.canvas.height = 1380/2;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[6]);
+  },*/
+
+  canvas : document.getElementById("scene"),
+
+  start : function(){
+    //this.canvas.setAttribute('width', '1000');
+    this.canvas.width = 600/2;
+    this.canvas.height = 1380/2;
+    this.context = this.canvas.getContext("2d");
   },
 
   clear : function(){
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
   }
+
 }
 
 /*function Fond(){
@@ -103,3 +119,8 @@ function updateGameArea(){
     dessins[i].repaint();
   }
 }
+
+
+
+
+startGame();

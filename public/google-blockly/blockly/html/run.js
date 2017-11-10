@@ -1,4 +1,4 @@
-var testButton = document.getElementById('test');
+var testButton = document.getElementById('run');
 testButton.onclick = function(){
   Blockly.JavaScript.addReservedWords('code');
   //on récupère dans un string le code des blocks

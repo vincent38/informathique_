@@ -82,9 +82,9 @@ Blockly.Blocks['m_heros_droite'] = {
 
 Blockly.Blocks['m_jarno'] = {
   init: function() {
-    this.appendValueInput("bite")
+    this.appendValueInput("test jarno")
         .setCheck("String")
-        .appendField("bite");
+        .appendField("test jarno");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
