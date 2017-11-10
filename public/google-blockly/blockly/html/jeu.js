@@ -1,4 +1,13 @@
 
+//var tabNiveau = require('./resources/niveaux/didactitiel.json');
+/*loadJSON(function(response){
+  var actual_JSON = JSON.parse(response);
+  alert(actual_JSON);
+});*/
+
+//alert(tabNiveau);
+var tabNiveau;
+
 var heros;
 var dessins = new Array();
 
@@ -7,6 +16,7 @@ var dessins = new Array();
 function startGame(){
 
   scene.start();
+  tabNiveau = new TabNiveau(loadMap());
   var fond = new Fond();
   dessins.push(fond);
   heros = new Heros();
@@ -37,6 +47,14 @@ var scene = {
 
   }
 
+}
+
+class TabNiveau{
+  constructor(parsedJson) {
+    this.tab = parsedJson.data;
+    this.xMax = parsedJson.xMax;
+    this.yMax = parsedJson.yMax;
+  }
 }
 
 /*function Fond(){
@@ -77,7 +95,8 @@ class Fond{
 class Heros {
   constructor() {
     this.tailleDeplacement = 42;
-
+    this.tabX = 1;
+    this.tabY = 14;
     this.x = 77;
     this.y = scene.canvas.height - 50;
     this.width = 50;
@@ -93,19 +112,57 @@ class Heros {
   }
 
   monter(){
-    this.y -= this.tailleDeplacement;
+    if(this.testerMonter()){
+      this.y -= this.tailleDeplacement;
+      this.tabY--;
+    }else{
+      alert("Impossible de monter");
+    }
+    //sleep(500);
+  }
+
+  testerMonter(){
+    return(this.tabY > 0 && tabNiveau.tab[this.tabX][this.tabY - 1] == 0);
   }
 
   descendre(){
-    this.y += this.tailleDeplacement;
+    if(this.testerDescendre()){
+      this.y += this.tailleDeplacement;
+      this.tabY++;
+    }else{
+      alert("Impossible de descendre");
+    }
+  }
+
+  testerDescendre(){
+    return(this.tabY < tabNiveau.yMax && tabNiveau.tab[this.tabX][this.tabY + 1] == 0);
   }
 
   goGauche(){
-    this.x -= this.tailleDeplacement;
+    if(this.testerGoGauche()){
+      this.x -= this.tailleDeplacement;
+      this.tabX--;
+    }else{
+      alert("Impossible d'aller à gauche");
+    }
+  }
+
+  testerGoGauche(){
+    return(this.tabX > 0 && tabNiveau.tab[this.tabX -1][this.tabY] == 0);
   }
 
   goDroite(){
-    this.x += this.tailleDeplacement;
+    if(this.testerGoDroite()){
+      this.x += this.tailleDeplacement;
+      this.tabX++;
+    }else{
+      alert("Impossible d'aller à droite");
+    }
+  }
+
+  testerGoDroite(){
+    //alert(tabNiveau.tab[this.tabX+1][this.tabY]);
+    return(this.tabX < tabNiveau.xMax && tabNiveau.tab[this.tabX +1][this.tabY] == 0);
   }
 
   repaint(){
@@ -120,7 +177,54 @@ function updateGameArea(){
   }
 }
 
+/*function loadJSON(callback){
+  var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("application/json");
+  xobj.open('GET', './resources/niveaux/didactitiel.json', true);
+  xobj.onreadystatechange = function(){
+    if (xobj.readyState == 4 && xobj.status == "200"){
+      callback(xobj.responseText);
+    }
+  };
+  xobj.send(null);
+}*/
+function getXMLHttpRequest() {
+	var xhr = null;
+	if (window.XMLHttpRequest || window.ActiveXObject) {
+		if (window.ActiveXObject) {
+			try {
+				xhr = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch(e) {
+				xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		} else {
+			xhr = new XMLHttpRequest();
+		}
+	} else {
+		alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+		return null;
+	}
 
+	return xhr;
+}
+
+function loadMap(){
+  var xhr = getXMLHttpRequest();
+  //chargement du fichier
+  xhr.open("GET", './resources/niveaux/didactitiel.json', false);
+  xhr.send(null);
+  if(xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)){
+    throw new Error("impossible de charger le niveau : " + xhr.status);
+  }
+  var mapJsonData = xhr.responseText;
+  var mapData = JSON.parse(mapJsonData);
+  return mapData;
+}
+
+function sleep(miliseconds) {
+   /*function wait(){}
+   setTimeout(wait, 1000);*/
+}
 
 
 startGame();
