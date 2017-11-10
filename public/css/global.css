@@ -1,0 +1,82 @@
+/* //////////////////////////////////////////////////////////////////////
+///
+///         GENERAL
+///
+////////////////////////////////////////////////////////////////////// */
+
+
+body {
+  font-family: Roboto, sans-serif;
+
+  margin: 0px 50px;
+
+
+
+  /*border: 1px solid red;*/
+}
+
+.paragraph {
+  text-align: justify;
+}
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         MENU PRINCIPAL
+///
+////////////////////////////////////////////////////////////////////// */
+
+.main-menu { /* Conteneur général du menu */
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: center;
+  margin: 15px 0px;
+
+
+  /*border: 1px solid blue;*/
+}
+
+.main-menu-container-math { /* Conteneur bouton mathématiques */
+  background-color: #a070e0;
+  width: 50%;
+  margin-right: 5px;
+  padding: 0px;
+
+  text-align: center;
+}
+
+.main-menu-container-math:hover {
+  background-color: #c090f0;
+}
+
+.main-menu-container-info { /* Conteneur bouton informatique */
+  background-color: #70e0a0;
+  width: 50%;
+  margin-left: 5px;
+  padding: 0px;
+
+  text-align: center;
+}
+
+.main-menu-container-info:hover {
+  background-color: #90f0c0;
+}
+
+.main-menu-container-2 { /* Conteneur dans le a */
+  padding: 15px 0px;
+}
+
+.lien-main-menu { /* Lien */
+  text-decoration: none;
+  color: #303030;
+}
+
+.main-menu-title { /* Texte titre */
+  margin: 0px;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+.main-menu-subtitle { /* Texte sous-titre */
+  margin: 0px;
+}

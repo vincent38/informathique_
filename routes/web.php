@@ -12,5 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Auth::routes();
+
+
+Route::get('/profil', function () {
+    return view('profil');
+})->name('profil');
+
+Route::get('/mathematiques', function () {
+    return view('mathematiques');
+})->name('mathematiques');
+
+Route::get('/escapecolle', function () {
+    return view('informatique');
+})->name('informatique');
+
+Route::get('/logout', function () {
+    Auth::logout();
+    return view('home');
+})->name('logout');
