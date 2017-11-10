@@ -13,8 +13,8 @@
         <a href="{{ route("profil") }}">Profil</a>
         <a href="{{ route("logout") }}">Se déconnecter</a>
       @else
-        <a href="{{ route('login') }}">Login</a>
-        <a href="{{ route('register') }}">Register</a>
+        <a href="{{ route('login') }}">Se connecter</a>
+        <a href="{{ route('register') }}">S'inscrire</a>
       @endauth
     @endif
 
