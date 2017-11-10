@@ -1,5 +1,5 @@
 body {
-  font-family: Verdana;
+  font-family: Roboto, sans-serif;
 }
 
 /* //////////////////////////////////////////////////////////////////////
@@ -16,7 +16,7 @@ body {
 }
 
 .main-menu-container-math { /* Conteneur bouton mathématiques */
-  background-color: #00ffff;
+  background-color: #a070e0;
   width: 45%;
   margin-left: 4%;
   margin-right: 5px;
@@ -26,7 +26,7 @@ body {
 }
 
 .main-menu-container-info { /* Conteneur bouton informatique */
-  background-color: #00ffff;
+  background-color: #70e0a0;
   width: 45%;
   margin-right: 4%;
   margin-left: 5px;
@@ -35,11 +35,21 @@ body {
   text-align: center;
 }
 
+.main-menu-container-2 { /* Conteneur dans le a */
+  padding: 15px 0px;
+}
+
 .lien-main-menu { /* Lien */
   text-decoration: none;
   color: #303030;
 }
 
 .main-menu-title { /* Texte titre */
+  margin: 0px;
+  font-size: 4em;
+  font-weight: lighter;
+}
+
+.main-menu-subtitle { /* Texte sous-titre */
   margin: 0px;
 }

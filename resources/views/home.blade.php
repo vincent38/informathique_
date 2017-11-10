@@ -12,19 +12,21 @@
         <a href="{{ route("mathematiques")}}" class="lien-main-menu">
           <div class="main-menu-container-2">
             <p class="main-menu-title">Mathématiques</p>
-            <br>
-            Nom
-          </div>
+            <p class="main-menu-subtitle">Nom<p>
+          </div> <!-- container-2 -->
         </a>
       </div> <!--container-->
 
       <div class="main-menu-container-info">
         <a href="{{ route("informatique")}}" class="lien-main-menu">
-          <p class="main-menu-title">Informatique</p>
-          <br>
-          Escape Colle
+          <div class="main-menu-container-2">
+            <p class="main-menu-title">Informatique</p>
+            <p class="main-menu-subtitle">Escape Colle<p>
+          </div> <!-- container-2 -->
         </a>
       </div> <!--container-->
+
     </div> <!-- main menu -->
+
   </body>
 </html>
