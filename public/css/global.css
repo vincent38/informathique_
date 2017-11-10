@@ -1,0 +1,45 @@
+body {
+  font-family: Verdana;
+}
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         MENU PRINCIPAL
+///
+////////////////////////////////////////////////////////////////////// */
+
+.main-menu { /* Conteneur général du menu */
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: center;
+}
+
+.main-menu-container-math { /* Conteneur bouton mathématiques */
+  background-color: #00ffff;
+  width: 45%;
+  margin-left: 4%;
+  margin-right: 5px;
+  padding: 0px;
+
+  text-align: center;
+}
+
+.main-menu-container-info { /* Conteneur bouton informatique */
+  background-color: #00ffff;
+  width: 45%;
+  margin-right: 4%;
+  margin-left: 5px;
+  padding: 0px;
+
+  text-align: center;
+}
+
+.lien-main-menu { /* Lien */
+  text-decoration: none;
+  color: #303030;
+}
+
+.main-menu-title { /* Texte titre */
+  margin: 0px;
+}

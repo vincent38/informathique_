@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/mathematiques', function () {
+    echo "oui";
+    //return view('mathematiques');
+})->name('mathematiques');
+
+Route::get('/informatique', function () {
+    echo "oui2";
+    //return view('informatique');
+})->name('informatique');
