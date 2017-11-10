@@ -2,14 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Kinimi - Page d'accueil</title>
+    <title>{{ config('app.name', '') }} - Page d'accueil</title>
     <link rel="stylesheet" href="{{ asset("css/global.css") }}">
   </head>
   <body>
-    <a href="{{ route("profil") }}">Profil</a>
+
+    @if (Route::has('login'))
+      @auth
+        <p>{{ Auth::user()->name }}</p>
+        <a href="{{ route("profil") }}">Profil</a>
+        <a href="{{ route("logout") }}">Se déconnecter</a>
+      @else
+        <a href="{{ route('login') }}">Login</a>
+        <a href="{{ route('register') }}">Register</a>
+      @endauth
+    @endif
+
     <a href="/public/u">Mauvaise page</a>
 
-    <h1>Kinimi</h1>
+    <h1>{{ config('app.name', '') }}</h1>
 
     <p class="paragraph">Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -49,4 +60,3 @@
 
   </body>
 </html>
->>>>>>> 73604cf69c443203fee8708ca087313c779c7aa5

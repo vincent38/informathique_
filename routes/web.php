@@ -30,3 +30,7 @@ Route::get('/escapecolle', function () {
     return view('informatique');
 })->name('informatique');
 
+Route::get('/logout', function () {
+    Auth::logout();
+    return view('home');
+})->name('logout');
