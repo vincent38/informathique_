@@ -16,16 +16,13 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/profil', function () {
-    echo "profil";
-    //return view('profil');
+    return view('profil');
 })->name('profil');
 
 Route::get('/mathematiques', function () {
-    echo "maths";
-    //return view('mathematiques');
+    return view('mathematiques');
 })->name('mathematiques');
 
 Route::get('/informatique', function () {
-    echo "info";
-    //return view('informatique');
+    return view('informatique');
 })->name('informatique');
