@@ -9,6 +9,8 @@
     <a href="{{ route("profil") }}">Profil</a>
     <a href="/public/u">Mauvaise page</a>
 
+    <h1>Kinimi</h1>
+
     <p>Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

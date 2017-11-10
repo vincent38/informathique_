@@ -23,6 +23,6 @@ Route::get('/mathematiques', function () {
     return view('mathematiques');
 })->name('mathematiques');
 
-Route::get('/informatique', function () {
+Route::get('/escapecolle', function () {
     return view('informatique');
 })->name('informatique');
