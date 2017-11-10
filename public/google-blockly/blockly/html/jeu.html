@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jeu</title>
+    <script src="../blockly_uncompressed.js"></script>
+    <script src="../javascript_compressed.js">
+    </script>
+    <script src="../blocks_compressed.js"></script>
+
+    <!--custom blocks-->
+    <script src="../blocks/m_blocks.js"></script>
+    <script src="../generators/javascript/m_blocks.js"></script>
+
+
+    <script src="../msg/js/fr.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+      canvas {
+          border: 1px solid #d3d3d3;
+          background-color: #f1f1f1;
+      }
+    </style>
+
+
+  </head>
+  <body>
+      <xml id="toolbox" style="display: none">
+        <!--colour = 0 - 360 -->
+
+        <category name ="Deplacements" colour="120">
+          <block type="m_heros_monter"></block>
+          <block type="m_heros_descendre"></block>
+          <block type="m_heros_gauche"></block>
+          <block type="m_heros_droite"></block>
+        </category>
+        <!--<category name="Contrôles" colour="210">
+          <block type="colour_picker"></block>
+          <block type="controls_if"></block>
+          <block type="controls_repeat_ext" disabled="true"></block>
+          <label text="un label"></label>
+          <block type ="controls_whileUntil"></block>
+        </category>
+        <category name="Logique & maths" colour="120">
+          <block type="logic_compare"></block>
+          <block type="math_number"></block>
+          <block type="math_arithmetic"></block>
+
+        </category>
+        <category name="Texte" colour="290">
+          <block type="text"></block>
+          <block type="text_print"></block>
+        </category>-->
+        <!--remplissage auto grâce à custom-->
+        <category name="Variables" custom="VARIABLE" colour="60"></category>
+        <category name="Procédures" custom="PROCEDURE" colour="360"></category>
+
+      </xml>
+
+
+
+      <input type="button" value="Lancer le programme" id="run">
+      <div id="blocklyDiv"></div>
+
+      <canvas id="scene"></canvas>
+
+
+  </body>
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',
+    {toolbox: document.getElementById('toolbox')});
+  </script>
+
+  <script src="jeu.js"></script>
+  <!--script pour run le code-->
+  <script src="run.js"></script>
+</html>

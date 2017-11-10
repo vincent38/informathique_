@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>le je</title>
+    <script src="../blockly_uncompressed.js"></script>
+    <script src="../javascript_compressed.js">
+    </script>
+    <script src="../blocks_compressed.js"></script>
+
+    <!--custom blocks-->
+    <script src="../blocks/m_blocks.js"></script>
+    <script src="../generators/javascript/m_blocks.js"></script>
+
+
+    <script src="../msg/js/fr.js"></script>
+  </head>
+  <body>
+  <xml id="toolbox" style="display: none">
+    <!--colour = 0 - 360 -->
+    <category name ="Blocks custom" colour="360">
+      <block type="m_colour_rgb"></block>
+    </category>
+    <category name="Contrôles" colour="210">
+      <block type="colour_picker"></block>
+      <block type="controls_if"></block>
+      <block type="controls_repeat_ext" disabled="true"></block>
+      <label text="un label"></label>
+      <block type ="controls_whileUntil"></block>
+    </category>
+    <category name="Logique & maths" colour="120">
+      <block type="logic_compare"></block>
+      <block type="math_number"></block>
+      <block type="math_arithmetic"></block>
+
+    </category>
+    <category name="Texte" colour="290">
+      <block type="text"></block>
+      <block type="text_print"></block>
+    </category>
+    <!--remplissage auto grâce à custom-->
+    <category name="Variables" custom="VARIABLE" colour="60"></category>
+    <category name="Procédures" custom="PROCEDURE" colour="360"></category>
+
+  </xml>
+
+
+
+    <input type="button" value="test" id="test">
+
+    <div id="blocklyDiv" style="height: 600px; width: 1000px;"></div>
+  </body>
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',
+    {toolbox: document.getElementById('toolbox')});
+  </script>
+  <!--script pour run le code-->
+  <script src="run.js"></script>
+</html>

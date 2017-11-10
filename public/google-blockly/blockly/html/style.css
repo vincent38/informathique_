@@ -1,0 +1,9 @@
+#blocklyDiv{
+  height: 600px;
+  width: 50%;
+  display: inline-block;
+}
+
+input{
+  display: block;
+}
