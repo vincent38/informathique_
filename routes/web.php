@@ -13,8 +13,20 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/profil', function () {
+    return view('profil');
+})->name('profil');
+
+Route::get('/mathematiques', function () {
+    return view('mathematiques');
+})->name('mathematiques');
+
+Route::get('/escapecolle', function () {
+    return view('informatique');
+})->name('informatique');
+
