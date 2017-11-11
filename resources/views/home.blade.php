@@ -18,7 +18,7 @@
       @endauth
     @endif
 
-    <a href="/public/u">Mauvaise page</a>
+    <a href="/public/uzerdsqzesfzeqiznkeuuuuuu">Mauvaise page (juste pour tester l'erreur 404)</a>
 
     <h1>{{ config('app.name', '') }}</h1>
 

@@ -80,3 +80,46 @@ body {
 .main-menu-subtitle { /* Texte sous-titre */
   margin: 0px;
 }
+
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         MENU PRINCIPAL MATHEMATIQUES
+///
+////////////////////////////////////////////////////////////////////// */
+
+.math-main-menu { /* Conteneur général du menu */
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: center;
+  margin: 15px 0px;
+
+
+  /*border: 1px solid blue;*/
+}
+
+.math-main-menu-container {
+  background-color: #a0f0f0;
+  width: 25%;
+  margin-right: 5px;
+}
+
+.math-main-menu-container:last-child {
+  margin-right: 0px;
+}
+
+.math-main-menu-container-2 {
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.math-main-menu-title { /* Texte titre */
+  margin: 0px;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+.math-main-menu-subtitle { /* Texte sous-titre */
+  margin: 0px;
+}
