@@ -92,3 +92,14 @@ Blockly.Blocks['m_jarno'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['m_echappe'] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField("S'échapper");
+        this.setPreviousStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};

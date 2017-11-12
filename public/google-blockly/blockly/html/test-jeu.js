@@ -2,7 +2,7 @@
 var rect;
 //FIN MAIN
 
-//fonction appelée par <body> dans jeu.html
+//fonction appelée par <body> dans html.html
 function startGame() {
     myGameArea.start();
     rect = new rectangle(30,30, 10, 120, "red");
@@ -19,7 +19,7 @@ var myGameArea = {
      * @return {[type]} [description]
      */
     start : function() {
-        //intervalle de raffraichissement du jeu
+        //intervalle de raffraichissement du html
         this.interval = setInterval(updateGameArea, 20);
 
         this.canvas.width = 480;
@@ -52,7 +52,7 @@ function rectangle(width, height, x, y, color) {
 }
 
 /**
- * met à jour le jeu
+ * met à jour le html
  * @return {[type]} [description]
  */
 var avancer = 5;
