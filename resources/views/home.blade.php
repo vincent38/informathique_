@@ -9,10 +9,11 @@
 
     @if (Route::has('login'))
       @auth
-        <p>{{ Auth::user()->name }}</p>
+        <p>Bienvenue {{ Auth::user()->name }}</p>
         <a href="{{ route("profil") }}">Profil</a>
         <a href="{{ route("logout") }}">Se déconnecter</a>
       @else
+        <p>Vous n'êtes pas connecté</p>
         <a href="{{ route('login') }}">Se connecter</a>
         <a href="{{ route('register') }}">S'inscrire</a>
       @endauth

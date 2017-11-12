@@ -105,6 +105,10 @@ body {
   margin-right: 5px;
 }
 
+.math-main-menu-container:hover {
+  background-color: #c0f0f0;
+}
+
 .math-main-menu-container:last-child {
   margin-right: 0px;
 }
