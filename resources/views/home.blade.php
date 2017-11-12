@@ -13,12 +13,12 @@
         <a href="{{ route("profil") }}">Profil</a>
         <a href="{{ route("logout") }}">Se déconnecter</a>
       @else
-        <a href="{{ route('login') }}">Login</a>
-        <a href="{{ route('register') }}">Register</a>
+        <a href="{{ route('login') }}">Se connecter</a>
+        <a href="{{ route('register') }}">S'inscrire</a>
       @endauth
     @endif
 
-    <a href="/public/u">Mauvaise page</a>
+    <a href="/public/uzerdsqzesfzeqiznkeuuuuuu">Mauvaise page (juste pour tester l'erreur 404)</a>
 
     <h1>{{ config('app.name', '') }}</h1>
 
