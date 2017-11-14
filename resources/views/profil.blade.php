@@ -8,6 +8,14 @@
   <body>
     <h1>Profil</h1>
 
+    @if (Route::has('login'))
+      @auth
+      <p>Bienvenue {{ Auth::user()->name }}</p>
+      @else
+      <p>Erreur, vous n'êtes pas connecté.</p>
+      @endauth
+    @endif
+
     <a href="{{ route("home") }}">Retour à l'accueil</a>
   </body>
 </html>
