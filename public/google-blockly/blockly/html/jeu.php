@@ -1,3 +1,7 @@
+<?php
+$lvl = $_GET['lvl'] ?? 'didactitiel';
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,6 +60,8 @@
 
       <canvas id="scene"></canvas>
 
+  <!--query string pour js-->
+  <input type="hidden" id="lvl" value="<?=$lvl?>"/>
   </body>
   <script>
     var workspace = Blockly.inject('blocklyDiv',

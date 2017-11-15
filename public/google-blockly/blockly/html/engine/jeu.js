@@ -12,6 +12,11 @@ var dessins = new Array();
 var gagne = false;
 var delay = 300;
 
+var lvl = document.getElementById('lvl').value;
+alert(lvl);
+
+//alert(<?php echo $lvl ?>);
+
 
 function startGame() {
     scene.start();
@@ -78,7 +83,8 @@ class Fond {
         this.width = scene.canvas.width;
         this.height = scene.canvas.height;
         this.img = new Image();
-        this.img.src = 'resources/images/didactitiel.png';
+        this.img.src = './resources/images/didactitiel.png';
+
 
         var sup = this;
         this.img.onload = function () {
@@ -102,7 +108,7 @@ class Heros {
         this.width = 50;
         this.height = 50;
         this.img = new Image();
-        this.img.src = 'resources/images/heros.png';
+        this.img.src = './resources/images/heros.png';
 
         var sup = this;
 
