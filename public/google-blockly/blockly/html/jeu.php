@@ -43,13 +43,13 @@ $lvl = $_GET['lvl'] ?? 'didactitiel';
 
         <category name="Mathématiques" colour="200">
             <block type="math_number"></block>
-            <block type="math_arithmetic"></block>
-            <block type="logic_compare"></block>
             <block type="controls_repeat_ext"></block>
         </category>
 
+        <!--
         <category name="Variables" custom="VARIABLE" colour="60"></category>
         <category name="Procédures" custom="PROCEDURE" colour="360"></category>
+        -->
 
       </xml>
 

@@ -10,17 +10,16 @@ var timeout;
 var heros;
 var dessins = new Array();
 var gagne = false;
-var delay = 300;
 
 var lvl = document.getElementById('lvl').value;
-alert(lvl);
+var jsonData = loadMap(lvl);
+var delay = jsonData.delay || 300;
 
-//alert(<?php echo $lvl ?>);
 
 
 function startGame() {
     scene.start();
-    tabNiveau = new TabNiveau(loadMap());
+    tabNiveau = new TabNiveau(jsonData);
     var fond = new Fond();
     dessins.push(fond);
     heros = new Heros();
@@ -42,8 +41,9 @@ var scene = {
 
     start: function () {
         //this.canvas.setAttribute('width', '1000');
-        this.canvas.width = 600 / 2;
-        this.canvas.height = 1380 / 2;
+        //alert(jsonData.tailleFondX);
+        this.canvas.width = jsonData.tailleFondX;
+        this.canvas.height = jsonData.tailleFondY;
         this.context = this.canvas.getContext("2d");
     },
 
@@ -56,9 +56,23 @@ var scene = {
 
 class TabNiveau {
     constructor(parsedJson) {
-        this.tab = parsedJson.data;
+        //this.tab = parsedJson.data;
+        this.tab = this.rearrangeJsonTab(parsedJson.data);
         this.xMax = parsedJson.xMax;
         this.yMax = parsedJson.yMax;
+    }
+
+    rearrangeJsonTab(data) {
+        var dataTemp = clone(data);
+        for(var i = 0; i < data.length; i++){
+            for(var j = 0; j < data[i].length; j++){
+                //alert(i + ' ' + j);
+                dataTemp[j][i] = data[i][j];
+            }
+        }
+        data = dataTemp;
+        //alert('*');
+        return data;
     }
 }
 
@@ -83,7 +97,8 @@ class Fond {
         this.width = scene.canvas.width;
         this.height = scene.canvas.height;
         this.img = new Image();
-        this.img.src = './resources/images/didactitiel.png';
+        this.img.src = './resources/images/' + lvl + '.png';
+
 
 
         var sup = this;
@@ -100,11 +115,11 @@ class Fond {
 
 class Heros {
     constructor() {
-        this.tailleDeplacement = 42;
-        this.tabX = 1;
-        this.tabY = 14;
-        this.x = 77;
-        this.y = scene.canvas.height - 50;
+        this.tailleDeplacement = jsonData.tailleDeplacement;
+        this.tabX = jsonData.spawnTabX;
+        this.tabY = jsonData.spawnTabY;
+        this.x = jsonData.spawnX;
+        this.y = jsonData.spawnY;
         this.width = 50;
         this.height = 50;
         this.img = new Image();
@@ -141,7 +156,7 @@ class Heros {
     }
 
     testerDescendre() {
-        return (this.tabY < tabNiveau.yMax && tabNiveau.tab[this.tabX][this.tabY + 1] != 1);
+        return (this.tabY < tabNiveau.yMax - 1 && tabNiveau.tab[this.tabX][this.tabY + 1] != 1);
     }
 
     goGauche() {
@@ -168,7 +183,7 @@ class Heros {
 
     testerGoDroite() {
         //alert(tabNiveau.tab[this.tabX+1][this.tabY]);
-        return (this.tabX < tabNiveau.xMax && tabNiveau.tab[this.tabX + 1][this.tabY] != 1);
+        return (this.tabX < tabNiveau.xMax - 1 && tabNiveau.tab[this.tabX + 1][this.tabY] != 1);
     }
 
     repaint() {
@@ -207,17 +222,17 @@ function getXMLHttpRequest() {
             xhr = new XMLHttpRequest();
         }
     } else {
-        alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+        alert("Erreur : Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
         return null;
     }
 
     return xhr;
 }
 
-function loadMap() {
+function loadMap(lvl) {
     var xhr = getXMLHttpRequest();
     //chargement du fichier
-    xhr.open("GET", './resources/niveaux/didactitiel.json', false);
+    xhr.open("GET", './resources/niveaux/'+lvl+'.json', false);
     xhr.send(null);
     if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
         throw new Error("impossible de charger le niveau : " + xhr.status);
@@ -227,13 +242,22 @@ function loadMap() {
     return mapData;
 }
 
-function testerGagne(heros){
+function testerGagne(heros) {
     if (tabNiveau.tab[heros.tabX][heros.tabY] == -1) {
         gagne = true;
         alert("Vous vous etes échappé !");
-    }else{
+    } else {
         alert("Pas de porte à proximité");
     }
+}
+
+function clone(obj){
+    try{
+        var copy = JSON.parse(JSON.stringify(obj));
+    } catch(ex){
+        alert("Votre navigateur n'est pas compatible à ce site");
+    }
+    return copy;
 }
 
 
