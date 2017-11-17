@@ -10,6 +10,7 @@ var timeout;
 var heros;
 var dessins = new Array();
 var gagne = false;
+var perdu;
 
 var lvl = document.getElementById('lvl').value;
 var jsonData = loadMap(lvl);
@@ -19,6 +20,7 @@ var delay = jsonData.delay || 300;
 
 function startGame() {
     scene.start();
+    perdu = false;
     tabNiveau = new TabNiveau(jsonData);
     var fond = new Fond();
     dessins.push(fond);
@@ -136,8 +138,11 @@ class Heros {
         if (this.testerMonter()) {
             this.y -= this.tailleDeplacement;
             this.tabY--;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible de monter");
+            perdu = true;
+
         }
         //sleep(500);
     }
@@ -147,11 +152,13 @@ class Heros {
     }
 
     descendre() {
-        if (this.testerDescendre()) {
+        if (this.testerDescendre() && !perdu) {
             this.y += this.tailleDeplacement;
             this.tabY++;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible de descendre");
+            perdu = true;
         }
     }
 
@@ -160,11 +167,13 @@ class Heros {
     }
 
     goGauche() {
-        if (this.testerGoGauche()) {
+        if (this.testerGoGauche() && !perdu) {
             this.x -= this.tailleDeplacement;
             this.tabX--;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible d'aller à gauche");
+            perdu = true;
         }
     }
 
@@ -173,11 +182,13 @@ class Heros {
     }
 
     goDroite() {
-        if (this.testerGoDroite()) {
+        if (this.testerGoDroite() && !perdu) {
             this.x += this.tailleDeplacement;
             this.tabX++;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible d'aller à droite");
+            perdu = true;
         }
     }
 
