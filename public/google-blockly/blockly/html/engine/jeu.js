@@ -80,7 +80,7 @@ class TabNiveau {
   this.width = scene.canvas.width;
   this.height = scene.canvas.height;
   img = new Image();
-  img.src='resources/images/didactitiel.png';
+  img.src='resources/images/0.png';
 
   img.onload = function(){
     scene.context.drawImage(img, 0, 0, scene.canvas.width, scene.canvas.height);
@@ -201,7 +201,7 @@ function updateGameArea() {
 /*function loadJSON(callback){
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
-  xobj.open('GET', './resources/niveaux/didactitiel.json', true);
+  xobj.open('GET', './resources/niveaux/0.json', true);
   xobj.onreadystatechange = function(){
     if (xobj.readyState == 4 && xobj.status == "200"){
       callback(xobj.responseText);
@@ -246,6 +246,12 @@ function testerGagne(heros) {
     if (tabNiveau.tab[heros.tabX][heros.tabY] == -1) {
         gagne = true;
         alert("Vous vous etes échappé !");
+        var div = document.getElementById("nextLvl");
+        var btn = document.createElement("input");
+        btn.setAttribute("name", "nextLvl");
+        btn.setAttribute("type", "button");
+        btn.setAttribute("value", "prochain niveau");
+        div.appendChild(btn);
     } else {
         alert("Pas de porte à proximité");
     }

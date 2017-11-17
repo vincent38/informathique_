@@ -1,5 +1,5 @@
 <?php
-$lvl = $_GET['lvl'] ?? 'didactitiel';
+$lvl = $_GET['lvl'] ?? '0';
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +59,9 @@ $lvl = $_GET['lvl'] ?? 'didactitiel';
       <div id="blocklyDiv"></div>
 
       <canvas id="scene"></canvas>
+      <a href="?lvl=<?=$lvl + 1?>">
+      <div id="nextLvl"></div>
+      </a>
 
   <!--query string pour js-->
   <input type="hidden" id="lvl" value="<?=$lvl?>"/>
