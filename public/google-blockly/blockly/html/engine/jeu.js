@@ -247,6 +247,11 @@ function testerGagne(heros) {
         gagne = true;
         alert("Vous vous etes échappé !");
         var div = document.getElementById("nextLvl");
+
+        while(div.firstChild){
+            div.removeChild(div.firstChild);
+        }
+
         var btn = document.createElement("input");
         btn.setAttribute("name", "nextLvl");
         btn.setAttribute("type", "button");
