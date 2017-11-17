@@ -135,7 +135,7 @@ class Heros {
     }
 
     monter() {
-        if (this.testerMonter()) {
+        if (this.testerMonter() && !perdu) {
             this.y -= this.tailleDeplacement;
             this.tabY--;
         } else if(perdu){}
