@@ -1,3 +1,7 @@
+<?php
+  $nbNiveaux = 1; // Nombre de niveaux, sans compter le didacticiel
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,15 +14,19 @@
 
     <a href="{{ route("home") }}">Retour à l'accueil</a>
 
-    <a href="google-blockly/blockly/html/jeu.php">Lien du jeu qui marche</a>
-
-    <!-- Test intégration page -->
-    <!-- Samarchpa lol -->
-    <p>ça marche pas :(</p>
-    <iframe
-     src="google-blockly/blockly/html/jeu.html"
-     width="100%" height="500"
-     sandbox></iframe>
+    <ul>
+      <li>
+        <a href="google-blockly/blockly/html/jeu.php">Didacticiel</a>
+      </li>
+      <?php
+      for($i = 1; $i <= $nbNiveaux; $i++) { ?>
+        <li>
+          <a href="google-blockly/blockly/html/jeu.php?lvl=<?php echo $i;?>">
+            Niveau <?php echo $i; ?>
+          </a>
+        </li>
+      <?php }
+       ?>
 
   </body>
 </html>
