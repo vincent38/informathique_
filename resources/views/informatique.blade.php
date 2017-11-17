@@ -10,7 +10,7 @@
 
     <a href="{{ route("home") }}">Retour à l'accueil</a>
 
-    <a href="google-blockly/blockly/html/jeu.html">Lien du jeu qui marche</a>
+    <a href="google-blockly/blockly/html/jeu.php">Lien du jeu qui marche</a>
 
     <!-- Test intégration page -->
     <!-- Samarchpa lol -->

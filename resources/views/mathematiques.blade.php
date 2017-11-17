@@ -13,7 +13,7 @@
     <div class="math-main-menu">
 
       <div class="math-main-menu-container">
-        <a href="" class="lien-main-menu">
+        <a href="{{ route("maths-th1") }}" class="lien-main-menu">
           <div class="math-main-menu-container-2">
             <p class="math-main-menu-title">Thème 1</p>
             <p class="math-main-menu-subtitle">Nombres et calculs<p>
@@ -22,7 +22,7 @@
       </div> <!--container-->
 
       <div class="math-main-menu-container">
-        <a href="" class="lien-main-menu">
+        <a href="{{ route("maths-th2") }}" class="lien-main-menu">
           <div class="math-main-menu-container-2">
             <p class="math-main-menu-title">Thème 2</p>
             <p class="math-main-menu-subtitle">Organisation et gestion de données, fonctions<p>
@@ -31,7 +31,7 @@
       </div> <!--container-->
 
       <div class="math-main-menu-container">
-        <a href="" class="lien-main-menu">
+        <a href="{{ route("maths-th3") }}" class="lien-main-menu">
           <div class="math-main-menu-container-2">
             <p class="math-main-menu-title">Thème 3</p>
             <p class="math-main-menu-subtitle">Grandeurs et mesures<p>
@@ -40,7 +40,7 @@
       </div> <!--container-->
 
       <div class="math-main-menu-container">
-        <a href="" class="lien-main-menu">
+        <a href="{{ route("maths-th4") }}" class="lien-main-menu">
           <div class="math-main-menu-container-2">
             <p class="math-main-menu-title">Thème 4</p>
             <p class="math-main-menu-subtitle">Espace et géométrie<p>
