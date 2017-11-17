@@ -21,6 +21,7 @@ var delay = jsonData.delay || 300;
 function startGame() {
     scene.start();
     perdu = false;
+    jsonData = loadMap(lvl);
     tabNiveau = new TabNiveau(jsonData);
     var fond = new Fond();
     dessins.push(fond);
@@ -268,8 +269,11 @@ function testerGagne(heros) {
         btn.setAttribute("type", "button");
         btn.setAttribute("value", "prochain niveau");
         div.appendChild(btn);
-    } else {
-        alert("Pas de porte à proximité");
+    } else if (tabNiveau.tab[heros.tabX][heros.tabY] == -2){
+        alert("Porte fermée");
+    } else{
+        alert("Pas de porte içi");
+        perdu = true;
     }
 }
 
@@ -280,6 +284,23 @@ function clone(obj){
         alert("Votre navigateur n'est pas compatible à ce site");
     }
     return copy;
+}
+
+function actionLevier(){
+    for(var i = 0; i < jsonData.leviers.length; i++){
+        if(jsonData.leviers[i].xTab == heros.tabX && jsonData.leviers[i].yTab == heros.tabY){
+            //alert(jsonData.leviers[i].action);
+            //alert(tabNiveau.tab[heros.tabX][heros.tabY]);
+            eval(jsonData.leviers[i].action);
+            //alert(tabNiveau.tab[heros.tabX][heros.tabY]);
+        }else{
+            alert("pas de levier ici");
+            perdu = true;
+        }
+        //if(jsonData.leviers[i].)
+
+    }
+
 }
 
 

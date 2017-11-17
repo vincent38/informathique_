@@ -39,7 +39,11 @@ $lvl = $_GET['lvl'] ?? '0';
           <block type="m_heros_droite"></block>
           <block type="m_echappe"></block>
         </category>
-        <!--remplissage auto grâce à custom-->
+
+        <category name = "Actions" colour = "300">
+          <block type="m_echappe"></block>
+          <block type="m_levier"></block>
+        </category>
 
         <category name="Mathématiques" colour="200">
             <block type="math_number"></block>
