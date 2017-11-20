@@ -10,6 +10,7 @@ var timeout;
 var heros;
 var dessins = new Array();
 var gagne = false;
+var perdu;
 
 var lvl = document.getElementById('lvl').value;
 var jsonData = loadMap(lvl);
@@ -19,6 +20,8 @@ var delay = jsonData.delay || 300;
 
 function startGame() {
     scene.start();
+    perdu = false;
+    jsonData = loadMap(lvl);
     tabNiveau = new TabNiveau(jsonData);
     var fond = new Fond();
     dessins.push(fond);
@@ -133,11 +136,14 @@ class Heros {
     }
 
     monter() {
-        if (this.testerMonter()) {
+        if (this.testerMonter() && !perdu) {
             this.y -= this.tailleDeplacement;
             this.tabY--;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible de monter");
+            perdu = true;
+
         }
         //sleep(500);
     }
@@ -147,11 +153,13 @@ class Heros {
     }
 
     descendre() {
-        if (this.testerDescendre()) {
+        if (this.testerDescendre() && !perdu) {
             this.y += this.tailleDeplacement;
             this.tabY++;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible de descendre");
+            perdu = true;
         }
     }
 
@@ -160,11 +168,13 @@ class Heros {
     }
 
     goGauche() {
-        if (this.testerGoGauche()) {
+        if (this.testerGoGauche() && !perdu) {
             this.x -= this.tailleDeplacement;
             this.tabX--;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible d'aller à gauche");
+            perdu = true;
         }
     }
 
@@ -173,11 +183,13 @@ class Heros {
     }
 
     goDroite() {
-        if (this.testerGoDroite()) {
+        if (this.testerGoDroite() && !perdu) {
             this.x += this.tailleDeplacement;
             this.tabX++;
-        } else {
+        } else if(perdu){}
+        else {
             alert("Impossible d'aller à droite");
+            perdu = true;
         }
     }
 
@@ -257,8 +269,11 @@ function testerGagne(heros) {
         btn.setAttribute("type", "button");
         btn.setAttribute("value", "prochain niveau");
         div.appendChild(btn);
-    } else {
-        alert("Pas de porte à proximité");
+    } else if (tabNiveau.tab[heros.tabX][heros.tabY] == -2){
+        alert("Porte fermée");
+    } else{
+        alert("Pas de porte içi");
+        perdu = true;
     }
 }
 
@@ -269,6 +284,23 @@ function clone(obj){
         alert("Votre navigateur n'est pas compatible à ce site");
     }
     return copy;
+}
+
+function actionLevier(){
+    for(var i = 0; i < jsonData.leviers.length; i++){
+        if(jsonData.leviers[i].xTab == heros.tabX && jsonData.leviers[i].yTab == heros.tabY){
+            //alert(jsonData.leviers[i].action);
+            //alert(tabNiveau.tab[heros.tabX][heros.tabY]);
+            eval(jsonData.leviers[i].action);
+            //alert(tabNiveau.tab[heros.tabX][heros.tabY]);
+        }else{
+            alert("pas de levier ici");
+            perdu = true;
+        }
+        //if(jsonData.leviers[i].)
+
+    }
+
 }
 
 

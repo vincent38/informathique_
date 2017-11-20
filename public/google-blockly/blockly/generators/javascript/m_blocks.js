@@ -46,3 +46,9 @@ Blockly.JavaScript['m_echappe'] = function(block) {
     var code = 'timeout += delay;\nsetTimeout(\'testerGagne(heros)\', timeout);\n';
     return code;
 };
+
+Blockly.JavaScript['m_levier'] = function(block) {
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'timeout += delay;\nsetTimeout(\'actionLevier()\', timeout);\n';
+    return code;
+};
