@@ -31,15 +31,22 @@
             </li>
           <?php }
           ?>
+          <li>En construction !</li>
         </ul>
       </div> <!--container-->
 
       <div class="main-menu-container-info">
         <h2>Médium</h2>
+        <ul>
+            <li>En construction !</li>
+        </ul>
       </div> <!--container-->
 
       <div class="main-menu-container-info">
         <h2>Expert</h2>
+        <ul>
+            <li>En construction !</li>
+        </ul>
       </div> <!--container-->
 
     </div> <!-- main menu -->
