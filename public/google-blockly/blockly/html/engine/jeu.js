@@ -272,7 +272,7 @@ function testerGagne(heros) {
     } else if (tabNiveau.tab[heros.tabX][heros.tabY] == -2){
         alert("Porte fermée");
     } else{
-        alert("Pas de porte içi");
+        alert("Pas de porte ici");
         perdu = true;
     }
 }
