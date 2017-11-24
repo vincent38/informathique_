@@ -128,8 +128,11 @@ class Heros {
         this.img = new Image();
         this.img.src = './resources/images/heros.png';
 
-        var sup = this;
+        setTimeout(this.afficher(), 2000);
 
+    }
+    afficher(){
+        var sup = this;
         this.img.onload = function () {
             scene.context.drawImage(this, sup.x, sup.y, sup.width, sup.height);
         }
