@@ -27,7 +27,7 @@ function startGame() {
     dessins.push(fond);
     heros = new Heros();
     dessins.push(heros);
-    setTimeout(function(){updateGameArea();}, 2000);
+    setTimeout(function(){updateGameArea();}, 1000);
     timeout = 0;
 }
 
