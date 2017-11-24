@@ -40,7 +40,7 @@
       </div> <!--container-->
 
       <div class="math-main-menu-container">
-        <a href="{{ route("maths-th4") }}" class="lien-main-menu">
+        <a href="/mathematiques/Espace.html" class="lien-main-menu">
           <div class="math-main-menu-container-2">
             <p class="math-main-menu-title">Thème 4</p>
             <p class="math-main-menu-subtitle">Espace et géométrie<p>
