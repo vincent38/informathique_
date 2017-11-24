@@ -128,7 +128,7 @@ class Heros {
         this.img = new Image();
         this.img.src = './resources/images/heros.png';
 
-        setTimeout(this.afficher(), 2000);
+        setTimeout(this.afficher(), 10000);
 
     }
     afficher(){
