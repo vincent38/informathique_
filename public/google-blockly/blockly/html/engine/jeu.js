@@ -27,7 +27,7 @@ function startGame() {
     dessins.push(fond);
     heros = new Heros();
     dessins.push(heros);
-    setTimeout(function(){updateGameArea();}, 1000);
+    setTimeout('updateGameArea()', timeout + 10);
     timeout = 0;
 }
 
@@ -211,6 +211,7 @@ function updateGameArea() {
     scene.clear();
     for (var i = 0; i < dessins.length; i++) {
         dessins[i].repaint();
+        //setTimeout(function(){updateGameArea();}, 1000);
     }
 }
 
