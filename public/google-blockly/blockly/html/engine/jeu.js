@@ -27,6 +27,7 @@ function startGame() {
     dessins.push(fond);
     heros = new Heros();
     dessins.push(heros);
+    setTimeout('updateGameArea()', timeout + 10);
     timeout = 0;
 }
 
@@ -128,8 +129,11 @@ class Heros {
         this.img = new Image();
         this.img.src = './resources/images/heros.png';
 
-        var sup = this;
+        setTimeout(this.afficher(), 2000);
 
+    }
+    afficher(){
+        var sup = this;
         this.img.onload = function () {
             scene.context.drawImage(this, sup.x, sup.y, sup.width, sup.height);
         }
@@ -207,6 +211,7 @@ function updateGameArea() {
     scene.clear();
     for (var i = 0; i < dessins.length; i++) {
         dessins[i].repaint();
+        //setTimeout(function(){updateGameArea();}, 1000);
     }
 }
 

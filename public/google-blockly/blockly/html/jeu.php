@@ -37,7 +37,6 @@ $lvl = $_GET['lvl'] ?? '0';
           <block type="m_heros_descendre"></block>
           <block type="m_heros_gauche"></block>
           <block type="m_heros_droite"></block>
-          <block type="m_echappe"></block>
         </category>
 
         <category name = "Actions" colour = "300">
