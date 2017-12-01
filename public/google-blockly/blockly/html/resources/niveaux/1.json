@@ -25,12 +25,11 @@
   "tailleDeplacement" : 35,
   "leviers" : [
     {
-      "xTab" : 12,
-      "yTab" : 0,
-      "x" : 10,
-      "y" : 10,
-      "action" : "tabNiveau.tab[12][1] = -1;\ntabNiveau.tab[12][2] = -1;\nalert('porte ouverte);\n",
-      "action-test" : "alert('OUI')"
+      "xTab" : 2,
+      "yTab" : 12,
+      "x" : 490,
+      "y" : 57,
+      "action" : "tabNiveau.tab[12][1] = -1;\ntabNiveau.tab[12][2] = -1;\nalert('porte ouverte');\n"
     }
   ]
 }
