@@ -11,6 +11,7 @@ var heros;
 var dessins = new Array();
 var gagne = false;
 var perdu;
+var leviers;
 
 var lvl = document.getElementById('lvl').value;
 var jsonData = loadMap(lvl);
@@ -21,12 +22,15 @@ var delay = jsonData.delay || 300;
 function startGame() {
     scene.start();
     perdu = false;
+    dessins = new Array();
     jsonData = loadMap(lvl);
     tabNiveau = new TabNiveau(jsonData);
     var fond = new Fond();
     dessins.push(fond);
     heros = new Heros();
     dessins.push(heros);
+    leviers = setupLeviers(jsonData, dessins);
+
     setTimeout('updateGameArea()', timeout + 10);
     timeout = 0;
 }
@@ -260,25 +264,28 @@ function loadMap(lvl) {
 }
 
 function testerGagne(heros) {
-    if (tabNiveau.tab[heros.tabX][heros.tabY] == -1) {
-        gagne = true;
-        alert("Vous vous etes échappé !");
-        var div = document.getElementById("nextLvl");
+    if (!perdu) {
+        if (tabNiveau.tab[heros.tabX][heros.tabY] == -1) {
+            gagne = true;
+            alert("Vous vous etes échappé !");
+            var div = document.getElementById("nextLvl");
 
-        while(div.firstChild){
-            div.removeChild(div.firstChild);
+            while (div.firstChild) {
+                div.removeChild(div.firstChild);
+            }
+
+            var btn = document.createElement("input");
+            btn.setAttribute("name", "nextLvl");
+            btn.setAttribute("type", "button");
+            btn.setAttribute("value", "prochain niveau");
+            div.appendChild(btn);
+        } else if (tabNiveau.tab[heros.tabX][heros.tabY] == -2) {
+            alert("Porte fermée");
+            perdu = true
+        } else {
+            alert("Pas de porte ici");
+            perdu = true;
         }
-
-        var btn = document.createElement("input");
-        btn.setAttribute("name", "nextLvl");
-        btn.setAttribute("type", "button");
-        btn.setAttribute("value", "prochain niveau");
-        div.appendChild(btn);
-    } else if (tabNiveau.tab[heros.tabX][heros.tabY] == -2){
-        alert("Porte fermée");
-    } else{
-        alert("Pas de porte ici");
-        perdu = true;
     }
 }
 
@@ -291,20 +298,53 @@ function clone(obj){
     return copy;
 }
 
-function actionLevier(){
-    for(var i = 0; i < jsonData.leviers.length; i++){
-        if(jsonData.leviers[i].xTab == heros.tabX && jsonData.leviers[i].yTab == heros.tabY){
-            //alert(jsonData.leviers[i].action);
-            //alert(tabNiveau.tab[heros.tabX][heros.tabY]);
-            eval(jsonData.leviers[i].action);
-            //alert(tabNiveau.tab[heros.tabX][heros.tabY]);
-        }else{
-            alert("pas de levier ici");
-            perdu = true;
-        }
-        //if(jsonData.leviers[i].)
-
+class Levier{
+    constructor(jsonLevier){
+        this.xTab = jsonLevier.xTab;
+        this.yTab = jsonLevier.yTab;
+        this.x = jsonLevier.x;
+        this.y = jsonLevier.y;
+        this.action = jsonLevier.action;
+        this.img = new Image();
+        this.img.src = './resources/images/heros.png';
+        this.affiche();
     }
+
+    affiche(){
+        var sup = this;
+        this.img.onload = function () {
+            scene.context.drawImage(this, sup.x, sup.y, 50, 50);
+        }
+    }
+    repaint(){
+        scene.context.drawImage(this.img, this.x, this.y, 50, 50);
+    }
+}
+
+function setupLeviers(jsonData, dessins){
+    var tabLeviers = Array();
+    for(var i = 0; i < jsonData.leviers.length; i++){
+        tabLeviers[i] = new Levier(jsonData.leviers[i]);
+        dessins.push(tabLeviers[i]);
+    }
+    return tabLeviers;
+}
+
+function actionLevier() {
+    if (!perdu) {
+        var trouve = false;
+        for (var i = 0; i < leviers.length; i++) {
+            var lev = leviers[i];
+            if (lev.xTab == heros.tabX && lev.yTab == heros.tabY) {
+                trouve = true;
+                eval(lev.action);
+            }
+        }
+        if (!trouve) {
+            alert('Pas de levier ici');
+        }
+    }
+
 
 }
 
