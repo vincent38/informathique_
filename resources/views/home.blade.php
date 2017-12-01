@@ -37,4 +37,15 @@
 
     </div> <!-- main menu -->
 
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6">
+         Maths
+       </div>
+       <div class="col-md-6">
+         Info
+       </div>
+     </div>
+   </div>
+
 @endsection
