@@ -1,27 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ config('app.name', '') }} - Page d'accueil</title>
-    <link rel="stylesheet" href="{{ asset("css/global.css") }}">
-  </head>
-  <body>
-
-    @if (Route::has('login'))
-      @auth
-        <p>Bienvenue {{ Auth::user()->name }}</p>
-        <a href="{{ route("profil") }}">Profil</a>
-        <a href="{{ route("logout") }}">Se déconnecter</a>
-      @else
-        <p>Vous n'êtes pas connecté</p>
-        <a href="{{ route('login') }}">Se connecter</a>
-        <a href="{{ route('register') }}">S'inscrire</a>
-      @endauth
-    @endif
-
-    <!--<a href="/public/uzerdsqzesfzeqiznkeuuuuuu">Mauvaise page (juste pour tester l'erreur 404)</a>-->
-
-    <h1>{{ config('app.name', '') }}</h1>
+@extends('layouts.headerHome')
+@section('site')
 
     <p class="paragraph">Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -59,5 +37,4 @@
 
     </div> <!-- main menu -->
 
-  </body>
-</html>
+@endsection
