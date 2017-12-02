@@ -17,6 +17,26 @@ body {
   background-size: 100%;
 }
 
+div.banniere {
+  width: 100%;
+  overflow: hidden;
+}
+
+img.banniere {
+  max-width: 100%;
+  min-width: 720px;
+  height: auto;
+  text-align: center;
+}
+
+@media (max-width: 1350px) {
+  img.banniere {
+    max-width: 140%;
+    text-align: center;
+    margin-left: -20%;
+  }
+}
+
 header {
   vertical-align: top;
   background-color: #FAFAFAFA;
@@ -27,10 +47,6 @@ header {
 
 p {
   text-align: justify;
-}
-
-header-logo {
-  display: inline-block;
 }
 
 h1.header-title {

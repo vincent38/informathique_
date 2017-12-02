@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="{{ asset("css/home.css") }}">
   </head>
   <body>
-
+    <div class="banniere">
+      <img class="banniere" src="/img/Banniere.jpg" alt="banniere">
+    </div>
     <header>
-      <img class="header-logo" src="/img/logo64.png" alt="logo">
       <h1 class="header-title">{{ config('app.name', '') }}</h1>
 
       <div class=" pull-right header-profil">
