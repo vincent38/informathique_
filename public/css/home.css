@@ -24,7 +24,6 @@ div.banniere {
 
 img.banniere {
   max-width: 100%;
-  min-width: 720px;
   height: auto;
   text-align: center;
 }
