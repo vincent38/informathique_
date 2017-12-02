@@ -57,6 +57,14 @@ img.banniere {
   }
 }
 
+@media (max-width: 986px) {
+  img.banniere {
+    width: 160%;
+    text-align: center;
+    margin-left: -30%;
+  }
+}
+
 header {
   vertical-align: top;
   background-color: #FAFAFAFA;
