@@ -49,7 +49,7 @@ img.banniere {
   text-align: center;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1199px) {
   img.banniere {
     width: 140%;
     text-align: center;
@@ -57,7 +57,7 @@ img.banniere {
   }
 }
 
-@media (max-width: 986px) {
+@media (max-width: 992px) {
   img.banniere {
     width: 160%;
     text-align: center;
