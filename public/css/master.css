@@ -1,0 +1,113 @@
+/* //////////////////////////////////////////////////////////////////////
+///
+///         GENERAL
+///
+////////////////////////////////////////////////////////////////////// */
+
+
+/*div {
+    border: 1px solid red;
+}*/
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url('../img/background.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 750px;
+  /*border: 1px solid red;*/
+}
+
+
+p, dd, dt {
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         HEADER
+///
+////////////////////////////////////////////////////////////////////// */
+
+
+div.banniere {
+  width: 100%;
+  overflow: hidden;
+}
+
+img.banniere {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  img.banniere {
+    width: 140%;
+    text-align: center;
+    margin-left: -20%;
+  }
+}
+
+@media (max-width: 992px) {
+  img.banniere {
+    width: 160%;
+    text-align: center;
+    margin-left: -30%;
+  }
+}
+
+header {
+  vertical-align: top;
+  background-color: #FAFAFAFA;
+  border-bottom: 3px solid #C0C0C0;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  z-index: 9999;
+}
+
+h1.header-title {
+  transition: 0.1s;
+  color: #444444;
+  margin: 0;
+  display: inline-block;
+  font-size: 4em;
+}
+
+.header-profil {
+  vertical-align: top;
+}
+
+a > h1:hover {
+  color: #5CB85C;
+}
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         MESSAGE EN-TETE
+///
+////////////////////////////////////////////////////////////////////// */
+
+#msgentete {
+  background-color: #FFFFFFD0;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+#msgentete h2 {
+  margin-top: 0px;
+}
+
+#msgentete > p
