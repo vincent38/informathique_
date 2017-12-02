@@ -18,9 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::get('/profil', function () {
-    return view('profil');
-})->name('profil');
+Route::get('/profil', 'Profile@index')->middleware('auth')->name('profil');
 
 Route::get('/mathematiques', function () {
     return view('mathematiques');
