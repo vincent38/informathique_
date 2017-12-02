@@ -18,7 +18,6 @@ var jsonData = loadMap(lvl);
 var delay = jsonData.delay || 300;
 
 
-
 function startGame() {
     scene.start();
     perdu = false;
@@ -72,8 +71,8 @@ class TabNiveau {
 
     rearrangeJsonTab(data) {
         var dataTemp = clone(data);
-        for(var i = 0; i < data.length; i++){
-            for(var j = 0; j < data[i].length; j++){
+        for (var i = 0; i < data.length; i++) {
+            for (var j = 0; j < data[i].length; j++) {
                 //alert(i + ' ' + j);
                 dataTemp[j][i] = data[i][j];
             }
@@ -108,7 +107,6 @@ class Fond {
         this.img.src = './resources/images/' + lvl + '.png';
 
 
-
         var sup = this;
         this.img.onload = function () {
             scene.context.drawImage(this, 0, 0, scene.canvas.width, scene.canvas.height);
@@ -136,7 +134,8 @@ class Heros {
         setTimeout(this.afficher(), 2000);
 
     }
-    afficher(){
+
+    afficher() {
         var sup = this;
         this.img.onload = function () {
             scene.context.drawImage(this, sup.x, sup.y, sup.width, sup.height);
@@ -147,7 +146,8 @@ class Heros {
         if (this.testerMonter() && !perdu) {
             this.y -= this.tailleDeplacement;
             this.tabY--;
-        } else if(perdu){}
+        } else if (perdu) {
+        }
         else {
             alert("Impossible de monter");
             perdu = true;
@@ -164,7 +164,8 @@ class Heros {
         if (this.testerDescendre() && !perdu) {
             this.y += this.tailleDeplacement;
             this.tabY++;
-        } else if(perdu){}
+        } else if (perdu) {
+        }
         else {
             alert("Impossible de descendre");
             perdu = true;
@@ -179,7 +180,8 @@ class Heros {
         if (this.testerGoGauche() && !perdu) {
             this.x -= this.tailleDeplacement;
             this.tabX--;
-        } else if(perdu){}
+        } else if (perdu) {
+        }
         else {
             alert("Impossible d'aller à gauche");
             perdu = true;
@@ -194,7 +196,8 @@ class Heros {
         if (this.testerGoDroite() && !perdu) {
             this.x += this.tailleDeplacement;
             this.tabX++;
-        } else if(perdu){}
+        } else if (perdu) {
+        }
         else {
             alert("Impossible d'aller à droite");
             perdu = true;
@@ -253,7 +256,7 @@ function getXMLHttpRequest() {
 function loadMap(lvl) {
     var xhr = getXMLHttpRequest();
     //chargement du fichier
-    xhr.open("GET", './resources/niveaux/'+lvl+'.json', false);
+    xhr.open("GET", './resources/niveaux/' + lvl + '.json', false);
     xhr.send(null);
     if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
         throw new Error("impossible de charger le niveau : " + xhr.status);
@@ -289,43 +292,47 @@ function testerGagne(heros) {
     }
 }
 
-function clone(obj){
-    try{
+function clone(obj) {
+    try {
         var copy = JSON.parse(JSON.stringify(obj));
-    } catch(ex){
+    } catch (ex) {
         alert("Votre navigateur n'est pas compatible à ce site");
     }
     return copy;
 }
 
-class Levier{
-    constructor(jsonLevier){
+class Levier {
+    constructor(jsonLevier) {
         this.xTab = jsonLevier.xTab;
         this.yTab = jsonLevier.yTab;
         this.x = jsonLevier.x;
         this.y = jsonLevier.y;
         this.action = jsonLevier.action;
         this.img = new Image();
-        this.img.src = './resources/images/heros.png';
+        this.img.src = './resources/images/'+jsonLevier.imgHaut;
+        this.imgBas = './resources/images/'+jsonLevier.imgBas;
         this.affiche();
     }
 
-    affiche(){
+    affiche() {
         var sup = this;
         this.img.onload = function () {
-            scene.context.drawImage(this, sup.x, sup.y, 50, 50);
+            scene.context.drawImage(this, sup.x, sup.y, 70, 70);
         }
     }
-    repaint(){
-        scene.context.drawImage(this.img, this.x, this.y, 50, 50);
+
+    repaint() {
+        scene.context.drawImage(this.img, this.x, this.y, 70, 70);
     }
 }
 
-function setupLeviers(jsonData, dessins){
+function setupLeviers(jsonData, dessins) {
     var tabLeviers = Array();
-    for(var i = 0; i < jsonData.leviers.length; i++){
-        tabLeviers[i] = new Levier(jsonData.leviers[i]);
-        dessins.push(tabLeviers[i]);
+    if (jsonData.leviers) {
+        for (var i = 0; i < jsonData.leviers.length; i++) {
+            tabLeviers[i] = new Levier(jsonData.leviers[i]);
+            dessins.push(tabLeviers[i]);
+        }
     }
     return tabLeviers;
 }
@@ -337,11 +344,13 @@ function actionLevier() {
             var lev = leviers[i];
             if (lev.xTab == heros.tabX && lev.yTab == heros.tabY) {
                 trouve = true;
+                lev.img.src = lev.imgBas;
                 eval(lev.action);
             }
         }
         if (!trouve) {
             alert('Pas de levier ici');
+            perdu = true;
         }
     }
 

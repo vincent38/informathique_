@@ -14,8 +14,8 @@
     [1,1,1,0,0,1,1,1,0,0,1,1,1],
     [0,0,0,0,0,0,0,0,0,0,0,0,0]
   ],
-  "spawnTabX" : 1,
-  "spawnTabY" : 12,
+  "spawnTabX" : 12,
+  "spawnTabY" : 0,
   "spawnX" : 97,
   "spawnY" : 485,
   "xMax" : 13,
@@ -25,11 +25,13 @@
   "tailleDeplacement" : 35,
   "leviers" : [
     {
-      "xTab" : 2,
+      "xTab" : 1,
       "yTab" : 12,
-      "x" : 490,
+      "x" : 495,
       "y" : 57,
-      "action" : "tabNiveau.tab[12][1] = -1;\ntabNiveau.tab[12][2] = -1;\nalert('porte ouverte');\n"
+      "imgHaut" : "levier-monte-droite.png",
+      "imgBas" : "levier-baisse-droite.png",
+      "action" : "tabNiveau.tab[12][1] = -1;\ntabNiveau.tab[12][2] = -1;\n"
     }
   ]
 }

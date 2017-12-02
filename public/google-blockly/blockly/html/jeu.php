@@ -63,7 +63,8 @@ $lvl = $_GET['lvl'] ?? '0';
 
       <canvas id="scene"></canvas>
       <a href="?lvl=<?=$lvl + 1?>">
-      <div id="nextLvl"></div>
+      <div id="nextLvl">
+      </div>
       </a>
 
   <!--query string pour js-->
