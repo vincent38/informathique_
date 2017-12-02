@@ -16,12 +16,12 @@
   <div class="row">
     <div class="col-sm-6 menu-maths">
       <h2 class="menu-title">Mathématiques</h2>
-      <a href="{{ route("mathematiques")}}" class="menu-bouton btn btn-success btn-lg">Accéder aux exercices</a>
+      <a href="{{ route("mathematiques")}}" class="menu-bouton btn btn-success btn-lg btn-block">Accéder aux exercices</a>
       <p class="menu-desc">On a des supers exos de maths avec des histoires et tout et tout, et même des exos classiques sans histoire, parfait pour réviser ! Allez viens, on est bien ! En plus j'ai des bonbons, tu vas voir tu vas te régaler...</p>
     </div> <!-- menu-maths -->
     <div class="col-sm-6 menu-info">
       <h2 class="menu-title">Informatique</h2>
-      <a href="{{ route("informatique")}}" class="menu-bouton btn btn-success btn-lg">Accéder à Escape-Colle</a>
+      <a href="{{ route("informatique")}}" class="menu-bouton btn btn-success btn-lg btn-block">Accéder à Escape-Colle</a>
       <p class="menu-desc">Si tu cherches des idées pour t'échapper de classe, ce jeu est parfait pour te l'apprendre ! On va te transformer en délinquant, espèce de sale racaille !</p>
     </div> <!-- menu-info -->
   </div> <!-- row -->

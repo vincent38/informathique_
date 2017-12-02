@@ -5,6 +5,13 @@
   $nbNiveaux = 1; // Nombre de niveaux, sans compter le didacticiel
  ?>
 
+ <div class="container" id="msgentete">
+   <div class="row">
+     <div class="col-lg-12">
+       <p>Bienvenue sur la partie « Informatique » de Kinimi ! Ici, tu vas pouvoir jouer au jeu Escape-Colle&nbsp;: tu dois aider Kini à s'échapper de là où il se trouve, en lui indiquant les mouvements qu'il doit faire.</p>
+     </div> <!-- col> -->
+   </div> <!-- row -->
+ </div> <!-- container -->
 <div class="main-menu">
 
   <div class="main-menu-container-info">
