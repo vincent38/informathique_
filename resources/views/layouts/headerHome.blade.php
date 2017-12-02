@@ -10,7 +10,7 @@
   <body>
     <div class="banniere">
       <a href="{{ route("home") }}">
-        <img class="banniere" src="/img/Banniere.jpg" alt="banniere">
+        <img class="banniere" src="{{ asset("img/Banniere.jpg") }}" alt="banniere">
       </a>
     </div>
     <header>
