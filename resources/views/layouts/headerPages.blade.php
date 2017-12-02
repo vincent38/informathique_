@@ -5,7 +5,7 @@
     <title>{{ config('app.name', '') }} - Page d'accueil</title>
     <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
     <link rel="stylesheet" href="{{ asset("css/master.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/home.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/mathinfo.css") }}">
   </head>
   <body>
     <div class="banniere">
@@ -14,7 +14,7 @@
       </a>
     </div>
     <header>
-      <h1 class="header-title">{{ config('app.name', '') }}</h1>
+      <a href="{{ route("home") }}"><h1 class="header-title">{{ config('app.name', '') }}</h1></a>
 
       <div class=" pull-right header-profil">
         @if (Route::has('login'))
@@ -29,7 +29,7 @@
           @endauth
         @endif
       </div> <!-- header-profil -->
-
+      
     </header>
 
     @yield ('site')
