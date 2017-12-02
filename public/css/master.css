@@ -78,6 +78,7 @@ header {
 }
 
 h1.header-title {
+  transition: 0.1s;
   color: #444444;
   margin: 0;
   display: inline-block;
@@ -89,7 +90,7 @@ h1.header-title {
 }
 
 a > h1:hover {
-  color: red;
+  color: #5CB85C;
 }
 
 /* //////////////////////////////////////////////////////////////////////
