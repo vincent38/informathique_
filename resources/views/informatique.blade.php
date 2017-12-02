@@ -2,7 +2,7 @@
 @section('site')
 
 <?php
-  $nbNiveauxFaciles = 27; // Nombre de niveaux faciles
+  $nbNiveauxFaciles = 16; // Nombre de niveaux faciles
   $nbNiveauxMoyens = 14; // Nombre de niveaux moyens
   $nbNiveauxDifficiles = 17; // T'as compris
 
