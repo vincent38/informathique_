@@ -3,6 +3,12 @@
 ///         GENERAL
 ///
 ////////////////////////////////////////////////////////////////////// */
+
+
+/*div {
+    border: 1px solid red;
+}*/
+
 body {
   background-image: url('/img/background.jpg');
   background-attachment: fixed;
@@ -11,16 +17,33 @@ body {
   background-size: 100%;
 }
 
-div {
-    border: 1px solid red;
+header {
+  vertical-align: top;
+  background-color: #FAFAFAFA;
+  position: sticky;
+  top: 0;
+  padding: 10px;
 }
 
-body {
-    font-family: Roboto, sans-serif;
-
-    margin: 0px 50px;
-  /*border: 1px solid red;*/
+p {
+  text-align: justify;
 }
+
+header-logo {
+  display: inline-block;
+}
+
+h1.header-title {
+  color: #444444;
+  margin: 0;
+  display: inline-block;
+  font-size: 4em;
+}
+
+.header-profil {
+  vertical-align: bottom;
+}
+
 
 .paragraph {
     text-align: justify;
@@ -36,12 +59,13 @@ body {
 
 .main-menu {
   background-color: #FFFFFFD0;
-  padding: 15px;
+  /*padding: 15px;*/
 }
 
 .menu-maths, .menu-info {
   height: 100%;
 }
+
 .menu-title {
   text-align: center;
   font-size: 3em;
@@ -50,11 +74,10 @@ body {
 
 .menu-desc {
   text-align: justify;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .menu-bouton {
   width: 100%;
-  position: relative;
-  bottom: 0px;
+  margin: 15px 0px;
 }
