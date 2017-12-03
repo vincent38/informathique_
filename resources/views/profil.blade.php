@@ -40,18 +40,69 @@
           <span class="btn btn-success" id="btnChgMail">Changer d'adresse e-mail</span>
           <span class="btn btn-success" id="btnChgPw">Changer de mot de passe</span>
         </div> <!-- col #chgInfo -->
-        <div class="col-lg-12" id="chgPseudo">
-          <p>PSEUDO</p>
+
+        <!-- Changement de pseudo -->
+        <div class="col-xs-9" id="chgPseudo">
+          <h4>Changement de pseudo</h4>
+          <div class="form-group">
+
+            <label for="text" class="col-lg-4 control-label">Nouveau pseudo</label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" name="newPseudo">
+            </div>
+
+            <label for="text" class="col-lg-4 control-label">Mot de passe</label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" name="password">
+            </div>
+
+          </div> <!-- form-group -->
           <span class="btn btn-primary btn-danger" id="btnChgPseudoCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
         </div> <!-- col #chgPseudo -->
-        <div class="col-lg-12" id="chgMail">
-          <p>MAIL</p>
+
+        <!-- Changement e-mail -->
+        <div class="col-xs-9" id="chgMail">
+          <h4>Changement d'adresse e-mail</h4>
+          <div class="form-group">
+
+            <label for="text" class="col-lg-4 control-label">Nouvel e-mail</label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" name="newMail">
+            </div>
+
+            <label for="text" class="col-lg-4 control-label">Mot de passe</label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" name="password">
+            </div>
+
+          </div> <!-- form-group -->
           <span class="btn btn-primary btn-danger" id="btnChgMailCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-        </div> <!-- col #chgPseudo -->
-        <div class="col-lg-12" id="chgPw">
-          <p>MDP et pas FDP mdr</p>
+        </div> <!-- col #chgMail -->
+
+        <!-- Changement mot de passe -->
+        <div class="col-xs-9" id="chgPw">
+          <h4>Changement de mot de passe</h4>
+          <div class="form-group">
+
+            <label for="text" class="col-lg-5 control-label">Mot de passe actuel</label>
+            <div class="col-lg-7">
+              <input type="password" class="form-control" name="currentPassword">
+            </div>
+
+            <label for="text" class="col-lg-5 control-label">Nouveau mot de passe</label>
+            <div class="col-lg-7">
+              <input type="password" class="form-control" name="newPassword">
+            </div>
+
+            <label for="text" class="col-lg-5 control-label">Confirme ton nouveau mot de passe</label>
+            <div class="col-lg-7">
+              <input type="password" class="form-control" name="confirmNewPassword">
+            </div>
+
+          </div> <!-- form-group -->
           <span class="btn btn-primary btn-danger" id="btnChgPwCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-        </div> <!-- col #chgPseudo -->
+        </div> <!-- col #chgPw -->
+
         <script id="jsChangementProfil" src="{{ asset("js/leChangementCestMaintenant.js")}}"></script>
       </div> <!-- row -->
     </div> <!-- container menu -->
