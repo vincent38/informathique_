@@ -58,6 +58,7 @@
 
           </div> <!-- form-group -->
           <span class="btn btn-primary btn-danger" id="btnChgPseudoCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
+          <span class="btn btn-primary btn-success" id="btnChgPseudoSubmit"><span class="glyphicon glyphicon-ok"></span> Valider</span>
         </div> <!-- col #chgPseudo -->
 
         <!-- Changement e-mail -->
@@ -77,6 +78,7 @@
 
           </div> <!-- form-group -->
           <span class="btn btn-primary btn-danger" id="btnChgMailCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
+          <span class="btn btn-primary btn-success" id="btnChgMailSubmit"><span class="glyphicon glyphicon-ok"></span> Valider</span>
         </div> <!-- col #chgMail -->
 
         <!-- Changement mot de passe -->
@@ -101,6 +103,7 @@
 
           </div> <!-- form-group -->
           <span class="btn btn-primary btn-danger" id="btnChgPwCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
+          <span class="btn btn-primary btn-success" id="btnChgPwSubmit"><span class="glyphicon glyphicon-ok"></span> Valider</span>
         </div> <!-- col #chgPw -->
 
         <script id="jsChangementProfil" src="{{ asset("js/leChangementCestMaintenant.js")}}"></script>
