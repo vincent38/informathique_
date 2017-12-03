@@ -66,15 +66,20 @@ img.banniere {
   }
 }
 
-header {
+#mainHeader {
   vertical-align: top;
   background-color: #FAFAFAFA;
   border-bottom: 3px solid #C0C0C0;
-  margin-bottom: 00px;
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+header {
   position: sticky;
   top: 0;
   padding: 10px;
   z-index: 9999;
+  padding: 0;
 }
 
 h1.header-title {
@@ -110,6 +115,39 @@ a > h1:hover {
   margin-top: 0px;
 }
 
+/* //////////////////////////////////////////////////////////////////////
+///
+///         MENU PRINCIPAL
+///
+////////////////////////////////////////////////////////////////////// */
+
+
+
+.main-menu {
+  background-color: #FFFFFFD0;
+  border-radius: 5px;
+  /*padding: 15px;*/
+}
+
+.menu-maths, .menu-info {
+  height: 100%;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 3em;
+  margin: 0px;
+  margin-top: 5px;
+}
+
+.menu-desc {
+  text-align: justify;
+}
+
+.menu-bouton {
+  margin: 15px 0px;
+}
+
 
 /* //////////////////////////////////////////////////////////////////////
 ///
@@ -119,4 +157,11 @@ a > h1:hover {
 
 #content {
   margin-top: 50px;
+}
+
+#menu, .menu {
+  background-color: #FFFFFFD0;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }

@@ -1,4 +1,4 @@
-@extends('layouts.headerPages')
+@extends('layouts.headerHome')
 @section('site')
 
 <?php

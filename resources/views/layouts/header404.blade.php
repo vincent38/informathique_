@@ -14,7 +14,9 @@
       </a>
     </div>
     <header>
-      <h1 class="header-title">{{ config('app.name', '') }}</h1>
+      <div id="mainHeader">
+        <h1 class="header-title">{{ config('app.name', '') }}</h1>
+      </div> <!-- #mainHeader -->
 
     </header>
 
