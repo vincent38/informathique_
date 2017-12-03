@@ -122,13 +122,6 @@ a > h1:hover {
 ////////////////////////////////////////////////////////////////////// */
 
 
-
-.main-menu {
-  background-color: #FFFFFFD0;
-  border-radius: 5px;
-  /*padding: 15px;*/
-}
-
 .menu-maths, .menu-info {
   height: 100%;
 }
@@ -160,8 +153,11 @@ a > h1:hover {
 }
 
 #menu, .menu {
-  background-color: #FFFFFFD0;
   padding-bottom: 10px;
-  border-radius: 5px;
   margin-bottom: 30px;
+}
+
+.container {
+  background-color: #FFFFFFD0;
+  border-radius: 5px;
 }
