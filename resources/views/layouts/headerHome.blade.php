@@ -33,8 +33,16 @@
       </div> <!-- header-profil -->
 
     </header>
+    @if (Route::has('login'))
+      @auth
+      @else
+        <div class="alert alert-danger">Attention, tu n'es pas connecté. Tu peux jouer sans compte, mais tu ne pourras pas sauvegarder ta progression. Pour accéder à toutes les fonctionnalités de {{ config('app.name', '') }}, <a href="{{ route('login') }}">connecte-toi</a> ou <a href="{{ route('register') }}">crée un compte</a> maintenant.</div>
+      @endauth
+    @endif
 
-    @yield ('site')
+    <div id="content">
+      @yield ('site')
+    </div>
 
   </body>
 </html>

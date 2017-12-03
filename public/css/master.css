@@ -70,7 +70,7 @@ header {
   vertical-align: top;
   background-color: #FAFAFAFA;
   border-bottom: 3px solid #C0C0C0;
-  margin-bottom: 50px;
+  margin-bottom: 00px;
   position: sticky;
   top: 0;
   padding: 10px;
@@ -110,4 +110,13 @@ a > h1:hover {
   margin-top: 0px;
 }
 
-#msgentete > p
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         AUTRES
+///
+////////////////////////////////////////////////////////////////////// */
+
+#content {
+  margin-top: 50px;
+}
