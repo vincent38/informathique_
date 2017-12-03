@@ -16,14 +16,169 @@
     <div class="container menu">
       <div class="row">
         <div class="col-lg-12">
-
+          <h2>Progression</h2>
+        </div> <!-- col -->
+      </div> <!-- row -->
+      <div class="row">
+        <div class="col-lg-12">
           <h3>Ton niveau</h3>
           <p>Niveau : {{ $user_lvl[0]->lvl }} - Expérience : {{ $user_lvl[0]->exp }} / {{ $user_lvl[0]->exp*100 }}</p>
+        </div> <!-- col -->
+      </div> <!-- row -->
+      <div class="row">
+        <div class="col-lg-12">
           <h3>Tes badges</h3>
           @foreach($user_badges as $ub)
             <p>Badge {{ $badges[$ub->id_badge][0]->name }} obtenu le {{ $ub->created_at }}</p>
           @endforeach
           <p>Obtiens tous les badges en complétant les exercices de mathématiques et en terminant les niveaux d'Escape-Colle !</p>
+        </div> <!-- col -->
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Exercices terminés (mathématiques)</h3>
+          <h4>Aventures</h4>
+          <p>Kini au monde du thème 1</p>
+          <p>Kini au monde du thème 2</p>
+          <p>Kini au monde du thème 3</p>
+          <p>Kini dans la ville de Géométra</p>
+          <h4>Exercices - Thème 1</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Exercice 1</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Exercice 2</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Exercice 3</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Exercice 4</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-warning">Terminé avec aide</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Exercice 5</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-danger">Abandonné</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Exercice 6</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-default">Non débuté</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+        </div> <!-- col -->
+
+        <div class="col-md-6">
+          <h3>Niveaux terminés (Escape-Colle)</h3>
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Didacticiel</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <h4>Niveaux faciles</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 1</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 2</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 3</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-warning">Non terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <h4>Niveaux moyens</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 4</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 5</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-warning">Non terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 6</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-default">Non débuté</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <h4>Niveaux difficiles</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 7</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-warning">Non terminé</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 8</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-success">Non débuté</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Niveau 9</p>
+            </div> <!-- col -->
+            <div class="col-xs-6">
+              <p><span class="label label-default">Non débuté</span></p>
+            </div> <!-- col -->
+          </div> <!-- row -->
         </div> <!-- col -->
       </div> <!-- row -->
     </div> <!-- container menu -->
