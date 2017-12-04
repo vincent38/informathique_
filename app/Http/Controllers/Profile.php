@@ -17,8 +17,6 @@ class Profile extends Controller
         foreach($user_badges as $ub){
             $badges[$ub->id_badge] = DB::select('select * from storage_badges where id = ?', [$ub->id_badge]);
         }
-        
-        var_dump($badges);
         return view('profil', compact('user','user_lvl','user_badges', 'badges'));
     }
 }
