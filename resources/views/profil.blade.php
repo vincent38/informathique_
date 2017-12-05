@@ -187,8 +187,8 @@
       <div class="row">
         <div class="col-lg-12">
           <h3>Tes informations</h3>
-          <p>Pseudo : </p>
-          <p>Adresse e-mail : </p>
+          <p>Pseudo : {{ $user->name }}</p>
+          <p>Adresse e-mail : {{ $user->email }}</p>
         </div> <!-- col -->
         <div class="col-lg-12" id="chgInfo">
           <span class="btn btn-success" id="btnChgPseudo">Changer de pseudo</span>
