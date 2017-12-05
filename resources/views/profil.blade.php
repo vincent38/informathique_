@@ -208,7 +208,7 @@
 
             <label for="text" class="col-lg-4 control-label">Mot de passe</label>
             <div class="col-lg-8">
-              <input type="text" class="form-control" name="password">
+              <input type="password" class="form-control" name="password">
             </div>
 
           </div> <!-- form-group -->
@@ -228,7 +228,7 @@
 
             <label for="text" class="col-lg-4 control-label">Mot de passe</label>
             <div class="col-lg-8">
-              <input type="text" class="form-control" name="password">
+              <input type="password" class="form-control" name="password">
             </div>
 
           </div> <!-- form-group -->
