@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h2>Bienvenue {{ $user->name }}</h2>
-          @if ($message)
+          @if (isset($message))
           <p>{{ $message }}</p>
           @endif
           <p>Sur cette page, tu peux consulter ton avancement, mais également faire tout un tas d'autres trucs vachement cools.</p>
