@@ -202,7 +202,7 @@
         <!-- Changement de pseudo -->
         <div class="col-xs-9" id="chgPseudo">
           <h4>Changement de pseudo</h4>
-          <form action="{{ name('updateProfil') }}" method="post" class="form-group">
+          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
 
             <label for="text" class="col-lg-4 control-label">Nouveau pseudo</label>
             <div class="col-lg-8">
