@@ -21,6 +21,10 @@ class Profile extends Controller
     }
 
     function update(Request $request) {
+        $validatedData = $request->validate([
+            'newPseudo' => 'required|max:16',
+            'password' => 'required',
+        ]);
         $newPseudo = $request->input('newPseudo');
         $pass = $request->input('password');
         $user = Auth::user();

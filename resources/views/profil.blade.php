@@ -203,7 +203,7 @@
         <div class="col-xs-9" id="chgPseudo">
           <h4>Changement de pseudo</h4>
           <form action="{{ route('updateProfil') }}" method="post" class="form-group">
-
+            {!! csrf_field() !!}
             <label for="text" class="col-lg-4 control-label">Nouveau pseudo</label>
             <div class="col-lg-8">
               <input type="text" class="form-control" name="newPseudo">
@@ -214,7 +214,7 @@
               <input type="password" class="form-control" name="password">
             </div>
             <span class="btn btn-primary btn-danger" id="btnChgPseudoCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-            <input type="submit" class="btn btn-primary btn-success" id="btnChgPseudoSubmit" value="<span class='glyphicon glyphicon-ok'></span> Valider">
+            <input type="submit" class="btn btn-primary btn-success" id="btnChgPseudoSubmit" value="Valider"> <!-- <span class='glyphicon glyphicon-ok'></span> -->
           </form> <!-- form-group -->
           
         </div> <!-- col #chgPseudo -->
