@@ -67,7 +67,7 @@ img.banniere {
 }
 
 #mainHeader {
-  vertical-align: top;
+  height: 47px;
   background-color: #FAFAFAFA;
   border-bottom: 3px solid #C0C0C0;
   margin-bottom: 0px;
@@ -100,38 +100,9 @@ a > h1:hover {
 
 /* //////////////////////////////////////////////////////////////////////
 ///
-///         MESSAGE EN-TETE
-///
-////////////////////////////////////////////////////////////////////// */
-
-#msgentete {
-  background-color: #FFFFFFD0;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  padding-top: 10px;
-}
-
-#msgentete h2 {
-  margin-top: 0px;
-}
-
-/* //////////////////////////////////////////////////////////////////////
-///
 ///         MENU PRINCIPAL
 ///
 ////////////////////////////////////////////////////////////////////// */
-
-
-.menu-maths, .menu-info {
-  height: 100%;
-}
-
-.menu-title {
-  text-align: center;
-  font-size: 3em;
-  margin: 0px;
-  margin-top: 5px;
-}
 
 .menu-desc {
   text-align: justify;
@@ -152,12 +123,25 @@ a > h1:hover {
   margin-top: 50px;
 }
 
-#menu, .menu {
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-}
+/* //////////////////////////////////////////////////////////////////////
+///
+///         BOOTSTRAP
+///
+////////////////////////////////////////////////////////////////////// */
 
 .container {
   background-color: #FFFFFFD0;
   border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container p {
+  margin-bottom: 0;
+}
+
+.container h2, .container h3 {
+  margin-top: 10px;
 }

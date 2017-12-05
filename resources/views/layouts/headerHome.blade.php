@@ -14,7 +14,6 @@
     </div>
     <header>
       <div id="mainHeader">
-        <h1 class="header-title">{{ config('app.name', '') }}</h1>
 
         <div class=" pull-right header-profil">
           @if (Route::has('login'))

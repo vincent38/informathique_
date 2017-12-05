@@ -3,17 +3,17 @@
 
 @if (Route::has('login'))
   @auth
-    <div class="container" id="msgentete">
+    <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <h2>Bienvenue {{ $user->name }}</h2>
           <p>Sur cette page, tu peux consulter ton avancement, mais également faire tout un tas d'autres trucs vachement cools.</p>
         </div> <!-- col -->
       </div> <!-- row -->
-    </div> <!-- container #msgentete -->
+    </div> <!-- container -->
 
 
-    <div class="container menu">
+    <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <h2>Progression</h2>
@@ -181,9 +181,9 @@
           </div> <!-- row -->
         </div> <!-- col -->
       </div> <!-- row -->
-    </div> <!-- container menu -->
+    </div> <!-- container -->
 
-    <div class="container menu">
+    <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <h3>Tes informations</h3>
