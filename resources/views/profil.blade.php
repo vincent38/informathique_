@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h3>Ton niveau</h3>
-          <p>Niveau : {{ $user_lvl[0]->lvl }} - Expérience : {{ $user_lvl[0]->exp }} / {{ $user_lvl[0]->exp*100 }}</p>
+          <p>Niveau : {{ $user_lvl[0]->lvl }} - Expérience : {{ $user_lvl[0]->exp }} / {{ $user_lvl[0]->lvl*100 }}</p>
         </div> <!-- col -->
       </div> <!-- row -->
       <div class="row">
