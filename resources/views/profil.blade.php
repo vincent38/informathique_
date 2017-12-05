@@ -8,7 +8,18 @@
         <div class="col-lg-12">
           <h2>Bienvenue {{ $user->name }}</h2>
           @if (isset($message))
-          <p>{{ $message }}</p>
+          <div class="alert alert-success">
+             {{ $message }}
+          </div>
+          @endif
+          @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
           @endif
           <p>Sur cette page, tu peux consulter ton avancement, mais également faire tout un tas d'autres trucs vachement cools.</p>
         </div> <!-- col -->
