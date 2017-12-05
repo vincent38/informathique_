@@ -28,7 +28,7 @@ class Profile extends Controller
         $newPseudo = $request->input('newPseudo');
         $pass = $request->input('password');
         $user = Auth::user();
-        if (Hash::check($pass, DB::select('select password from users where id = ?', [$user->id])) {
+        if (Hash::check($pass, DB::select('select password from users where id = ?', [$user->id]))) {
             //Passwords are equals, processing
             DB::table('users')->where('id', $user->id)->update(['name' => $newPseudo]);
             $message = 'Pseudonyme modifié avec succès !';
