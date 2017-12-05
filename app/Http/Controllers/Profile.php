@@ -19,4 +19,18 @@ class Profile extends Controller
         }
         return view('profil', compact('user','user_lvl','user_badges', 'badges'));
     }
+
+    function update(Request $request) {
+        $newPseudo = $request->input('newPseudo');
+        $pass = $request->input('password');
+        $user = Auth::user();
+        if (DB::select('select password from users where id = ?', [$user->id]) == password_hash($pass)) {
+            //Passwords are equals, processing
+            DB::table('users')->where('id', $user->id)->update(['name' => $newPseudo]);
+            $message = 'Pseudonyme modifié avec succès !';
+        } else {
+            $message = 'Erreur lors de la modification : les mots de passe divergent';
+        }
+        return view('profil', compact('user','user_lvl','user_badges', 'badges', 'message'));
+    }
 }

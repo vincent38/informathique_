@@ -20,6 +20,8 @@ Auth::routes();
 
 Route::get('/profil', 'Profile@index')->middleware('auth')->name('profil');
 
+Route::post('/profil/update', 'Profile@update')->middleware('auth')->name('updateProfil');
+
 Route::get('/mathematiques', function () {
     return view('mathematiques');
 })->name('mathematiques');
