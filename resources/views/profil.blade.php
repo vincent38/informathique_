@@ -256,7 +256,7 @@
         <!-- Changement mot de passe -->
         <div class="col-xs-9" id="chgPw">
           <h4>Changement de mot de passe</h4>
-          <form action="{{ route('updateProfil') }}" method="post"></form> class="form-group">
+          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
 
             <label for="text" class="col-lg-5 control-label">Mot de passe actuel</label>
             <div class="col-lg-7">
