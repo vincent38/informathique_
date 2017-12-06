@@ -63,7 +63,7 @@ class Profile extends Controller
             if (Hash::check($pass, $passUser[0]->password)) {
                 //Passwords are equals, processing
                 DB::table('users')->where('id', $user->id)->update(['email' => $newEmail]);
-                $user->name = $newPseudo;
+                $user->name = $newEmail;
                 $message = 'Adresse mail modifié avec succès !';
             } else {
                 $message = 'Erreur lors de la modification : les mots de passe divergent';
