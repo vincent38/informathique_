@@ -239,7 +239,7 @@
             <input type="hidden" name="typeOfForm" value="email">
             <label for="text" class="col-lg-4 control-label">Nouvel e-mail</label>
             <div class="col-lg-8">
-              <input type="text" class="form-control" name="newMail">
+              <input type="text" class="form-control" name="newEmail">
             </div>
 
             <label for="text" class="col-lg-4 control-label">Mot de passe</label>
