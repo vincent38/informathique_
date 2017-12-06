@@ -215,6 +215,7 @@
           <h4>Changement de pseudo</h4>
           <form action="{{ route('updateProfil') }}" method="post" class="form-group">
             {!! csrf_field() !!}
+            <input type="hidden" name="typeOfForm" value="pseudo">
             <label for="text" class="col-lg-4 control-label">Nouveau pseudo</label>
             <div class="col-lg-8">
               <input type="text" class="form-control" name="newPseudo">
@@ -233,8 +234,9 @@
         <!-- Changement e-mail -->
         <div class="col-xs-9" id="chgMail">
           <h4>Changement d'adresse e-mail</h4>
-          <div class="form-group">
-
+          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
+            {!! csrf_field() !!}
+            <input type="hidden" name="typeOfForm" value="email">
             <label for="text" class="col-lg-4 control-label">Nouvel e-mail</label>
             <div class="col-lg-8">
               <input type="text" class="form-control" name="newMail">
@@ -245,9 +247,9 @@
               <input type="password" class="form-control" name="password">
             </div>
 
-          </div> <!-- form-group -->
-          <span class="btn btn-primary btn-danger" id="btnChgMailCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-          <span class="btn btn-primary btn-success" id="btnChgMailSubmit"><span class="glyphicon glyphicon-ok"></span> Valider</span>
+            <span class="btn btn-primary btn-danger" id="btnChgMailCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
+            <input type="submit" class="btn btn-primary btn-success" id="btnChgMailSubmit" value="Valider">
+          </form> <!-- form-group -->
         </div> <!-- col #chgMail -->
 
         <!-- Changement mot de passe -->

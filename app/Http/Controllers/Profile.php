@@ -33,6 +33,9 @@ class Profile extends Controller
     }
 
     function update(Request $request) {
+        if($request->typeOfForm == "pseudo") {
+            echo "OUI";
+        }
         $validatedData = $request->validate([
             'newPseudo' => 'required|max:16',
             'password' => 'required',
