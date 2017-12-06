@@ -236,7 +236,7 @@
           <h4>Changement d'adresse e-mail</h4>
           <form action="{{ route('updateProfil') }}" method="post" class="form-group">
             {!! csrf_field() !!}
-            <input type="hidden" name="typeOfForm" value="email">
+            <input type="hidden" name="typeOfForm" value="password">
             <label for="text" class="col-lg-4 control-label">Nouvel e-mail</label>
             <div class="col-lg-8">
               <input type="text" class="form-control" name="newEmail">
@@ -255,7 +255,7 @@
         <!-- Changement mot de passe -->
         <div class="col-xs-9" id="chgPw">
           <h4>Changement de mot de passe</h4>
-          <div class="form-group">
+          <<form action="{{ route('updateProfil') }}" method="post"></form> class="form-group">
 
             <label for="text" class="col-lg-5 control-label">Mot de passe actuel</label>
             <div class="col-lg-7">
@@ -271,10 +271,9 @@
             <div class="col-lg-7">
               <input type="password" class="form-control" name="confirmNewPassword">
             </div>
-
-          </div> <!-- form-group -->
-          <span class="btn btn-primary btn-danger" id="btnChgPwCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-          <span class="btn btn-primary btn-success" id="btnChgPwSubmit"><span class="glyphicon glyphicon-ok"></span> Valider</span>
+            <span class="btn btn-primary btn-danger" id="btnChgPwCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
+            <input type="submit" class="btn btn-primary btn-success" id="btnChgPwSubmit" value="Valider">
+          </form> <!-- form-group -->
         </div> <!-- col #chgPw -->
 
         <script id="jsChangementProfil" src="{{ asset("js/leChangementCestMaintenant.js")}}"></script>
