@@ -68,6 +68,27 @@ class Profile extends Controller
             } else {
                 $message = 'Erreur lors de la modification : les mots de passe divergent';
             }
+        } else if ($request->typeOfForm == "password") {
+            $validatedData = $request->validate([
+                'newEmail' => 'required|email',
+                'password' => 'required',
+            ]);
+            $newPass = $request->input('newPassword');
+            $confirmNewPass = $request->input('confirmNewPassword');
+            $pass = $request->input('currentPassword');
+            $user = Auth::user();
+            $passUser = DB::select('select password from users where id = ?', [$user->id]);
+            if (Hash::check($pass, $passUser[0]->password)) {
+                //Passwords are equals, processing
+                if ($newPass == $confirmNewPass){
+                    DB::table('users')->where('id', $user->id)->update(['password' => $newPass]);
+                    $message = 'Mot de passe modifié avec succès !';
+                } else {
+                    $message = 'Les mots de passe ne sont pas égaux.';
+                }
+            } else {
+                $message = 'Erreur lors de la modification : les mots de passe divergent';
+            }
         }
                 
         return $this->indexMsg($message);
