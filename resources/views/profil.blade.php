@@ -250,12 +250,13 @@
             <span class="btn btn-primary btn-danger" id="btnChgMailCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
             <input type="submit" class="btn btn-primary btn-success" id="btnChgMailSubmit" value="Valider">
           </form> <!-- form-group -->
+
         </div> <!-- col #chgMail -->
 
         <!-- Changement mot de passe -->
         <div class="col-xs-9" id="chgPw">
           <h4>Changement de mot de passe</h4>
-          <<form action="{{ route('updateProfil') }}" method="post"></form> class="form-group">
+          <form action="{{ route('updateProfil') }}" method="post"></form> class="form-group">
 
             <label for="text" class="col-lg-5 control-label">Mot de passe actuel</label>
             <div class="col-lg-7">
