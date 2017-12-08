@@ -53,16 +53,16 @@
 
 
       <input type="button" value="Lancer le programme" id="run">
-      <div id="blocklyDiv"></div>
+      <div style="width: 45%" id="blocklyDiv"></div>
 
       <canvas id="scene"></canvas>
-      <a href="{{ route('launchGame', ['id' => $id+1]) }}">
+      <a href="{{ route('launchGame', ['id' => $myId+1]) }}">
       <div id="nextLvl">
       </div>
       </a>
 
   <!--query string pour js-->
-  <input type="hidden" id="lvl" value="{{ $id }}"/>
+  <input type="hidden" id="lvl" value="{{ $myId }}"/>
   </body>
   <script>
     var workspace = Blockly.inject('blocklyDiv',

@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class Escape extends Controller
 {
     function index(Request $request) {
-        $id = $request->input('id');
-        return view('escape',compact('id'));
+        $myId = $request->route('id', 0);
+        return view('escape',compact('myId'));
     }
 }
