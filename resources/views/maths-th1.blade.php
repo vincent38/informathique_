@@ -1,4 +1,7 @@
-<h1>Thème 1</h1>
+@extends('layouts.headerMaths')
+@section('site')
 
-<div id="mainDiv"></div>
+<div id="mainDiv" class="container"></div>
 <script src="js/maths/theme1.js"></script>
+
+@endsection

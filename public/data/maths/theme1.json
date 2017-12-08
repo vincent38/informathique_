@@ -1,0 +1,29 @@
+{
+  "textes": [{
+      "titre": "Bienvenue",
+      "texte": "Ceci est une histoire test. Clique sur le bouton ci-dessous pour continuer.",
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 1
+      }]
+    },{
+      "titre": "Bravo",
+      "texte": "C'est bien, t'as réussi à cliquer sur un bouton. Maintenant, choisis un des deux boutons ci-dessous.",
+      "boutons": [{
+        "texte": "Choix 1",
+        "pageLien": 2
+        },{
+        "texte": "Choix 2",
+        "pageLien": 3
+      }]
+    },{
+      "titre": "Super",
+      "texte": "Tu as choisis le premier choix.",
+      "boutons": []
+    },{
+      "titre": "Géniol",
+      "texte": "Tu as choisis le deuxième choix.",
+      "boutons": []
+    }
+  ]
+}

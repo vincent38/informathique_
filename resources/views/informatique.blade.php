@@ -44,7 +44,7 @@
       for($i = 1; $i <= $nbNiveauxFaciles; $i++) {
         $numNiveau = $i;
         $lien = $lienJeu."?lvl=".$numNiveau; ?>
-        <a href="<?php echo $lien; ?>" class="btn btn-success btn-lg  btn-block">Niveau <?php echo $i; ?></a>
+          <a href="<?php echo $lien; ?>" class="btn btn-success btn-lg  btn-block">Niveau <?php echo $i; ?></a>
       <?php } ?>
     </div> <!-- col -->
     <div class="col-md-4">
