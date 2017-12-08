@@ -14,8 +14,8 @@
     [1,1,1,0,0,1,1,1,0,0,1,1,1],
     [0,0,0,0,0,0,0,0,0,0,0,0,0]
   ],
-  "spawnTabX" : 12,
-  "spawnTabY" : 0,
+  "spawnTabX" : 1,
+  "spawnTabY" : 12,
   "spawnX" : 97,
   "spawnY" : 485,
   "xMax" : 13,
