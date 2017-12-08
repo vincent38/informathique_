@@ -14,7 +14,6 @@ var perdu;
 var leviers;
 
 var lvl = document.getElementById('lvl').value;
-alert(lvl);
 var jsonData = loadMap(lvl);
 var delay = jsonData.delay || 300;
 
