@@ -82,7 +82,7 @@ class Profile extends Controller
             if (Hash::check($pass, $passUser[0]->password)) {
                 //Passwords are equals, processing
                 if ($newPass == $confirmNewPass){
-                    DB::table('users')->where('id', $user->id)->update(['password' => $newPass]);
+                    DB::table('users')->where('id', $user->id)->update(['password' => Hash::make($newPass)]);
                     $message = 'Mot de passe modifié avec succès !';
                 } else {
                     $message = 'Les mots de passe ne sont pas égaux.';
