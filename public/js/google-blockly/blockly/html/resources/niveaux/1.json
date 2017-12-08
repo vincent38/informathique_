@@ -25,8 +25,8 @@
   "tailleDeplacement" : 35,
   "leviers" : [
     {
-      "xTab" : 1,
-      "yTab" : 12,
+      "xTab" : 12,
+      "yTab" : 0,
       "x" : 495,
       "y" : 57,
       "imgHaut" : "levier-monte-droite.png",

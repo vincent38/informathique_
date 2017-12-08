@@ -69,7 +69,11 @@
     {toolbox: document.getElementById('toolbox')});
   </script>
 
-  <script src="../js/google-blockly/blockly/html/engine/jeu.js"></script>
+
+  <div id="engine"></div>
+  <script src="../js/google-blockly/blockly/html/engine/include.js"></script>
+
+  <!--<script src="../js/google-blockly/blockly/html/engine/jeu.js"></script>-->
   <!--script pour run le code-->
   <script src="../js/google-blockly/blockly/html/engine/run.js"></script>
     </div> <!-- col -->
