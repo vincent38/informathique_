@@ -5,18 +5,81 @@
 ////////////////////////////////////////////////////////////////////// */
 
 
+/*div {
+    border: 1px solid red;
+}*/
+
 body {
-  font-family: Roboto, sans-serif;
-
-  margin: 0px 50px;
-
-
-
-  /*border: 1px solid red;*/
+  background-image: url('/img/background.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.paragraph {
+
+p {
   text-align: justify;
+  font-size: 1.2em;
+}
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         HEADER
+///
+////////////////////////////////////////////////////////////////////// */
+
+
+div.banniere {
+  width: 100%;
+  overflow: hidden;
+}
+
+img.banniere {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+@media (max-width: 1350px) {
+  img.banniere {
+    width: 140%;
+    text-align: center;
+    margin-left: -20%;
+  }
+}
+
+header {
+  vertical-align: top;
+  background-color: #FAFAFAFA;
+  border-bottom: 3px solid #C0C0C0;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  z-index: 9999;
+}
+
+h1.header-title {
+  color: #444444;
+  margin: 0;
+  display: inline-block;
+  font-size: 4em;
+}
+
+.header-profil {
+  vertical-align: bottom;
+}
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         MESSAGE ACCUEIL
+///
+////////////////////////////////////////////////////////////////////// */
+
+#msgaccueil {
+  background-color: #FFFFFFD0;
+  margin-bottom: 30px;
 }
 
 /* //////////////////////////////////////////////////////////////////////
@@ -25,105 +88,29 @@ body {
 ///
 ////////////////////////////////////////////////////////////////////// */
 
-.main-menu { /* Conteneur général du menu */
-  display: flex;                  /* establish flex container */
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  justify-content: center;
-  margin: 15px 0px;
 
 
-  /*border: 1px solid blue;*/
+.main-menu {
+  background-color: #FFFFFFD0;
+  /*padding: 15px;*/
 }
 
-.main-menu-container-math { /* Conteneur bouton mathématiques */
-  background-color: #a070e0;
-  width: 50%;
-  margin-right: 5px;
-  padding: 0px;
+.menu-maths, .menu-info {
+  height: 100%;
+}
 
+.menu-title {
   text-align: center;
-}
-
-.main-menu-container-math:hover {
-  background-color: #c090f0;
-}
-
-.main-menu-container-info { /* Conteneur bouton informatique */
-  background-color: #70e0a0;
-  width: 50%;
-  margin-left: 5px;
-  padding: 0px;
-
-  text-align: center;
-}
-
-.main-menu-container-info:hover {
-  background-color: #90f0c0;
-}
-
-.main-menu-container-2 { /* Conteneur dans le a */
-  padding: 15px 0px;
-}
-
-.lien-main-menu { /* Lien */
-  text-decoration: none;
-  color: #303030;
-}
-
-.main-menu-title { /* Texte titre */
-  margin: 0px;
   font-size: 3em;
-  font-weight: lighter;
-}
-
-.main-menu-subtitle { /* Texte sous-titre */
   margin: 0px;
+  margin-top: 5px;
 }
 
+.menu-desc {
+  text-align: justify;
+}
 
-/* //////////////////////////////////////////////////////////////////////
-///
-///         MENU PRINCIPAL MATHEMATIQUES
-///
-////////////////////////////////////////////////////////////////////// */
-
-.math-main-menu { /* Conteneur général du menu */
-  display: flex;                  /* establish flex container */
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  justify-content: center;
+.menu-bouton {
+  width: 100%;
   margin: 15px 0px;
-
-
-  /*border: 1px solid blue;*/
-}
-
-.math-main-menu-container {
-  background-color: #a0f0f0;
-  width: 25%;
-  margin-right: 5px;
-}
-
-.math-main-menu-container:hover {
-  background-color: #c0f0f0;
-}
-
-.math-main-menu-container:last-child {
-  margin-right: 0px;
-}
-
-.math-main-menu-container-2 {
-  padding: 15px 0px;
-  text-align: center;
-}
-
-.math-main-menu-title { /* Texte titre */
-  margin: 0px;
-  font-size: 3em;
-  font-weight: lighter;
-}
-
-.math-main-menu-subtitle { /* Texte sous-titre */
-  margin: 0px;
 }
