@@ -1,4 +1,14 @@
-var mainDiv = document.getElementById("mainDiv");
+var errorDiv = document.getElementById("jserror");
+var script = document.getElementById("script");
+//var mainDiv = document.getElementById("mainDiv");
+
+errorDiv.parentNode.removeChild(errorDiv);
+
+var mainDiv = document.createElement("div");
+mainDiv.setAttribute("id", "mainDiv");
+mainDiv.setAttribute("class", "container");
+script.parentNode.insertBefore(mainDiv, script);
+
 
 function loadJSON(cb) {
 
@@ -24,7 +34,6 @@ loadJSON(function(json){
 
     mainDiv.innerHTML += "<h1>" + json.textes[numPage].titre + "</h1>";
     mainDiv.innerHTML += "<p>" + json.textes[numPage].texte + "</p>";
-    mainDiv.innerHTML += "<p>" + json.textes[numPage].boutons.length + "</p>";
     for(var i = 0; i < json.textes[numPage].boutons.length; i++) {
       var texteBouton = json.textes[numPage].boutons[i].texte;
       let lienBouton  = json.textes[numPage].boutons[i].pageLien;
