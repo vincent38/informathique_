@@ -236,7 +236,7 @@
           <h4>Changement d'adresse e-mail</h4>
           <form action="{{ route('updateProfil') }}" method="post" class="form-group">
             {!! csrf_field() !!}
-            <input type="hidden" name="typeOfForm" value="password">
+            <input type="hidden" name="typeOfForm" value="email">
             <label for="text" class="col-lg-4 control-label">Nouvel e-mail</label>
             <div class="col-lg-8">
               <input type="text" class="form-control" name="newEmail">
@@ -257,7 +257,8 @@
         <div class="col-xs-9" id="chgPw">
           <h4>Changement de mot de passe</h4>
           <form action="{{ route('updateProfil') }}" method="post" class="form-group">
-
+            {!! csrf_field() !!}
+            <input type="hidden" name="typeOfForm" value="password">
             <label for="text" class="col-lg-5 control-label">Mot de passe actuel</label>
             <div class="col-lg-7">
               <input type="password" class="form-control" name="currentPassword">
