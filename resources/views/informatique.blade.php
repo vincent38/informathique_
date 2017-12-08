@@ -42,14 +42,8 @@
       <h2>Niveaux faciles</h2>
       <?php
       for($i = 1; $i <= $nbNiveauxFaciles; $i++) {
-<<<<<<< HEAD
-        $numNiveau = $i;
-        $lien = $lienJeu."?lvl=".$numNiveau; ?>
-          <a href="<?php echo $lien; ?>" class="btn btn-success btn-lg  btn-block">Niveau <?php echo $i; ?></a>
-=======
         $numNiveau = $i; ?>
         <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" class="btn btn-success btn-lg  btn-block">Niveau <?php echo $i; ?></a>
->>>>>>> 6e32036cd0933d00fab83f4eb5ee4621ccd9761f
       <?php } ?>
     </div> <!-- col -->
     <div class="col-md-4">
