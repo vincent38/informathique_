@@ -5,7 +5,6 @@
     <title>{{ config('app.name', '') }} - Page d'accueil</title>
     <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
     <link rel="stylesheet" href="{{ asset("css/master.css") }}">
-    <link rel="stylesheet" href="{{ asset("css/home.css") }}">
   </head>
   <body>
     <div class="banniere">
@@ -14,25 +13,36 @@
       </a>
     </div>
     <header>
-      <h1 class="header-title">{{ config('app.name', '') }}</h1>
+      <div id="mainHeader">
 
-      <div class=" pull-right header-profil">
-        @if (Route::has('login'))
-          @auth
-            <p>Bienvenue {{ Auth::user()->name }} -
-            <a href="{{ route("profil") }}">Profil</a> -
-            <a href="{{ route("logout") }}">Se déconnecter</a></p>
-          @else
-            <p>Vous n'êtes pas connecté -
-            <a href="{{ route('login') }}">Se connecter</a> -
-            <a href="{{ route('register') }}">S'inscrire</a></p>
-          @endauth
-        @endif
-      </div> <!-- header-profil -->
-
+        <div class=" pull-right header-profil">
+          @if (Route::has('login'))
+            @auth
+              <p>Bienvenue {{ Auth::user()->name }} !
+                <a href="{{ route("profil") }}" class="btn btn-info"><span class="glyphicon glyphicon-user"></span> Mon profil</a>
+                <a href="{{ route("logout") }}" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a>
+              </p>
+            @else
+              <p>Tu n'es pas connecté.
+                <a href="{{ route('login') }}" class="btn btn-info"><span class="glyphicon glyphicon-log-in"></span> Connexion</a>
+                <a href="{{ route('register') }}" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Inscription</a>
+              </p>
+            @endauth
+          @endif
+        </div> <!-- header-profil -->
+      </div> <!-- #mainHeader -->
+      @if (Route::has('login'))
+        @auth
+        @else
+          <div class="alert alert-danger">Attention, tu n'es pas connecté. Tu peux jouer sans compte, mais tu ne pourras pas sauvegarder ta progression. Pour accéder à toutes les fonctionnalités de {{ config('app.name', '') }}, <a href="{{ route('login') }}">connecte-toi</a> ou <a href="{{ route('register') }}">crée un compte</a> maintenant.</div>
+        @endauth
+      @endif
     </header>
 
-    @yield ('site')
+
+    <div id="content">
+      @yield ('site')
+    </div>
 
   </body>
 </html>

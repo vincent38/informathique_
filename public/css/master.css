@@ -20,11 +20,12 @@ body {
   background-position: center;
   background-size: cover;
   min-height: 100%;
+  min-width: 750px;
   /*border: 1px solid red;*/
 }
 
 
-p {
+p, dd, dt {
   text-align: justify;
   font-size: 1.2em;
 }
@@ -49,7 +50,7 @@ img.banniere {
   text-align: center;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1199px) {
   img.banniere {
     width: 140%;
     text-align: center;
@@ -57,7 +58,7 @@ img.banniere {
   }
 }
 
-@media (max-width: 986px) {
+@media (max-width: 992px) {
   img.banniere {
     width: 160%;
     text-align: center;
@@ -65,18 +66,24 @@ img.banniere {
   }
 }
 
-header {
-  vertical-align: top;
+#mainHeader {
+  height: 47px;
   background-color: #FAFAFAFA;
   border-bottom: 3px solid #C0C0C0;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+header {
   position: sticky;
   top: 0;
   padding: 10px;
   z-index: 9999;
+  padding: 0;
 }
 
 h1.header-title {
+  transition: 0.1s;
   color: #444444;
   margin: 0;
   display: inline-block;
@@ -84,28 +91,61 @@ h1.header-title {
 }
 
 .header-profil {
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 a > h1:hover {
-  color: red;
+  color: #5CB85C;
 }
 
 /* //////////////////////////////////////////////////////////////////////
 ///
-///         MESSAGE EN-TETE
+///         MENU PRINCIPAL
 ///
 ////////////////////////////////////////////////////////////////////// */
 
-#msgentete {
+.menu-desc {
+  text-align: justify;
+}
+
+.menu-bouton {
+  margin: 15px 0px;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         AUTRES
+///
+////////////////////////////////////////////////////////////////////// */
+
+#content {
+  margin-top: 50px;
+}
+
+#chgInfo {
+  margin-top: 10px;
+}
+
+/* //////////////////////////////////////////////////////////////////////
+///
+///         BOOTSTRAP
+///
+////////////////////////////////////////////////////////////////////// */
+
+.container {
   background-color: #FFFFFFD0;
   border-radius: 5px;
-  margin-bottom: 30px;
   padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#msgentete h2 {
-  margin-top: 0px;
+.container p {
+  margin-bottom: 0;
 }
 
-#msgentete > p
+.container h2, .container h3 {
+  margin-top: 10px;
+}

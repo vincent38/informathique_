@@ -14,25 +14,35 @@
       </a>
     </div>
     <header>
-      <a href="{{ route("home") }}"><h1 class="header-title">{{ config('app.name', '') }}</h1></a>
+      <a href="{{ route("home") }}"><h1 class="header-title" title="Retour à l'accueil">{{ config('app.name', '') }}</h1></a>
 
       <div class=" pull-right header-profil">
         @if (Route::has('login'))
           @auth
-            <p>Bienvenue {{ Auth::user()->name }} -
-            <a href="{{ route("profil") }}">Profil</a> -
-            <a href="{{ route("logout") }}">Se déconnecter</a></p>
+            <p>Bienvenue {{ Auth::user()->name }} !
+              <a href="{{ route("profil") }}" class="btn btn-info"><span class="glyphicon glyphicon-user"></span> Mon profil</a>
+              <a href="{{ route("logout") }}" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a>
+            </p>
           @else
-            <p>Vous n'êtes pas connecté -
-            <a href="{{ route('login') }}">Se connecter</a> -
-            <a href="{{ route('register') }}">S'inscrire</a></p>
+            <p>Vous n'êtes pas connecté.
+              <a href="{{ route('login') }}" class="btn btn-info"><span class="glyphicon glyphicon-log-in"></span> Connexion</a>
+              <a href="{{ route('register') }}" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Inscription</a>
+            </p>
           @endauth
         @endif
       </div> <!-- header-profil -->
 
     </header>
+    @if (Route::has('login'))
+      @auth
+      @else
+        <div class="alert alert-danger">Attention, tu n'es pas connecté. Tu peux jouer sans compte, mais tu ne pourras pas sauvegarder ta progression. Pour accéder à toutes les fonctionnalités de {{ config('app.name', '') }}, <a href="{{ route('login') }}">connecte-toi</a> ou <a href="{{ route('register') }}">crée un compte</a> maintenant.</div>
+      @endauth
+    @endif
 
-    @yield ('site')
+    <div id="content">
+      @yield ('site')
+    </div>
 
   </body>
 </html>
