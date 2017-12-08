@@ -6,7 +6,7 @@
   $nbNiveauxMoyens = 14; // Nombre de niveaux moyens
   $nbNiveauxDifficiles = 17; // T'as compris
 
-  $lienJeu = "google-blockly/blockly/html/jeu.php";
+  //$lienJeu = "google-blockly/blockly/html/jeu.php";
  ?>
 
  <div class="container">
@@ -31,7 +31,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h2>Didacticiel</h2>
-      <a href="<?php echo $lienJeu; ?>" class="btn btn-success btn-lg btn-block">Accéder au didacticiel</a>
+      <a href="{{ route('launchGame', ['id' => 0]) }}" class="btn btn-success btn-lg btn-block">Accéder au didacticiel</a>
     </div> <!-- col -->
   </div> <!-- row -->
 </div> <!-- container -->
@@ -42,27 +42,30 @@
       <h2>Niveaux faciles</h2>
       <?php
       for($i = 1; $i <= $nbNiveauxFaciles; $i++) {
+<<<<<<< HEAD
         $numNiveau = $i;
         $lien = $lienJeu."?lvl=".$numNiveau; ?>
           <a href="<?php echo $lien; ?>" class="btn btn-success btn-lg  btn-block">Niveau <?php echo $i; ?></a>
+=======
+        $numNiveau = $i; ?>
+        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" class="btn btn-success btn-lg  btn-block">Niveau <?php echo $i; ?></a>
+>>>>>>> 6e32036cd0933d00fab83f4eb5ee4621ccd9761f
       <?php } ?>
     </div> <!-- col -->
     <div class="col-md-4">
       <h2>Niveaux moyens</h2>
       <?php
       for($i = 1; $i <= $nbNiveauxMoyens; $i++) {
-        $numNiveau = $i + $nbNiveauxFaciles;
-        $lien = $lienJeu."?lvl=".$numNiveau; ?>
-        <a href="<?php echo $lien; ?>" class="btn btn-warning btn-lg  btn-block">Niveau <?php echo $i+$nbNiveauxFaciles; ?></a>
+        $numNiveau = $i + $nbNiveauxFaciles; ?>
+        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" class="btn btn-warning btn-lg  btn-block">Niveau <?php echo $i+$nbNiveauxFaciles; ?></a>
       <?php } ?>
     </div> <!-- col -->
     <div class="col-md-4">
       <h2>Niveaux difficiles</h2>
       <?php
       for($i = 1; $i <= $nbNiveauxDifficiles; $i++) {
-        $numNiveau = $i + $nbNiveauxFaciles + $nbNiveauxMoyens;
-        $lien = $lienJeu."?lvl=".$numNiveau; ?>
-        <a href="<?php echo $lien; ?>" class="btn btn-danger btn-lg  btn-block">Niveau <?php echo $i+$nbNiveauxFaciles+$nbNiveauxMoyens; ?></a>
+        $numNiveau = $i + $nbNiveauxFaciles + $nbNiveauxMoyens;?>
+        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" class="btn btn-danger btn-lg  btn-block">Niveau <?php echo $i+$nbNiveauxFaciles+$nbNiveauxMoyens; ?></a>
       <?php } ?>
     </div> <!-- col -->
   </div> <!-- row -->
