@@ -104,7 +104,7 @@ class Fond {
         this.width = scene.canvas.width;
         this.height = scene.canvas.height;
         this.img = new Image();
-        this.img.src = '../js/google-blockly/blockly/html/resources/images/' + lvl + '.png';
+        this.img.src = './resources/images/' + lvl + '.png';
 
 
         var sup = this;
@@ -129,7 +129,7 @@ class Heros {
         this.width = 50;
         this.height = 50;
         this.img = new Image();
-        this.img.src = '../js/google-blockly/blockly/html/resources/images/heros.png';
+        this.img.src = './resources/images/heros.png';
 
         setTimeout(this.afficher(), 2000);
 
@@ -256,7 +256,7 @@ function getXMLHttpRequest() {
 function loadMap(lvl) {
     var xhr = getXMLHttpRequest();
     //chargement du fichier
-    xhr.open("GET", '../resources/niveaux/' + lvl + '.json', false);
+    xhr.open("GET", './resources/niveaux/' + lvl + '.json', false);
     xhr.send(null);
     if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
         throw new Error("impossible de charger le niveau : " + xhr.status);
@@ -309,8 +309,8 @@ class Levier {
         this.y = jsonLevier.y;
         this.action = jsonLevier.action;
         this.img = new Image();
-        this.img.src = '../js/google-blockly/blockly/html/resources/images/'+jsonLevier.imgHaut;
-        this.imgBas = '../js/google-blockly/blockly/html/resources/images/'+jsonLevier.imgBas;
+        this.img.src = './resources/images/'+jsonLevier.imgHaut;
+        this.imgBas = './resources/images/'+jsonLevier.imgBas;
         this.affiche();
     }
 
