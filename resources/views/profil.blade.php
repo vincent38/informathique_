@@ -203,7 +203,7 @@
           <h3>Tes informations</h3>
           <p>Pseudo : {{ $user->name }}</p>
           <p>Adresse e-mail : {{ $user->email }}</p>
-          <p>Identifiant universel unique (UUID) : {{ $uuid[0] }}</p>
+          <p>Identifiant universel unique (UUID) : {{ $uuid[0]->string }}</p>
         </div> <!-- col -->
         <div class="col-lg-12" id="chgInfo">
           <span class="btn btn-success" id="btnChgPseudo">Changer de pseudo</span>
