@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\DB;
+use Webpatser\Uuid\Uuid;
 
 class RegisterController extends Controller
 {
