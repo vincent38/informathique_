@@ -1,44 +1,57 @@
-var mainDiv = document.getElementById("mainDiv");
+var errorDiv = document.getElementById("jserror");
+var script = document.getElementById("script");
+//var mainDiv = document.getElementById("mainDiv");
+
+errorDiv.parentNode.removeChild(errorDiv);
+
+var mainDiv = document.createElement("div");
+mainDiv.setAttribute("id", "mainDiv");
+mainDiv.setAttribute("class", "container");
+script.parentNode.insertBefore(mainDiv, script);
 
 
+function loadJSON(cb) {
 
-afficherDiv01();
-
-function afficherDiv01() {
-  mainDiv.innerHTML = "<h1>Bienvenue</h1>"
-                    + "<p>Ceci est une histoire test. Clique sur le bouton ci-dessous pour continuer (on dirait pas mais c'est cliquable, fais pas chier) :</p>"
-                    + "<span id=\"button1\">Continuer</span>";
-
-  var button1 = document.getElementById("button1");
-
-  button1.onclick = function() {
-    afficherDiv02();
-  };
+    var xobj = new XMLHttpRequest();
+        //xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'data/maths/theme1.json', true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            //console.log(JSON.parse(xobj.responseText));
+            cb(JSON.parse(xobj.responseText));
+          }
+    };
+    xobj.send(null);
 }
 
-function afficherDiv02() {
-  mainDiv.innerHTML = "<h1>Bravo</h1>"
-                    + "<p>C'est bien, t'as réussi à cliquer sur un bouton, t'es pas trop con. Maintenant, choisis un des deux boutons ci-dessous (toujours pareil, c'est cliquable, t'as compris) :</p>"
-                    + "<span id=\"button2\">Choix 1</span> <span id=\"button3\">Choix 2</span>";
 
-  var button2 = document.getElementById("button2");
-  var button3 = document.getElementById("button3");
+loadJSON(function(json){
+  console.log(json);
 
-  button2.onclick = function() {
-    afficherDiv03();
-  };
+  function afficherDiv(numPage) {
+    mainDiv.innerHTML = null;
 
-  button3.onclick = function() {
-    afficherDiv04();
-  };
-}
+    mainDiv.innerHTML += "<h1>" + json.textes[numPage].titre + "</h1>";
+    mainDiv.innerHTML += "<p>" + json.textes[numPage].texte + "</p>";
+    for(var i = 0; i < json.textes[numPage].boutons.length; i++) {
+      var texteBouton = json.textes[numPage].boutons[i].texte;
+      let lienBouton  = json.textes[numPage].boutons[i].pageLien;
 
-function afficherDiv03() {
-    mainDiv.innerHTML = "<h1>Super</h1>"
-                      + "<p>T'as choisis le premier choix. T'es content ?";
+      var bouton = document.createElement("span");
+      bouton.setAttribute("class", "bouton");
+      bouton.id = i;
+      bouton.innerHTML = texteBouton;
+      bouton.addEventListener("click", function() {
+        afficherDiv(lienBouton);
+      });
+      mainDiv.appendChild(bouton);
+      var br = document.createElement("br");
+      mainDiv.appendChild(br);
+    }
   }
 
-function afficherDiv04() {
-  mainDiv.innerHTML = "<h1>Géniol</h1>"
-                    + "<p>T'as choisis le deuxième choix. Tu es bien talentueux.";
-}
+
+  afficherDiv(0);
+
+});

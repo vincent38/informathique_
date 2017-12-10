@@ -1,0 +1,11 @@
+span.bouton {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+span.bouton:hover {
+}
+
+h1 {
+  margin-top: 10px;
+}
