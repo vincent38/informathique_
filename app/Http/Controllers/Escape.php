@@ -29,8 +29,6 @@ class Escape extends Controller
         ]);
         $user = Auth::user();
         $exists = DB::select('select * from user_info where id_user = ? and id_exercise = ?', [$user->id, $request->route('id')]);
-        if ($exists[0] != null) {
-            echo 
-        }
+        var_dump($exists);
     }
 }
