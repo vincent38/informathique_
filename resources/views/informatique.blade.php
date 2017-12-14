@@ -21,7 +21,7 @@
          <dd>Les niveaux moyens vont commencer à te donner du fil à retordre. Utilise les boucles et les conditions pour déplacer ton personnage et éviter les pièges, et ne te fais pas repérer par les surveillants.</dd>
 
          <dt>Niveaux difficiles</dt>
-         <dd>Les niveaux difficiles sont difficiles. Je sais pas quoi dire d'autre, alors je dis rien d'autre. Voilà. Allez, arrête de lire. Arrête je te dis putain. Mais tu le fais exprès ou quoi ? T'as vraiment l'air con là !</dd>
+         <dd>Les niveaux difficiles sont difficiles. Je sais pas quoi dire d'autre, mais on mettra quand même du texte parce que c'est important de bien expliquer ce que c'est.</dd>
        </dl>
      </div> <!-- col -->
    </div> <!-- row -->
