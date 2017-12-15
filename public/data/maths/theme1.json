@@ -1,12 +1,15 @@
 {
   "textes": [{
+      "numeroPage": 0,
       "titre": "Bienvenue",
       "texte": "Ceci est une histoire test. Clique sur le bouton ci-dessous pour continuer.",
       "boutons": [{
         "texte": "Continuer",
         "pageLien": 1
-      }]
+        }],
+      "exercice": false
     },{
+      "numeroPage": 1,
       "titre": "Bravo",
       "texte": "C'est bien, t'as réussi à cliquer sur un bouton. Maintenant, choisis un des deux boutons ci-dessous.",
       "boutons": [{
@@ -15,15 +18,42 @@
         },{
         "texte": "Choix 2",
         "pageLien": 3
-      }]
+        },{
+          "texte": "Exercice",
+          "pageLien": 4
+        }],
+      "exercice": false
     },{
+      "numeroPage": 2,
       "titre": "Super",
       "texte": "Tu as choisis le premier choix.",
-      "boutons": []
+      "boutons": [],
+      "exercice": false
     },{
+      "numeroPage": 3,
       "titre": "Géniol",
       "texte": "Tu as choisis le deuxième choix.",
-      "boutons": []
+      "boutons": [],
+      "exercice": false
+    },{
+      "numeroPage": 4,
+      "titre": "Exo test",
+      "texte": "Ceci est un exercice test",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+        }]
     }
   ]
 }
