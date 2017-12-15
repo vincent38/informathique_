@@ -11,7 +11,7 @@
     },{
       "numeroPage": 1,
       "titre": "Bravo",
-      "texte": "C'est bien, t'as réussi à cliquer sur un bouton. Maintenant, choisis un des deux boutons ci-dessous.",
+      "texte": "C'est bien, t'as réussi à cliquer sur un bouton. Maintenant, choisis un des boutons ci-dessous.",
       "boutons": [{
         "texte": "Choix 1",
         "pageLien": 2

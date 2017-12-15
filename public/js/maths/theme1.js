@@ -29,7 +29,6 @@ function loadJSON(cb) {
 
 // C'est ici que tout se passe
 loadJSON(function(json){
-  console.log(json);
 
   function afficherDiv(numPage) {
     // On enlève ce qui est dans la div actuellement
@@ -46,7 +45,7 @@ loadJSON(function(json){
 
       // Création du bouton
       var bouton = document.createElement("span");
-      bouton.setAttribute("class", "bouton");
+      bouton.setAttribute("class", "btn btn-info btn-lg btn-block");
       bouton.id = i;
       bouton.innerHTML = texteBouton;
 
@@ -57,12 +56,12 @@ loadJSON(function(json){
 
       // Affichage du bouton
       mainDiv.appendChild(bouton);
-      mainDiv.appendChild(document.createElement("br"));
+      //mainDiv.appendChild(document.createElement("br"));
     }
 
+    // Si la page en cours est un exercice
     if (json.textes[numPage].exercice) {
-      //alert("C'EST UN EXO !!!");
-      // Affichage des boutons de réponses
+
       for(var i = 0; i < json.textes[numPage].reponses.length; i++) {
         var texteBouton = json.textes[numPage].reponses[i].texteReponse;
         let correcte = json.textes[numPage].reponses[i].correct
