@@ -2,9 +2,9 @@
 @section('site')
 
 <?php
-  $nbNiveauxFaciles = 16; // Nombre de niveaux faciles
-  $nbNiveauxMoyens = 14; // Nombre de niveaux moyens
-  $nbNiveauxDifficiles = 17; // T'as compris
+  $nbNiveauxFaciles = 17; // Nombre de niveaux faciles
+  $nbNiveauxMoyens = 20; // Nombre de niveaux moyens
+  $nbNiveauxDifficiles = 8; // T'as compris
 
   //$lienJeu = "google-blockly/blockly/html/jeu.php";
  ?>
