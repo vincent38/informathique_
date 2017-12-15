@@ -11,8 +11,13 @@ class Escape extends Controller
 {
     function index(Request $request) {
         $myId = $request->route('id', 0);
-        $user = Auth::user();
-        $uuid = DB::select('select uuid from user_uuid where id_user = ?', [$user->id]);
+        if (Auth::check()) {
+            $user = Auth::user();
+            $uuid = DB::select('select uuid from user_uuid where id_user = ?', [$user->id]);
+        } else {
+            $user = -1;
+            $uuid = "user-not-logged-in";
+        }
         return view('escape',compact('myId', 'user', 'uuid'));
     }
 
