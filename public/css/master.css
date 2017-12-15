@@ -68,7 +68,7 @@ img.banniere {
 
 #mainHeader {
   height: 47px;
-  background-color: #FAFAFAFA;
+  background-color: rgba(250,250,250,250);
   border-bottom: 3px solid #C0C0C0;
   margin-bottom: 0px;
   padding: 5px;
