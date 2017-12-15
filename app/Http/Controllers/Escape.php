@@ -30,16 +30,33 @@ class Escape extends Controller
         * Op : Add badge if eligible
         * Return : new exp, lvl, score, badge
         */
-        $validatedData = $request->validate([
+        /*$validatedData = $request->validate([
             'id' => 'required',
             'uuid' => 'required',
             'id_exo' => 'required',
             'lvl_exercice' => 'required',
             'nb_etapes' => 'required'
-        ]);
+        ]);*/
         
-        $exists = DB::select('select * from user_info where id_user = ? and id_exercise = ?', [$user->id, $request->route('id')]);
+        $exists = DB::select('select * from user_info where id_user = ? and id_exercise = ?', [$request->route('id'), $request->route('id_exo')]);
         var_dump($exists);
-        return view('escape',compact('id_exo', 'id', 'uuid'));
+        if ($exists != null) {
+            //Score déjà présent... Mettre à jour ?
+            echo "Already in database... Checking if in hand better\n";
+
+        } else {
+            //Score non présent, ajout
+            echo "Not in database, adding...\n";
+            $score = 100; //TODO : Score calculation
+            DB::table('user_info')->insert([
+                'id_user' => $request->route('id'),
+                'id_exercise' => $request->route('id_exo'),
+                'lvl_exercise' => $request->route('lvl_exercice'),
+                'score' => $score,
+                'created_at' => 'NOW()',
+                'updated_at' => 'NOW()'
+            ])
+        }
+        return "ok";
     }
 }
