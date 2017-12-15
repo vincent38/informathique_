@@ -134,8 +134,8 @@ a > h1:hover {
 ////////////////////////////////////////////////////////////////////// */
 
 .container {
-  /*background-color: #FFFFFFD0;*/
-  background-color: rgba(255, 255, 255, 208);
+  background-color: #FFFFFF;
+  background-color: #FFFFFFD0;
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
