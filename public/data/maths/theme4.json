@@ -1,0 +1,224 @@
+{
+  "textes": [{
+      "numeroPage": 0,
+      "titre": "Bienvenue",
+      "texte": "Clique sur le bouton ci-dessous pour commencer à jouer.",
+      "boutons": [{
+        "texte": "Commencer",
+        "pageLien": 1
+        }],
+      "exercice": false
+
+    },{
+      "numeroPage": 1,
+      "titre": "Kini tombe dans un profond sommeil",
+      "texte": "Après une longue journée de révisions, Kini s'endort paisiblement dans son lit.<br>Dans son rêve, il se retrouve dans une ville splendide où tous les bâtiments ont une forme géométrique différente. Sur ce qui semble être un panneau routier, il parvient à lire « Bienvenue à Géométra ».<br>Un habitant de Géométra, intrigué par les vêtements de Kini, s'approche et lui demande : « Bonjour jeune homme, vous semblez perdu. Auriez-vous besoin d'aide ? »",
+      "boutons": [{
+        "texte": "Je... Euh... Effectivement, je suis complètement perdu.",
+        "pageLien": 2
+      },{
+        "texte": "Non merci, je peux me débrouiller tout seul.",
+        "pageLien": 3
+      }]
+
+    },{
+      "numeroPage": 2,
+      "titre": "",
+      "texte": "L'inconnu s'approche de plus près. « Enchanté, je m'appelle Pierre. Je suis enseignant dans le collège de Géométra. »",
+      "boutons": [{
+        "texte": "Enchanté ! Mais où suis-je ?",
+        "pageLien": 4
+      }]
+
+    },{
+      "numeroPage": 3,
+      "titre": "",
+      "texte": "Kini commence à marcher dans un immense boulevard où une multitude de boutiques sublimes se suivent.<br>Du coin de l'œil, Kini repère un restaurant de pita nommé « Gora ». Le chef du restaurant, entendant le ventre de Kini rugir, l'accueille alors chaleureusement : « Tu as faim petit ? Tu es au bon endroit ! »",
+      "boutons": [{
+        "texte": "Oui, je meurs de faim !",
+        "pageLien": 5
+      },{
+        "texte": "Désolé, mais je ne sais pas comment payer pour manger...",
+        "pageLien": 6
+      }]
+
+    },{
+      "numeroPage": 4,
+      "titre": "",
+      "texte": "Tu as remarqué que tous les bâtiments ont tous une forme géométrique ? Cette ville a été fondée en suivant beaucoup de principes mathématiques et géométriques ! Ici, la monnaie, c'est des exercices de maths. La difficulté des exercices augmente en fonction du service rendu en échange.<br>Voilà, tu sais tout ce qu'il faut savoir sur cette ville !",
+      "boutons": [{
+        "texte": "Merci beaucoup !",
+        "pageLien": 7
+      }]
+    },{
+
+      "numeroPage": 5,
+      "titre": "",
+      "texte": "Après que Kini ait bien mangé, le chef lui dit : « Ça te fera 3 exercices !",
+      "boutons": [{
+        "texte": "Quoi ? Des exercices ? Mais comment ça ?",
+        "pageLien": 6
+      },{
+        "texte": "D'accord, c'est parti !",
+        "pageLien": 8
+      }]
+    },{
+
+      "numeroPage": 6,
+      "titre": "",
+      "texte": "Ah, tu es nouveau ici ? À Géométra, la monnaie se présente sous forme d'exercices de mathématiques : la difficulté augmente en fonction du service rendu en échange.",
+      "boutons": [{
+        "texte": "D'accord, c'est parti !",
+        "pageLien": 8
+      }]
+    },{
+
+      "numeroPage": 7,
+      "titre": "",
+      "texte": "Après cette rencontre instructive, Kini se sent plus à l'aise pour aller explorer la ville. Il décide de demander à un des habitants les lieux incontournables de Géométra.<br>« La tour Hypothénuse ou le Parc de la Tête Carrée, ce sont deux lieux absolument époustouflants ! »",
+      "boutons": [{
+        "texte": "Aller vers la tour",
+        "pageLien": 10
+      },{
+        "texte": "Aller vers le parc",
+        "pageLien": 11
+      }]
+    },{
+
+      "numeroPage": 8,
+      "titre": "",
+      "texte": "EXERCICE",
+      "boutons": [{
+        "texte": "Suite",
+        "pageLien": 9
+      }]
+    },{
+
+      "numeroPage": 9,
+      "titre": "",
+      "texte": "Après être sorti du restaurant, Kini remarque sur sa droite une gigantesque tour, dont il ne pouvait même pas distinguer le sommet. Au moment de continuer son chemin, son œil est attiré par un parc avec des animaux étranges.",
+      "boutons": [{
+        "texte": "Aller vers la tour",
+        "pageLien": 10
+      },{
+        "texte": "Aller vers le parc",
+        "pageLien": 11
+      }]
+    },{
+
+      "numeroPage": 10,
+      "titre": "Kini se dirige vers la tour",
+      "texte": "Plus Kini se rapproche de la tour, et plus son immensité l'émerveille. Cette tour transperce les nuages et semble ne pas avoir de fin.<br>Mais ce qui impressionne le plus Kini, c'est que la tour est penchée, comme l'hypothénuse d'un triangle rectangle. Kini en dédit qu'elle est basée sur les théorèmes du mathématicien Pythagore.<br>Kini arrive au pied de la tour.",
+      "boutons": [{
+        "texte": "Entrer dans la tour Hypothénuse",
+        "pageLien": 12
+      }]
+    },{
+
+      "numeroPage": 11,
+      "titre": "Kini se dirige vers le parc",
+      "texte": "",
+      "boutons": []
+    },{
+
+      "numeroPage": 12,
+      "titre": "",
+      "texte": "Kini se retrouve entouré de lustres somptueux, chacun étant un triangle. Un escalier en colimaçon se trouve au centre.<br>Kini entend une voix venant de sa gauche : « Bonjour et bienvenue à la Tour Hypothénuse. Nous vous proposons deux forfaits pour gravir la tour. Le premier est sous la forme d'un challenge : vous monterez les escaliers et répondrez à des questions tous les 20 étages. Le second est une visite guidée en ascenceur, ce forfait est au prix de 5 questions. »",
+      "boutons": [{
+        "texte": "J'aime les challenges !",
+        "pageLien": 13
+      },{
+        "texte": "Je vais monter en ascenceur s'il vous plait.",
+        "pageLien": 14
+      }]
+    },{
+      "numeroPage": 13,
+      "titre": "",
+      "texte": "« Très bien. Vous devrez gravir les 100 étages de la tour pour arriver au sommet. Bonne change ! »<br>Kini s'élance, gravit les marches trois par trois et arrive au vingtième étage en un rien de temps.<br>« Bonjour Monsieur » dit un employé de la tour en voyant Kini arriver. « Vous êtes prêt pour la première question ? »",
+      "boutons": [{
+        "texte": "Plus que prêt !",
+        "pageLien": 15
+      }]
+    },{
+      "numeroPage": 14,
+      "titre": "",
+      "texte": "Très bien. Vous allez donc effectuer 5 exercices.",
+      "boutons":[{
+        "texte": "Je suis prêt !",
+        "pageLien": 16
+      }]
+    },{
+
+      "numeroPage": 15,
+      "titre": "",
+      "texte": "EXERCICE ESCALIER 1",
+      "boutons":[{
+        "texte": "Suite",
+        "pageLien": 17
+      }]
+    }, {
+
+      "numeroPage": 16,
+      "titre": "",
+      "texte": "EXERCICE ASCENCEUR 1",
+      "boutons": [{
+        "texte": "Suite",
+        "pageLien": 18
+      }]
+    },{
+
+      "numeroPage": 17,
+      "titre": "",
+      "texte": "Bravo, mais ce n'est que le début !",
+      "boutons": [{
+        "texte": "Ça ne me fait pas peur !",
+        "pageLien": 19
+      }]
+    },{
+
+      "numeroPage": 18,
+      "titre": "",
+      "texte": "Bravo. Passons à l'exercice suivant.",
+      "boutons": [{
+        "texte": "Allons-y !",
+        "pageLien": 20
+      }]
+    },{
+
+      "numeroPage": 19,
+      "titre": "",
+      "texte": "Kini reprend son souffle et repart en courant. En arrivant au quarantième étage, un deuxième employé lui dit : « Bonjour jeune homme, préparez-vous pour un deuxième exercice ! »",
+      "boutons": [{
+        "texte": "Allons-y !",
+        "pageLien": 21
+      }]
+    },{
+
+      "numeroPage": 20,
+      "titre": "",
+      "texte": "EXERCICE ASCENCEUR 2",
+      "boutons": [{
+        "texte": "Suite",
+        "pageLien": 22
+      }]
+    },{
+
+      "numeroPage": 21,
+      "titre": "",
+      "texte": "EXERCICE ESCALIER 2",
+      "boutons": [{
+        "texte": "Suite",
+        "pageLien": 23
+      }]
+    },{
+
+      "numeroPage": 22,
+      "titre": "",
+      "texte": "Bien, passons au troisième exercice.",
+      "boutons": [{
+        "texte": "OK !",
+        "pageLien": 24
+        }]
+    }
+  ]
+}

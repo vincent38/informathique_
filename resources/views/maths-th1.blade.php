@@ -1,6 +1,8 @@
 @extends('layouts.headerHome')
 @section('site')
 
+<input id="numHistoire" type="hidden" value="1"> <!-- Permet au script de savoir quel fichier charger -->
+
 <div id="jserror" class="container">
   <h1>Erreur</h1>
   <p>On dirait que ton navigateur ne permet pas d'afficher l'histoire...</p>

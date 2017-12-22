@@ -14,9 +14,12 @@ script.parentNode.insertBefore(mainDiv, script);
 // Fonction pour lire le fichier JSON
 function loadJSON(cb) {
 
+    var numHistoire = document.getElementById("numHistoire").getAttribute("value");
+    var jsonFile = 'data/maths/theme' + numHistoire + '.json';
+
     var xobj = new XMLHttpRequest();
         //xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'data/maths/theme1.json', true); // Replace 'my_data' with the path to your file
+    xobj.open('GET', jsonFile, true); // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = function () {
           if (xobj.readyState == 4 && xobj.status == "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
@@ -67,7 +70,7 @@ loadJSON(function(json){
         let correcte = json.textes[numPage].reponses[i].correct
         // Création du bouton
         var bouton = document.createElement("span");
-        bouton.setAttribute("class", "bouton");
+        bouton.setAttribute("class", "btn btn-info btn-lg btn-block");
         bouton.id = i;
         bouton.innerHTML = texteBouton;
 
@@ -81,7 +84,6 @@ loadJSON(function(json){
         });
 
         mainDiv.appendChild(bouton);
-        mainDiv.appendChild(document.createElement("br"));
       }
     }
     //alert(json.textes[numPage].exercice);
