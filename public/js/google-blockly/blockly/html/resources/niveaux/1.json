@@ -31,7 +31,16 @@
       "y" : 57,
       "imgHaut" : "levier-monte-droite.png",
       "imgBas" : "levier-baisse-droite.png",
-      "action" : "tabNiveau.tab[12][1] = -1;\ntabNiveau.tab[12][2] = -1;\n"
+      "action" : "porte.ouvre()",
+      "action-old" : "tabNiveau.tab[12][1] = -1;\ntabNiveau.tab[12][2] = -1;\n"
     }
-  ]
+  ],
+  "porte" : {
+    "xTab" : 12,
+    "yTab" : 1,
+    "x" : 520,
+    "y" : 43,
+    "imgFermee" : "porte-fermee-droite.png",
+    "imgOuverte" : "porte-ouverte-droite.png"
+  }
 }

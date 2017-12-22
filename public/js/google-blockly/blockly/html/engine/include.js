@@ -14,5 +14,6 @@ includeJs("fond.js");
 includeJs("dessins.js");
 includeJs("heros.js");
 includeJs("levier.js");
-setTimeout('includeJs("jeu.js")', 100);//pour etre sur de ne pas créer d'erreurs par l'appel de fonctions pas encore incluses
+includeJs("porte.js");
+setTimeout('includeJs("jeu.js")', 1000);//pour etre sur de ne pas créer d'erreurs par l'appel de fonctions pas encore incluses
 //includeJs("jeu.js");

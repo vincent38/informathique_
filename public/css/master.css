@@ -108,10 +108,6 @@ a > h1:hover {
   text-align: justify;
 }
 
-.menu-bouton {
-  margin: 15px 0px;
-}
-
 
 /* //////////////////////////////////////////////////////////////////////
 ///
@@ -125,6 +121,15 @@ a > h1:hover {
 
 #chgInfo {
   margin-top: 10px;
+}
+
+.btn-no-margin {
+  margin: 0 !important;
+}
+
+.btn-informatique {
+  margin-top: 7px !important;
+  margin-bottom: 0 !important;
 }
 
 /* //////////////////////////////////////////////////////////////////////
@@ -149,4 +154,9 @@ a > h1:hover {
 
 .container h2, .container h3 {
   margin-top: 10px;
+}
+
+.btn {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

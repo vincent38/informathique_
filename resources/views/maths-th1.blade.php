@@ -1,4 +1,4 @@
-@extends('layouts.headerMaths')
+@extends('layouts.headerHome')
 @section('site')
 
 <div id="jserror" class="container">
