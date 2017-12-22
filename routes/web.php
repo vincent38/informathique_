@@ -32,7 +32,7 @@ Route::get('/escapecolle', function () {
 
 Route::get('/escape/{id}', 'Escape@index')->name('launchGame');
 
-Route::get('/escape/finish/{id}/{uuid}/{id_exo}/{lvl_exercice}/{nb_etapes}', 'Escape@finish')->name('finishGameAndSave');
+Route::get('/escape/finish/{uuid}/{id_exo}/{lvl_exercice}/{nb_etapes}', 'Escape@finish')->name('finishGameAndSave');
 
 Route::get('/logout', function () {
     Auth::logout();
