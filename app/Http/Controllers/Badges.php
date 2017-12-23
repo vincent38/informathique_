@@ -18,10 +18,24 @@ class Badges extends Controller
             if (!Badges::check($nbBadge[0]->id, $uid)) {
                 //On ne l'a pas
                 DB::table('user_badges')->insert(['id_user' => $uid, 'id_badge' => $nbBadge[0]->id, 'created_at' => NOW(), 'updated_at' => NOW()]);
+                //Ajout de 10 exp * nb_action
+                $lvlCurrent = DB::select("SELECT exp, lvl, exp_sum FROM user_lvl WHERE id_user = ?", [$uid]);
+                $newExp = 10*$number + $lvlCurrent[0]->exp;
+                $expSum = 10*$number + $lvlCurrent[0]->exp_sum;
+                $oldLvl = $lvlCurrent[0]->lvl;
+                $newLvl = $lvlCurrent[0]->lvl;
+                while ($newExp >= $newLvl * 100) {
+                    //On retire le nb d'exp et on ajoute 1 lvl tant que au dessus d'un palier
+                    $newExp = $newExp - $newLvl * 100;
+                    $newLvl = $newLvl + 1;
+                }
+                DB::table('user_lvl')->where('id_user', $uid)->update(['exp' => $newExp, 'lvl' => $newLvl, 'exp_sum' => $expSum]);
                 return response()->json([
                     'status' => "badge_unlocked",
                     'badge_name' => $nbBadge[0]->name,
-                    'badge_data' => $nbBadge[0]->data
+                    'badge_data' => $nbBadge[0]->data,
+                    'lvl' => 'Niveau : '.$oldLvl.' -> '.$newLvl,
+                    'exp' => 'Expérience : '.$newExp.'/'.($newLvl * 100).' (+'.($number*10).')'
                 ]);
             } else {
                 //On l'a déjà
