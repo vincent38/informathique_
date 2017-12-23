@@ -13,21 +13,28 @@ class Badges extends Controller
         //Check si les actions et nombres correspondent
         //Si badge non présent, on l'ajoute
         $nbBadge = DB::select("SELECT * FROM `storage_badges` WHERE action = ? AND count_action = ?", [$action, $number]);
-        if (!Badges::check($nbBadge[0]->id, $uid)) {
-            //On ne l'a pas
-            DB::table('user_badges')->insert(['id_user' => $uid, 'id_badge' => $nbBadge[0]->id, 'created_at' => NOW(), 'updated_at' => NOW()]);
-            return response()->json([
-                'status' => "badge_unlocked",
-                'badge_name' => $nbBadge[0]->name,
-                'badge_data' => $nbBadge[0]->data
-            ]);
+        if ($nbBadge != null) {
+            //Badge existant
+            if (!Badges::check($nbBadge[0]->id, $uid)) {
+                //On ne l'a pas
+                DB::table('user_badges')->insert(['id_user' => $uid, 'id_badge' => $nbBadge[0]->id, 'created_at' => NOW(), 'updated_at' => NOW()]);
+                return response()->json([
+                    'status' => "badge_unlocked",
+                    'badge_name' => $nbBadge[0]->name,
+                    'badge_data' => $nbBadge[0]->data
+                ]);
+            } else {
+                //On l'a déjà
+                return response()->json([
+                    'status' => "badge_already_unlocked",
+                ]);
+            }
         } else {
-            //On l'a déjà
+            //Badge inexistant
             return response()->json([
-                'status' => "badge_already_unlocked",
+                'status' => "no_badge",
             ]);
-        }
-        
+        }    
     }
 
     static function check(int $nbBadge, int $user) {
