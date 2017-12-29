@@ -14,3 +14,29 @@ span.bouton:hover {
 h1 {
   margin-top: 10px;
 }
+
+.btn-mauvaise-reponse {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.btn-mauvaise-reponse:hover {
+  cursor: default !important;
+  color: #fff !important;
+  background-color: #d9534f !important;
+  border-color: #d43f3a !important;
+}
+
+.btn-bonne-reponse {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.btn-bonne-reponse:hover {
+  cursor: default !important;
+  color: #fff !important;
+  background-color: #5cb85c !important;
+  border-color: #4cae4c !important;
+}

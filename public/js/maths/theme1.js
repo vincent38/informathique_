@@ -1,5 +1,7 @@
 var errorDiv = document.getElementById("jserror");
 var script = document.getElementById("script");
+
+var debug = true;
 //var mainDiv = document.getElementById("mainDiv");
 
 // On retire le message d'erreur affiché par défaut
@@ -34,6 +36,12 @@ function loadJSON(cb) {
 loadJSON(function(json){
 
   function afficherDiv(numPage) {
+    if(debug) {
+      console.log("Affichage de la page " + json.textes[numPage].numeroPage);
+      if(json.textes[numPage].exercice) {
+        console.log("EXERCICE");
+      }
+    }
     // On enlève ce qui est dans la div actuellement
     mainDiv.innerHTML = null;
 
@@ -60,16 +68,27 @@ loadJSON(function(json){
       // Affichage du bouton
       mainDiv.appendChild(bouton);
       //mainDiv.appendChild(document.createElement("br"));
+    } // Fin affichage boutons
+    if(debug) {
+      var bouton = document.createElement("span");
+      bouton.setAttribute("class", "btn btn-danger btn-sm");
+      bouton.id = "debug-retour-debut";
+      bouton.innerHTML = "(debug) Retour au début";
+      bouton.addEventListener("click", function() {
+        afficherDiv(0);
+      });
+      mainDiv.appendChild(bouton);
     }
 
     // Si la page en cours est un exercice
     if (json.textes[numPage].exercice) {
+      var pageLien = json.textes[numPage].pageLien;
 
       for(var i = 0; i < json.textes[numPage].reponses.length; i++) {
         var texteBouton = json.textes[numPage].reponses[i].texteReponse;
         let correcte = json.textes[numPage].reponses[i].correct
         // Création du bouton
-        var bouton = document.createElement("span");
+        let bouton = document.createElement("span");
         bouton.setAttribute("class", "btn btn-info btn-lg btn-block");
         bouton.id = i;
         bouton.innerHTML = texteBouton;
@@ -77,9 +96,10 @@ loadJSON(function(json){
         // Lors du clic sur le bouton, on redirige vers la page correspondante
         bouton.addEventListener("click", function() {
           if(correcte) {
-            alert("Bonne réponse !");
+            bouton.setAttribute("class", "btn btn-bonne-reponse btn-lg btn-block");
+            afficherBoutonContinuer(pageLien);
           } else {
-            alert("Eh non !");
+            bouton.setAttribute("class", "btn btn-mauvaise-reponse btn-lg btn-block");
           }
         });
 
@@ -87,6 +107,20 @@ loadJSON(function(json){
       }
     }
     //alert(json.textes[numPage].exercice);
+  }
+
+  function afficherBoutonContinuer(numPage) {
+    var bouton = document.getElementById("bouton-continuer-apres-exercice");
+    if (bouton === null) { // On affiche le bouton seulement si il n'est pas déjà affiché
+      bouton = document.createElement("span");
+      bouton.setAttribute("class", "btn btn-info btn-lg btn-block");
+      bouton.id = "bouton-continuer-apres-exercice";
+      bouton.innerHTML = "Continuer";
+      bouton.addEventListener("click", function() {
+        afficherDiv(numPage);
+      });
+      mainDiv.appendChild(bouton);
+    }
   }
 
   // Affichage de la première page
