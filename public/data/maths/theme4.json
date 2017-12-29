@@ -103,11 +103,22 @@
       "numeroPage": 8,
       "titre": "",
       "texte": "EXERCICE",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 9
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 9
 
     },{
 
@@ -183,22 +194,44 @@
       "numeroPage": 15,
       "titre": "",
       "texte": "EXERCICE ESCALIER 1",
-      "boutons":[{
-        "texte": "Suite",
-        "pageLien": 17
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 17
 
     }, {
 
       "numeroPage": 16,
       "titre": "",
       "texte": "EXERCICE ASCENCEUR 1",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 18
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 18
 
     },{
 
@@ -238,22 +271,44 @@
       "numeroPage": 20,
       "titre": "",
       "texte": "EXERCICE ASCENCEUR 2",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 22
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 22
 
     },{
 
       "numeroPage": 21,
       "titre": "",
       "texte": "EXERCICE ESCALIER 2",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 23
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 23
 
     },{
 
@@ -282,11 +337,22 @@
       "numeroPage": 24,
       "titre": "",
       "texte": "EXERCICE ASCENCEUR 3",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 26
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 26
 
     },{
 
@@ -315,22 +381,44 @@
       "numeroPage": 27,
       "titre": "",
       "texte": "EXERCICE ESCALIER 3",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 29
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 29
 
     },{
 
       "numeroPage": 28,
       "titre": "",
       "texte": "EXERCICE ASCENCEUR 4",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 30
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 30
 
     },{
 
@@ -370,22 +458,44 @@
       "numeroPage": 32,
       "titre": "",
       "texte": "EXERCICE ASCENCEUR 5",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 34
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 34
 
     },{
 
       "numeroPage": 33,
       "titre": "",
       "texte": "EXERCICE ESCALIER 4",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 35
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 35
 
     },{
 
@@ -425,11 +535,22 @@
       "numeroPage": 37,
       "titre": "",
       "texte": "EXERCICE ESCALIER 5",
-      "boutons": [{
-        "texte": "Suite",
-        "pageLien": 38
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
       }],
-      "exercice": false
+      "pageLien": 38
 
     },{
 
@@ -452,7 +573,7 @@
         "pageLien": 0
       }],
       "exercice": false
-      
+
     }
   ]
 }
