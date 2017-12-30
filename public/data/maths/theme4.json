@@ -55,7 +55,7 @@
       "texte": "Tu as remarqué que tous les bâtiments ont tous une forme géométrique ? Cette ville a été fondée en suivant beaucoup de principes mathématiques et géométriques ! Ici, la monnaie, c'est des exercices de maths. La difficulté des exercices augmente en fonction du service rendu en échange.<br>Voilà, tu sais tout ce qu'il faut savoir sur cette ville !",
       "boutons": [{
         "texte": "Merci beaucoup !",
-        "pageLien": 7
+        "pageLien": 3
       }],
       "exercice": false
 
@@ -149,8 +149,14 @@
 
       "numeroPage": 11,
       "titre": "Kini se dirige vers le parc",
-      "texte": "",
-      "boutons": [],
+      "texte": "Kini se dirige vers le parc. À l'entrée, il voit un panneau « Bienvenue au parc Haltes ». Puis, il entend au loin une douce mélodie. « Je dois trouver l'origine de cette musique », dit-il.",
+      "boutons": [{
+        "texte": "Aller à gauche",
+        "pageLien": 40
+        },{
+        "texte": "Aller à droite",
+        "pageLien": 41
+      }],
       "exercice": false
 
     },{
@@ -570,6 +576,37 @@
       "texte": "Une fois sur le toit de la tour, Kini est époustouflé par la vue : la ville s'étend à perte de vue, et certains bâtiments ont des formes très étranges. Une des constructions est même une sphère qui semble tenir en l'air comme par magie.<br>Après cette longue journée d'aventures, Kini se réveille, la tête remplie de souvenirs.",
       "boutons": [{
         "texte": "Continuer",
+        "pageLien": 9999
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 40,
+      "titre": "",
+      "texte": "Le son de la musique est de plus en plus faible.",
+      "boutons": [{
+        "texte": "Continuer tout droit",
+        "pageLien": 0
+      },{
+        "texte": "Aller à droite",
+        "pageLien": 0
+      },{
+        "texte": "Faire demi-tour",
+        "pageLien": 0
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 41,
+      "titre": "",
+      "texte": "Le son de la musique s'intensifie.",
+      "boutons": [{
+        "texte": "Continuer tout droit",
+        "pageLien": 0
+      },{
+        "texte": "Aller à gauche",
         "pageLien": 0
       }],
       "exercice": false
