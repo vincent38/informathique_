@@ -590,10 +590,10 @@
         "pageLien": 0
       },{
         "texte": "Aller à droite",
-        "pageLien": 0
+        "pageLien": 41
       },{
         "texte": "Faire demi-tour",
-        "pageLien": 0
+        "pageLien": 42
       }],
       "exercice": false
 
@@ -611,6 +611,25 @@
       }],
       "exercice": false
 
+    },{
+
+      "numeroPage": 42,
+      "titre": "",
+      "texte": "Kini se retrouve à l'entrée du parc.",
+      "boutons": [{
+        "texte": "Aller à gauche",
+        "pageLien": 40
+        },{
+        "texte": "Aller à droite",
+        "pageLien": 41
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 43,
+      "titre": "",
+      "texte": ""
     }
   ]
 }

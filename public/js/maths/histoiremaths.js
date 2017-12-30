@@ -124,7 +124,7 @@ loadJSON(function(json){
   }
 
   // Affichage de la première page
-  afficherDiv(11);
+  afficherDiv(0);
 
 });
 
