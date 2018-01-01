@@ -15,6 +15,7 @@ class Escape extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             $uuid = DB::select('select uuid from user_uuid where id_user = ?', [$user->id]);
+            $uuid = $uuid[0]->uuid;
         } else {
             $user = -1;
             $uuid = "user-not-logged-in";
@@ -35,16 +36,29 @@ class Escape extends Controller
             'id' => 'required',
             'uuid' => 'required',
             'id_exo' => 'required',
-            'lvl_exercice' => 'required',
-            'nb_etapes' => 'required'
+            'time_spent' => 'required'
         ]);*/
-        $score = 151; //TODO : Score calculation
+        /*
+            Score calculation : Time based scoring system -> the less time you spend, better the score is
+            Less points given on harder exercises (id)
+            Multiplier for number of levers (1 + nb_levers * 0.2)
+        */
+        $scoreModifier = (($request->route('time') * 100) / 300);
+        $scoreInterm = 100 - $scoreModifier;
+        if ($request->route('lvl_difficulty') == 0) {$d = 1;} else {$d = 1 + ($request->route('lvl_difficulty')*0.2);}
+        $score = ($scoreInterm - $request->route('id_exo')) * $d;
+        $score = round($score);
+        if ($score < 0) { $score = 0;}
+        /*
+            End of scoring system part
+        */
         $uuid = $request->route('uuid');
         if ($uuid == "user-not-logged-in") {
             //Utilisateur non connecté, pas de sauvegarde ni de calculs
             return response()->json([
                 'msg_status' => 'warning',
-                'status' => 'Niveau terminé - Votre score ne sera pas enregistré.',
+                'status' => 'Niveau terminé - Ton score ne sera pas enregistré.',
+                'infoplus' => 'Tu peux créer un compte pour enregistrer tes prochains scores, et accéder à toutes les fonctionnalités.',
                 'score' => $score,
             ]);
         } else {
@@ -60,20 +74,22 @@ class Escape extends Controller
                     $old_score = DB::select('select score from user_info where id_user = ? and id_exercise = ?', [$uid, $request->route('id_exo')]);
                     if ($score > $old_score[0]->score) {
                         //On a fait mieux, on met à jour + éventuellement badge better than before
-                        DB::table('user_info')->where('id_user', $uid)->where('id_exercise', $request->route('lvl_exercice'))->update(['score' => $score]);
+                        DB::table('user_info')->where('id_user', $uid)->where('id_exercise', $request->route('id_exo'))->update(['score' => $score]);
                         $b = Badges::unlock("improve_score_info", 1, $uid);
                         return response()->json([
                             'msg_status' => 'success',
-                            'status' => 'Niveau terminé - Vous avez amélioré votre précédent record !',
+                            'status' => 'Niveau terminé - Tu as amélioré ton précédent record !',
+                            'infoplus' => 'Ton score est passé de '.$old_score[0]->score.' à '.$score.' . Tu peux continuer au niveau suivant !',
                             'score' => $score,
                             'badge' => $b->original
                         ]);
                     } else {
                         //Meh, on ne fait rien et on se contente de dire que le jeu est fini sans sauvegarde
-                        $str = 'Niveau terminé - Vous n\'avez pas battu votre record de '.$old_score[0]->score;
+                        $str = 'Niveau terminé - Tu n\'as pas battu ton record';
                         return response()->json([
                             'msg_status' => 'info',
                             'status' => $str,
+                            'infoplus' => 'Tu as fait un score de '.$score.', ton précédent score étant de '.$old_score[0]->score.'.Tu peux réessayer une nouvelle fois, ou bien passer à la suite.',
                             'score' => $score
                         ]);
                     }
@@ -82,17 +98,18 @@ class Escape extends Controller
                     DB::table('user_info')->insert([
                         'id_user' => $uid,
                         'id_exercise' => $request->route('id_exo'),
-                        'lvl_exercise' => $request->route('lvl_exercice'),
+                        'lvl_exercise' => 0,
                         'score' => $score,
                         'created_at' => NOW(),
                         'updated_at' => NOW()
                     ]);
                     //On débloque le badge et on attend le résultat
-                    $b = Badges::unlock("end_info_0", 1, $uid);
+                    $b = Badges::unlock("end_info_".$request->route('id_exo'), 1, $uid);
                     //On génère le retour (JSON)
                     return response()->json([
                         'msg_status' => 'success',
                         'status' => 'Niveau terminé - Nouveau record !',
+                        'infoplus' => 'Tu as terminé le niveau avec un score de '.$score.'. Bravo ! Tu peux passer à la suite.',
                         'score' => $score,
                         'badge' => $b->original
                     ]);
@@ -101,7 +118,8 @@ class Escape extends Controller
                 //User inexistant (?!)
                 response()->json([
                     'msg_status' => 'error',
-                    'status' => 'Erreur, votre identifiant n\'est rattaché à aucun compte.',
+                    'status' => 'Erreur, ton identifiant n\'est rattaché à aucun compte.',
+                    'infoplus' => 'Nous t\'invitons à contacter un administrateur depuis ton profil',
                     'score' => 0
                 ]);
             }

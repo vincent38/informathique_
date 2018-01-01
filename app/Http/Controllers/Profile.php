@@ -19,7 +19,8 @@ class Profile extends Controller
         foreach($user_badges as $ub){
             $badges[$ub->id_badge] = DB::select('select * from storage_badges where id = ?', [$ub->id_badge]);
         }
-        return view('profil', compact('user','user_lvl','user_badges', 'badges', 'uuid'));
+        $user_info = DB::select('select * from user_info where id_user = ?', [$user->id]);
+        return view('profil', compact('user','user_lvl','user_badges', 'badges', 'uuid', 'user_info'));
     }
 
     function indexMsg($message){

@@ -10,6 +10,12 @@ var lvl = document.getElementById('lvl').value;
 var jsonData = loadMap(lvl);
 var delay = jsonData.delay || 300;
 
+/*
+Scoring system - variables for timers
+*/
+var tStart, tEnd, tTotal;
+tStart = new Date().getTime() / 1000;
+console.log(tStart); 
 
 function startGame() {
     scene.start();
@@ -53,11 +59,18 @@ function testerGagne(heros) {
     if (!perdu) {
         if (tabNiveau.tab[heros.tabX][heros.tabY] == -1) {
             gagne = true;
+            tEnd = new Date().getTime() / 1000;
+            console.log(tStart);
+            console.log(tEnd);
+            tTotal = Math.round(tEnd - tStart);
             /*
             On ajoute ici le message gagné - perdu et si le score est sauvegardé ou non
             */
+            var uuid = document.getElementById("u").value;
+            console.log(uuid);
+            var id = document.getElementById("lvl").value;
             var xhr = getXMLHttpRequest2();
-            xhr.open('GET','http://localhost:8081/projet/informathique_/public/escape/finish/b04965e6-a9bb-591f-8f8a-1adcb2c8dc39/0/1/10', false);
+            xhr.open('GET','http://localhost:8081/projet/informathique_/public/escape/finish/'+uuid+'/'+id+'/'+tTotal+'/'+leviers.length, false);
             xhr.send();
             if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
                 throw new Error("impossible de charger le lien : " + xhr.status);
@@ -65,10 +78,46 @@ function testerGagne(heros) {
             var r = JSON.parse(xhr.responseText);
             if (r.badge != undefined && r.badge['status'] === 'badge_unlocked') {
                 swal(r.badge["badge_name"], r.badge["badge_data"], 'info').then(() => {
-                    swal(r.status, "Vous pouvez maintenant passer au niveau suivant :)", r.msg_status);
+                    swal(r.status, r.infoplus, r.msg_status,{
+                        buttons: {
+                          retry: "Réessayer",
+                          next: "Passer à la suite",
+                        },
+                      }).then((value) => {
+                        switch (value){
+                            case "retry":
+                                window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+id);
+                                break;
+                            case "next":
+                                id = parseInt(id) + 1;
+                                window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                                break;
+                            default:
+                                id = parseInt(id) + 1;
+                                window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                        }
+                      });
                 });
             } else {
-                swal(r.status, "Vous pouvez maintenant passer au niveau suivant :)", r.msg_status);
+                swal(r.status, r.infoplus, r.msg_status,{
+                    buttons: {
+                        retry: "Réessayer",
+                        next: "Passer à la suite",
+                    },
+                }).then((value) => {
+                    switch (value){
+                        case "retry":
+                            window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+id);
+                            break;
+                        case "next":
+                            id = parseInt(id) + 1;
+                            window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                            break;
+                        default:
+                            id = parseInt(id) + 1;
+                            window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                    }
+                });
             }
             /*
             Fin partie envoi vers serveur et affichage
