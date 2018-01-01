@@ -70,7 +70,7 @@ function testerGagne(heros) {
             console.log(uuid);
             var id = document.getElementById("lvl").value;
             var xhr = getXMLHttpRequest2();
-            xhr.open('GET','http://localhost:8081/projet/informathique_/public/escape/finish/'+uuid+'/'+id+'/'+tTotal+'/'+leviers.length, false);
+            xhr.open('GET','./finish/'+uuid+'/'+id+'/'+tTotal+'/'+leviers.length, false);
             xhr.send();
             if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
                 throw new Error("impossible de charger le lien : " + xhr.status);
@@ -86,15 +86,15 @@ function testerGagne(heros) {
                       }).then((value) => {
                         switch (value){
                             case "retry":
-                                window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+id);
+                                window.location.replace("./"+id);
                                 break;
                             case "next":
                                 id = parseInt(id) + 1;
-                                window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                                window.location.replace("./"+(id));
                                 break;
                             default:
                                 id = parseInt(id) + 1;
-                                window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                                window.location.replace("./"+(id));
                         }
                       });
                 });
@@ -107,15 +107,15 @@ function testerGagne(heros) {
                 }).then((value) => {
                     switch (value){
                         case "retry":
-                            window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+id);
+                            window.location.replace("./"+id);
                             break;
                         case "next":
                             id = parseInt(id) + 1;
-                            window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                            window.location.replace("./"+(id));
                             break;
                         default:
                             id = parseInt(id) + 1;
-                            window.location.replace("http://localhost:8081/projet/informathique_/public/escape/"+(id));
+                            window.location.replace("./"+(id));
                     }
                 });
             }
