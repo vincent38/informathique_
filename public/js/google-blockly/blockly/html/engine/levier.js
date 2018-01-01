@@ -46,7 +46,7 @@ function actionLevier() {
             }
         }
         if (!trouve) {
-            alert('Pas de levier ici');
+            swal("Pas de levier ici", "Tu as activé un levier. Reste à trouver lequel, car tu n'es pas à côté d'un levier :/", "error");
             perdu = true;
         }
     }

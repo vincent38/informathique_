@@ -38,11 +38,12 @@ class Escape extends Controller
             'lvl_exercice' => 'required',
             'nb_etapes' => 'required'
         ]);*/
-        $score = 148; //TODO : Score calculation
+        $score = 151; //TODO : Score calculation
         $uuid = $request->route('uuid');
         if ($uuid == "user-not-logged-in") {
             //Utilisateur non connecté, pas de sauvegarde ni de calculs
             return response()->json([
+                'msg_status' => 'warning',
                 'status' => 'Niveau terminé - Votre score ne sera pas enregistré.',
                 'score' => $score,
             ]);
@@ -62,6 +63,7 @@ class Escape extends Controller
                         DB::table('user_info')->where('id_user', $uid)->where('id_exercise', $request->route('lvl_exercice'))->update(['score' => $score]);
                         $b = Badges::unlock("improve_score_info", 1, $uid);
                         return response()->json([
+                            'msg_status' => 'success',
                             'status' => 'Niveau terminé - Vous avez amélioré votre précédent record !',
                             'score' => $score,
                             'badge' => $b->original
@@ -70,6 +72,7 @@ class Escape extends Controller
                         //Meh, on ne fait rien et on se contente de dire que le jeu est fini sans sauvegarde
                         $str = 'Niveau terminé - Vous n\'avez pas battu votre record de '.$old_score[0]->score;
                         return response()->json([
+                            'msg_status' => 'info',
                             'status' => $str,
                             'score' => $score
                         ]);
@@ -85,18 +88,21 @@ class Escape extends Controller
                         'updated_at' => NOW()
                     ]);
                     //On débloque le badge et on attend le résultat
-                    $b = Badges::unlock("exo_".$request->route('id_exo'), 1, $uid);
+                    $b = Badges::unlock("end_info_0", 1, $uid);
                     //On génère le retour (JSON)
                     return response()->json([
+                        'msg_status' => 'success',
                         'status' => 'Niveau terminé - Nouveau record !',
                         'score' => $score,
-                        'badge' => $b
+                        'badge' => $b->original
                     ]);
                 }
             } else {
                 //User inexistant (?!)
                 response()->json([
+                    'msg_status' => 'error',
                     'status' => 'Erreur, votre identifiant n\'est rattaché à aucun compte.',
+                    'score' => 0
                 ]);
             }
         }

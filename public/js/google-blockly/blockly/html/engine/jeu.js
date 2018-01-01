@@ -29,11 +29,50 @@ function startGame() {
     timeout = 0;
 }
 
+function getXMLHttpRequest2() {
+    var xhr = null;
+    if (window.XMLHttpRequest || window.ActiveXObject) {
+        if (window.ActiveXObject) {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        } else {
+            xhr = new XMLHttpRequest();
+        }
+    } else {
+        swal("Erreur technique", "Erreur : Ton navigateur ne supporte pas l'objet XMLHTTPRequest...", "error");
+        return null;
+    }
+
+    return xhr;
+}
+
 function testerGagne(heros) {
     if (!perdu) {
         if (tabNiveau.tab[heros.tabX][heros.tabY] == -1) {
             gagne = true;
-            alert("Vous vous etes échappé !");
+            /*
+            On ajoute ici le message gagné - perdu et si le score est sauvegardé ou non
+            */
+            var xhr = getXMLHttpRequest2();
+            xhr.open('GET','http://localhost:8081/projet/informathique_/public/escape/finish/b04965e6-a9bb-591f-8f8a-1adcb2c8dc39/0/1/10', false);
+            xhr.send();
+            if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
+                throw new Error("impossible de charger le lien : " + xhr.status);
+            }
+            var r = JSON.parse(xhr.responseText);
+            if (r.badge != undefined && r.badge['status'] === 'badge_unlocked') {
+                swal(r.badge["badge_name"], r.badge["badge_data"], 'info').then(() => {
+                    swal(r.status, "Vous pouvez maintenant passer au niveau suivant :)", r.msg_status);
+                });
+            } else {
+                swal(r.status, "Vous pouvez maintenant passer au niveau suivant :)", r.msg_status);
+            }
+            /*
+            Fin partie envoi vers serveur et affichage
+            */
             var div = document.getElementById("nextLvl");
 
             while (div.firstChild) {
@@ -46,10 +85,10 @@ function testerGagne(heros) {
             btn.setAttribute("value", "prochain niveau");
             div.appendChild(btn);
         } else if (tabNiveau.tab[heros.tabX][heros.tabY] == -2) {
-            alert("Porte fermée");
+            swal("Porte fermée", "Impossible de s'echapper, la porte est fermée... As-tu rempli tous les objectifs ?", "error");
             perdu = true
         } else {
-            alert("Pas de porte ici");
+            swal("Pas de porte ici", "Impossible de s'echapper, il n'y a pas de porte à cet endroit...", "error");
             perdu = true;
         }
     }
