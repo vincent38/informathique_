@@ -58,7 +58,7 @@ class Escape extends Controller
             return response()->json([
                 'msg_status' => 'warning',
                 'status' => 'Niveau terminé - Ton score ne sera pas enregistré.',
-                'infoplus' => 'Tu peux créer un compte pour enregistrer tes prochains scores, et accéder à toutes les fonctionnalités.',
+                'infoplus' => 'Tu as fait un score de '.$score.', mais celui-ci ne sera pas enregistré, car tu n\'es pas connecté. Tu peux créer un compte pour enregistrer tes prochains scores, et accéder à toutes les fonctionnalités.',
                 'score' => $score,
             ]);
         } else {

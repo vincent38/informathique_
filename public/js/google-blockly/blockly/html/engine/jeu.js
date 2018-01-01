@@ -114,7 +114,8 @@ function testerGagne(heros) {
                             window.location.replace("./"+(id));
                             break;
                         default:
-                            id = parseInt(id) + 1;
+                            //id = parseInt(id) + 1;
+                            //If click out of the dialog then retry
                             window.location.replace("./"+(id));
                     }
                 });
