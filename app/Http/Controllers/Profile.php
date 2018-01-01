@@ -14,7 +14,7 @@ class Profile extends Controller
         $user = Auth::user();
         $uuid = DB::select('select uuid from user_uuid where id_user = ?', [$user->id]);
         $user_lvl = DB::select('select * from user_lvl where id_user = ?', [$user->id]);
-        $user_badges = DB::select('select * from user_badges where id_user = ?', [$user->id]);
+        $user_badges = DB::select('select * from user_badges where id_user = ? order by created_at', [$user->id]);
         $badges = [];
         foreach($user_badges as $ub){
             $badges[$ub->id_badge] = DB::select('select * from storage_badges where id = ?', [$ub->id_badge]);
