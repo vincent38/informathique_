@@ -6,6 +6,7 @@
 
 //alert(tabNiveau);
 
+
 var lvl = document.getElementById('lvl').value;
 var jsonData = loadMap(lvl);
 var delay = jsonData.delay || 300;
