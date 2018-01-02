@@ -52,3 +52,9 @@ Blockly.JavaScript['m_levier'] = function(block) {
     var code = 'timeout += delay;\nsetTimeout(\'actionLevier()\', timeout);\nsetTimeout(\'updateGameArea()\', timeout + 10);\n';
     return code;
 };
+
+Blockly.JavaScript['m_ramasser'] = function(block) {
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'timeout += delay;\nsetTimeout(\'ramasser()\', timeout);\nsetTimeout(\'updateGameArea()\', timeout + 10);\n';
+    return code;
+};

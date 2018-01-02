@@ -4,6 +4,8 @@ class Porte {
         this.yTab = jsonPorte.yTab;
         this.x = jsonPorte.x;
         this.y = jsonPorte.y;
+        this.tailleX = jsonPorte.tailleX;
+        this.tailleY = jsonPorte.tailleY;
         this.img = new Image();
         this.img.src = '../js/google-blockly/blockly/html/resources/images/'+jsonPorte.imgFermee;
         this.imgOuverte = '../js/google-blockly/blockly/html/resources/images/'+jsonPorte.imgOuverte;
@@ -13,12 +15,12 @@ class Porte {
     affiche() {
         var sup = this;
         this.img.onload = function () {
-            scene.context.drawImage(this, sup.x, sup.y, 150, 150);
+            scene.context.drawImage(this, sup.x, sup.y, this.tailleX,this.tailleY);
         }
     }
 
     repaint() {
-        scene.context.drawImage(this.img, this.x, this.y, 150, 150);
+        scene.context.drawImage(this.img, this.x, this.y, this.tailleX,this.tailleY);
     }
 
     ouvre() {
