@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62332cfd-ac51-4118-bf6f-f157140d6345" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/globalVars.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/globalVars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/jeu.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/jeu.js" />
-    </list>
+    <list default="true" id="62332cfd-ac51-4118-bf6f-f157140d6345" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +24,8 @@
       <file leaf-file-name="include.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="204">
+              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -280,12 +275,12 @@
       <workItem from="1513946163955" duration="6666000" />
       <workItem from="1513953440892" duration="459000" />
       <workItem from="1514824107164" duration="263000" />
-      <workItem from="1514885780426" duration="2598000" />
+      <workItem from="1514885780426" duration="2822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49938000" />
+    <option name="totallyTimeSpent" value="50162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
