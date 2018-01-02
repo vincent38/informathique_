@@ -37,7 +37,7 @@
     </div> <!-- col -->
     <div class="col-md-6">
       <h3>Kini dans la ville de Géométra</h3>
-      <a href="/mathematiques-theme-4" class="btn btn-success btn-lg  btn-block">Commencer l'aventure</a>
+      <a href="{{ route("maths-th4") }}" class="btn btn-success btn-lg  btn-block">Commencer l'aventure</a>
       <p>Description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div> <!-- col -->
   </div> <!-- row -->

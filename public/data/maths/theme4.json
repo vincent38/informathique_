@@ -1,0 +1,635 @@
+{
+  "textes": [{
+      "numeroPage": 0,
+      "titre": "Bienvenue",
+      "texte": "Clique sur le bouton ci-dessous pour commencer à jouer.",
+      "boutons": [{
+        "texte": "Commencer",
+        "pageLien": 1
+        }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 1,
+      "titre": "Kini tombe dans un profond sommeil",
+      "texte": "Après une longue journée de révisions, Kini s'endort paisiblement dans son lit.<br>Dans son rêve, il se retrouve dans une ville splendide où tous les bâtiments ont une forme géométrique différente. Sur ce qui semble être un panneau routier, il parvient à lire « Bienvenue à Géométra ».<br>Un habitant de Géométra, intrigué par les vêtements de Kini, s'approche et lui demande : « Bonjour jeune homme, vous semblez perdu. Auriez-vous besoin d'aide ? »",
+      "boutons": [{
+        "texte": "Je... Euh... Effectivement, je suis complètement perdu.",
+        "pageLien": 2
+      },{
+        "texte": "Non merci, je peux me débrouiller tout seul.",
+        "pageLien": 3
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 2,
+      "titre": "",
+      "texte": "L'inconnu s'approche de plus près. « Enchanté, je m'appelle Pierre. Je suis enseignant dans le collège de Géométra. »",
+      "boutons": [{
+        "texte": "Enchanté ! Mais où suis-je ?",
+        "pageLien": 4
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 3,
+      "titre": "",
+      "texte": "Kini commence à marcher dans un immense boulevard où une multitude de boutiques sublimes se suivent.<br>Du coin de l'œil, Kini repère un restaurant de pita nommé « Gora ». Le chef du restaurant, entendant le ventre de Kini rugir, l'accueille alors chaleureusement : « Tu as faim petit ? Tu es au bon endroit ! »",
+      "boutons": [{
+        "texte": "Oui, je meurs de faim !",
+        "pageLien": 5
+      },{
+        "texte": "Désolé, mais je ne sais pas comment payer pour manger...",
+        "pageLien": 6
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 4,
+      "titre": "",
+      "texte": "Tu as remarqué que tous les bâtiments ont tous une forme géométrique ? Cette ville a été fondée en suivant beaucoup de principes mathématiques et géométriques ! Ici, la monnaie, c'est des exercices de maths. La difficulté des exercices augmente en fonction du service rendu en échange.<br>Voilà, tu sais tout ce qu'il faut savoir sur cette ville !",
+      "boutons": [{
+        "texte": "Merci beaucoup !",
+        "pageLien": 3
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 5,
+      "titre": "",
+      "texte": "Après que Kini ait bien mangé, le chef lui dit : « Ça te fera 3 exercices !",
+      "boutons": [{
+        "texte": "Quoi ? Des exercices ? Mais comment ça ?",
+        "pageLien": 6
+      },{
+        "texte": "D'accord, c'est parti !",
+        "pageLien": 8
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 6,
+      "titre": "",
+      "texte": "Ah, tu es nouveau ici ? À Géométra, la monnaie se présente sous forme d'exercices de mathématiques : la difficulté augmente en fonction du service rendu en échange.",
+      "boutons": [{
+        "texte": "D'accord, c'est parti !",
+        "pageLien": 8
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 7,
+      "titre": "",
+      "texte": "Après cette rencontre instructive, Kini se sent plus à l'aise pour aller explorer la ville. Il décide de demander à un des habitants les lieux incontournables de Géométra.<br>« La tour Hypothénuse ou le Parc de la Tête Carrée, ce sont deux lieux absolument époustouflants ! »",
+      "boutons": [{
+        "texte": "Aller vers la tour",
+        "pageLien": 10
+      },{
+        "texte": "Aller vers le parc",
+        "pageLien": 11
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 8,
+      "titre": "",
+      "texte": "EXERCICE",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 9
+
+    },{
+
+      "numeroPage": 9,
+      "titre": "",
+      "texte": "Après être sorti du restaurant, Kini remarque sur sa droite une gigantesque tour, dont il ne pouvait même pas distinguer le sommet. Au moment de continuer son chemin, son œil est attiré par un parc avec des animaux étranges.",
+      "boutons": [{
+        "texte": "Aller vers la tour",
+        "pageLien": 10
+      },{
+        "texte": "Aller vers le parc",
+        "pageLien": 11
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 10,
+      "titre": "Kini se dirige vers la tour",
+      "texte": "Plus Kini se rapproche de la tour, et plus son immensité l'émerveille. Cette tour transperce les nuages et semble ne pas avoir de fin.<br>Mais ce qui impressionne le plus Kini, c'est que la tour est penchée, comme l'hypothénuse d'un triangle rectangle. Kini en dédit qu'elle est basée sur les théorèmes du mathématicien Pythagore.<br>Kini arrive au pied de la tour.",
+      "boutons": [{
+        "texte": "Entrer dans la tour Hypothénuse",
+        "pageLien": 12
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 11,
+      "titre": "Kini se dirige vers le parc",
+      "texte": "Kini se dirige vers le parc. À l'entrée, il voit un panneau « Bienvenue au parc Haltes ». Puis, il entend au loin une douce mélodie. « Je dois trouver l'origine de cette musique », dit-il.",
+      "boutons": [{
+        "texte": "Aller à gauche",
+        "pageLien": 40
+        },{
+        "texte": "Aller à droite",
+        "pageLien": 41
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 12,
+      "titre": "",
+      "texte": "Kini se retrouve entouré de lustres somptueux, chacun étant un triangle. Un escalier en colimaçon se trouve au centre.<br>Kini entend une voix venant de sa gauche : « Bonjour et bienvenue à la Tour Hypothénuse. Nous vous proposons deux forfaits pour gravir la tour. Le premier est sous la forme d'un challenge : vous monterez les escaliers et répondrez à des questions tous les 20 étages. Le second est une visite guidée en ascenceur, ce forfait est au prix de 5 questions. »",
+      "boutons": [{
+        "texte": "J'aime les challenges !",
+        "pageLien": 13
+      },{
+        "texte": "Je vais monter en ascenceur s'il vous plait.",
+        "pageLien": 14
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 13,
+      "titre": "",
+      "texte": "« Très bien. Vous devrez gravir les 100 étages de la tour pour arriver au sommet. Bonne chance ! »<br>Kini s'élance, gravit les marches trois par trois et arrive au vingtième étage en un rien de temps.<br>« Bonjour Monsieur » dit un employé de la tour en voyant Kini arriver. « Vous êtes prêt pour la première question ? »",
+      "boutons": [{
+        "texte": "Plus que prêt !",
+        "pageLien": 15
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 14,
+      "titre": "",
+      "texte": "« Très bien. Vous allez donc effectuer 5 exercices. »",
+      "boutons":[{
+        "texte": "Je suis prêt !",
+        "pageLien": 16
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 15,
+      "titre": "",
+      "texte": "EXERCICE ESCALIER 1",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 17
+
+    }, {
+
+      "numeroPage": 16,
+      "titre": "",
+      "texte": "EXERCICE ASCENCEUR 1",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 18
+
+    },{
+
+      "numeroPage": 17,
+      "titre": "",
+      "texte": "« Bravo, mais ce n'est que le début ! »",
+      "boutons": [{
+        "texte": "Ça ne me fait pas peur !",
+        "pageLien": 19
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 18,
+      "titre": "",
+      "texte": "« Bravo. Passons à l'exercice suivant. »",
+      "boutons": [{
+        "texte": "Allons-y !",
+        "pageLien": 20
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 19,
+      "titre": "",
+      "texte": "Kini reprend son souffle et repart en courant. En arrivant au quarantième étage, un deuxième employé lui dit : « Bonjour jeune homme, préparez-vous pour un deuxième exercice ! »",
+      "boutons": [{
+        "texte": "Allons-y !",
+        "pageLien": 21
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 20,
+      "titre": "",
+      "texte": "EXERCICE ASCENCEUR 2",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 22
+
+    },{
+
+      "numeroPage": 21,
+      "titre": "",
+      "texte": "EXERCICE ESCALIER 2",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 23
+
+    },{
+
+      "numeroPage": 22,
+      "titre": "",
+      "texte": "« Bien, passons au troisième exercice. »",
+      "boutons": [{
+        "texte": "OK !",
+        "pageLien": 24
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 23,
+      "titre": "",
+      "texte": "« Bien jeune homme, vous pouvez continuer » dit l'employé.<br>Kini s'empresse de monter les vingt étages suivants.",
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 25
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 24,
+      "titre": "",
+      "texte": "EXERCICE ASCENCEUR 3",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 26
+
+    },{
+
+      "numeroPage": 25,
+      "titre": "",
+      "texte": "Kini arrive au soixantième étage. Un troisième employé se dresse devant lui.<br>« Halte là ! Vous êtes bien courageux d'être arrivé jusqu'ici. Voyons voir si vous méritez d'aller plus haut... »",
+      "boutons": [{
+        "texte": "Je vais y arriver !",
+        "pageLien": 27
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 26,
+      "titre": "",
+      "texte": "« Bien, plus que deux exercices. »",
+      "boutons": [{
+        "texte": "Je suis prêt !",
+        "pageLien": 28
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 27,
+      "titre": "",
+      "texte": "EXERCICE ESCALIER 3",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 29
+
+    },{
+
+      "numeroPage": 28,
+      "titre": "",
+      "texte": "EXERCICE ASCENCEUR 4",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 30
+
+    },{
+
+      "numeroPage": 29,
+      "titre": "",
+      "texte": "« Bien, vous pouvez continuer. »<br>Kini continue péniblement de monter les marches.",
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 31
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 30,
+      "titre": "",
+      "texte": "« Vous y êtes presque. Plus qu'un exercice. »",
+      "boutons": [{
+        "texte": "Finissons-en !",
+        "pageLien": 32
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 31,
+      "titre": "",
+      "texte": "Kini, tout essoufflé, arrive au quatre-vingtième étage devant un autre employé.<br>« Bonjour jeune homme, prêt pour le quatrième exercice ? »",
+      "boutons": [{
+        "texte": "Prêt !",
+        "pageLien": 33
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 32,
+      "titre": "",
+      "texte": "EXERCICE ASCENCEUR 5",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 34
+
+    },{
+
+      "numeroPage": 33,
+      "titre": "",
+      "texte": "EXERCICE ESCALIER 4",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 35
+
+    },{
+
+      "numeroPage": 34,
+      "titre": "",
+      "texte": "« Bien, vous avez résolu les cinq exercices. Vous pouvez emprunter l'ascenceur. »<br>Kini emprunte l'ascenceur.",
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 39
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 35,
+      "titre": "",
+      "texte": "« Bonne réponse, vous pouvez continuer. »",
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 36
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 36,
+      "titre": "",
+      "texte": "Kini, épuisé, monte les vingt derniers étages. En arrivant au centième étage, il aperçoit un homme immense devant la porte de sortie.<br>« Bonjour jeune homme. Vous êtes arrivé jusque-là, mais vous avez sûrement eu beaucoup de chance... Voyons si vous méritez d'accéder au sommet de la tour Hypothénuse. »",
+      "boutons": [{
+        "texte": "Qu'on en finisse !",
+        "pageLien": 37
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 37,
+      "titre": "",
+      "texte": "EXERCICE ESCALIER 5",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 38
+
+    },{
+
+      "numeroPage": 38,
+      "titre": "",
+      "texte": "« Félicitations jeune homme, vous avez résolu tous les challenges. Vous pouvez accéder au sommet de la tour. »",
+      "boutons": [{
+        "texte": "Visiter le sommet de la tour",
+        "pageLien": 39
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 39,
+      "titre": "",
+      "texte": "Une fois sur le toit de la tour, Kini est époustouflé par la vue : la ville s'étend à perte de vue, et certains bâtiments ont des formes très étranges. Une des constructions est même une sphère qui semble tenir en l'air comme par magie.<br>Après cette longue journée d'aventures, Kini se réveille, la tête remplie de souvenirs.",
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 9999
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 40,
+      "titre": "",
+      "texte": "Le son de la musique est de plus en plus faible.",
+      "boutons": [{
+        "texte": "Continuer tout droit",
+        "pageLien": 0
+      },{
+        "texte": "Aller à droite",
+        "pageLien": 41
+      },{
+        "texte": "Faire demi-tour",
+        "pageLien": 42
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 41,
+      "titre": "",
+      "texte": "Le son de la musique s'intensifie.",
+      "boutons": [{
+        "texte": "Continuer tout droit",
+        "pageLien": 0
+      },{
+        "texte": "Aller à gauche",
+        "pageLien": 0
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 42,
+      "titre": "",
+      "texte": "Kini se retrouve à l'entrée du parc.",
+      "boutons": [{
+        "texte": "Aller à gauche",
+        "pageLien": 40
+        },{
+        "texte": "Aller à droite",
+        "pageLien": 41
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 43,
+      "titre": "",
+      "texte": ""
+    }
+  ]
+}

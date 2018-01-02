@@ -63,7 +63,7 @@
 
   <!--query string pour js-->
   <input type="hidden" id="lvl" value="{{ $myId }}"/>
-  </body>
+  <input type="hidden" id="u" value="{{ $uuid }}"/>
   <script>
     var workspace = Blockly.inject('blocklyDiv',
     {toolbox: document.getElementById('toolbox')});

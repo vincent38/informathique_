@@ -28,7 +28,7 @@ class Heros {
         } else if (perdu) {
         }
         else {
-            alert("Impossible de monter");
+            swal("Impossible de monter", "Ton héros monte... Et se prend un obstacle. On a fait mieux niveau discrétion.", "error");
             perdu = true;
 
         }
@@ -46,7 +46,7 @@ class Heros {
         } else if (perdu) {
         }
         else {
-            alert("Impossible de descendre");
+            swal("Impossible de descendre", "Ton héros descend... Et se prend un obstacle. On a fait mieux niveau discrétion.", "error");
             perdu = true;
         }
     }
@@ -62,7 +62,7 @@ class Heros {
         } else if (perdu) {
         }
         else {
-            alert("Impossible d'aller à gauche");
+            swal("Impossible d'aller à gauche", "Ton héros va a gauche... Et se prend un obstacle. On a fait mieux niveau discrétion.", "error");
             perdu = true;
         }
     }
@@ -78,7 +78,7 @@ class Heros {
         } else if (perdu) {
         }
         else {
-            alert("Impossible d'aller à droite");
+            swal("Impossible d'aller à droite", "Ton héros va a droite... Et se prend un obstacle. On a fait mieux niveau discrétion.", "error");
             perdu = true;
         }
     }

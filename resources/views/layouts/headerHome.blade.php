@@ -5,16 +5,17 @@
     <title>{{ config('app.name', '') }} - Page d'accueil</title>
     <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
     <link rel="stylesheet" href="{{ asset("css/master.css") }}">
-    @if (Route::current()->getName() == 'maths-th1')
+    @if (preg_match('/maths-th\d/' , Route::current()->getName()))
       <link rel="stylesheet" href="{{ asset("css/mathematiques.css") }}">
     @endif
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
     <!-- Bannière pas affichée si histoire interactive -->
-    @if (Route::current()->getName() != 'maths-th1')
+    @if (! preg_match('/maths-th\d/' , Route::current()->getName()))
       <div class="banniere">
         <a href="{{ route("home") }}">
           <img class="banniere" src="{{ asset("img/Banniere.jpg") }}" alt="banniere">
@@ -23,11 +24,11 @@
     @endif
     <header>
       <div id="mainHeader">
-        @if (Route::current()->getName() == 'maths-th1')
+        @if (preg_match('/maths-th\d/' , Route::current()->getName()))
           <a href="{{ route("mathematiques") }}">Retour au menu Mathématiques</a>
         @endif
         <!-- Boutons Connexion / Inscription / Profil / Déconnexion pas affichés si histoire interactive -->
-        @if (Route::current()->getName() != 'maths-th1')
+        @if (! preg_match('/maths-th\d/' , Route::current()->getName()))
           <div class=" pull-right header-profil">
             @if (Route::has('login'))
               @auth

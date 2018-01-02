@@ -2,7 +2,7 @@ function clone(obj) {
     try {
         var copy = JSON.parse(JSON.stringify(obj));
     } catch (ex) {
-        alert("Votre navigateur n'est pas compatible à ce site");
+        swal("Erreur technique", "Erreur : Ton navigateur est incompatible avec le jeu. Pense à le mettre à jour, ou migre vers un navigateur moderne !", "error");
     }
     return copy;
 }

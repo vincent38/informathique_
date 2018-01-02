@@ -37,14 +37,19 @@
         <div class="col-lg-12">
           <h3>Ton niveau</h3>
           <p>Niveau : {{ $user_lvl[0]->lvl }} - Expérience : {{ $user_lvl[0]->exp }} / {{ $user_lvl[0]->lvl*100 }}</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ ($user_lvl[0]->exp*100)/($user_lvl[0]->lvl*100)  }}%" aria-valuenow="{{ $user_lvl[0]->exp }}" aria-valuemin="0" aria-valuemax="{{ $user_lvl[0]->lvl*100 }}"></div>
+          </div>
         </div> <!-- col -->
       </div> <!-- row -->
       <div class="row">
         <div class="col-lg-12">
           <h3>Tes badges</h3>
           @foreach($user_badges as $ub)
-            <p>Badge {{ $badges[$ub->id_badge][0]->name }} obtenu le {{ $ub->created_at }}</p>
+            <img style="width: 10%" src="./img/badges/{{ $badges[$ub->id_badge][0]->action }}.png" onerror="this.src='./img/badges/default.png'"" alt="{{ $badges[$ub->id_badge][0]->name }}" title="Badge {{ $badges[$ub->id_badge][0]->name }} obtenu le {{ date('d/m/Y',  strtotime($ub->created_at)) }} - {{ $badges[$ub->id_badge][0]->data }}">
           @endforeach
+          <br>
+          <br>
           <p>Obtiens tous les badges en complétant les exercices de mathématiques et en terminant les niveaux d'Escape-Colle !</p>
         </div> <!-- col -->
       </div> <!-- row -->
@@ -110,89 +115,17 @@
 
         <div class="col-md-6">
           <h3>Niveaux terminés (Escape-Colle)</h3>
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Didacticiel</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <h4>Niveaux faciles</h4>
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 1</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 2</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 3</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-warning">Non terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <h4>Niveaux moyens</h4>
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 4</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 5</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-warning">Non terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 6</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-default">Non débuté</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <h4>Niveaux difficiles</h4>
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 7</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-warning">Non terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 8</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Non débuté</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Niveau 9</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-default">Non débuté</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
+            @if ($user_info == null)
+              <p>Pas d'exercice terminé à afficher pour le moment...</p>
+            @else
+              @foreach($user_info as $ui)
+                @if ($ui->id_exercise == 0)
+                  <p>Didacticiel terminé le {{ date('d/m/Y',  strtotime($ui->created_at)) }} avec un score de {{ $ui->score }}</p>
+                @else
+                  <p>Exercice {{ $ui->id_exercise }} terminé le {{ date('d/m/Y',  strtotime($ui->created_at)) }} avec un score de {{ $ui->score }}</p>
+                @endif
+              @endforeach
+            @endif
         </div> <!-- col -->
       </div> <!-- row -->
     </div> <!-- container -->
