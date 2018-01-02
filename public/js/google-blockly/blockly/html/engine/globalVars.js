@@ -5,3 +5,4 @@ var gagne = false;
 var perdu;
 var leviers;
 var porte;
+

@@ -144,5 +144,6 @@ function testerGagne(heros) {
     }
 }
 
+
 startGame();
 setTimeout('startGame()', 1000);
