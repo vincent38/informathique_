@@ -13,6 +13,7 @@ includeJs("niveau.js");
 includeJs("fond.js");
 includeJs("dessins.js");
 includeJs("heros.js");
+includeJs("personnage.js");
 includeJs("levier.js");
 includeJs("porte.js");
 

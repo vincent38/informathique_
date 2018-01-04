@@ -4,7 +4,7 @@
     [0,0,0],
     [-1,0,0],
     [0,0,0],
-    [0,1,0],
+    [0,0,0],
     [0,0,0],
     [0,0,0],
     [0,0,1],
@@ -24,7 +24,7 @@
   "yMax" : 14,
   "tailleFondX" : 300,
   "tailleFondY" : 691,
-  "tailleDeplacement" : 41,
+  "tailleDeplacement" : 41.3,
   "porte" : {
     "xTab" : 12,
     "yTab" : 1,
@@ -34,5 +34,33 @@
     "tailleY" : 150,
     "imgFermee" : "porte-ouverte-gauche.png",
     "imgOuverte" : "porte-ouverte-droite.png"
-  }
+  },
+  "personnages" : [
+    {
+      "xTab" : 1,
+      "yTab" : 4,
+      "x" : 120,
+      "y" : 225,
+      "tailleX" : 65,
+      "tailleY" : 65,
+      "image" : "fille-attente-face.png"
+    }
+  ],
+  "dataReal" : [
+    [0,0,0],
+    [0,0,0],
+    [-1,0,0],
+    [0,0,0],
+    [0,1,0],
+    [0,0,0],
+    [0,0,0],
+    [0,0,1],
+    [0,0,1],
+    [0,0,0],
+    [0,0,0],
+    [1,0,0],
+    [0,0,0],
+    [0,0,0],
+    [0,0,1]
+  ]
 }
