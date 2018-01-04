@@ -20,7 +20,7 @@ class Heros {
             scene.context.drawImage(this, sup.x, sup.y, sup.width, sup.height);
         }
     }
-
+    //TODO : spécifier le type d'obstacle que le héros se prend
     monter() {
         if (this.testerMonter() && !perdu) {
             this.y -= this.tailleDeplacement;
@@ -36,7 +36,10 @@ class Heros {
     }
 
     testerMonter() {
-        return (this.tabY > 0 && tabNiveau.tab[this.tabX][this.tabY - 1] != 1);
+        var ok = 1;
+        if(!(this.tabY > 0 && tabNiveau.tab[this.tabX][this.tabY - 1] != 1)) ok = 0;
+        //if(!testerObstacles(this.tabX - 1, this.tabY))
+        return ok;
     }
 
     descendre() {

@@ -5,7 +5,6 @@
 });*/
 
 //alert(tabNiveau);
-alert('HELLEA');
 
 
 var lvl = document.getElementById('lvl').value;
@@ -28,6 +27,7 @@ function startGame() {
     var fond = new Fond();
     dessins.push(fond);
     heros = new Heros();
+    personnages = setupPersonnages(jsonData, dessins);
     dessins.push(heros);
     leviers = setupLeviers(jsonData, dessins);
     porte = setupPorte(jsonData, dessins);
