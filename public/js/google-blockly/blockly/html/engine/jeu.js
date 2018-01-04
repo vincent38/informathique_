@@ -5,6 +5,7 @@
 });*/
 
 //alert(tabNiveau);
+alert('HELLEA');
 
 
 var lvl = document.getElementById('lvl').value;
