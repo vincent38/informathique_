@@ -25,3 +25,23 @@ class TabNiveau {
         return data;
     }
 }
+
+function testerObstacle(x, y){
+    var obstacle = 0;
+    //on teste qu'on  sort pas de la map
+    if (x < 0 || x > tabNiveau.xMax) obstacle = 1;
+    if (y < 0 || y > tabNiveau.yMax) obstacle = 1;
+
+    //on teste les obstacles non-objets
+    if(tabNiveau.tab[x][y] == 1) obstacle = 1;
+
+    //on regarde si un personnage est sur le chemin
+    for(var i = 0; i < personnages.length; i++){
+        if(personnages[i].xTab == x && personnages[i].yTab == y) obstacle = 1;
+    }
+
+
+
+
+    return obstacle;
+}

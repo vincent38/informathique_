@@ -36,10 +36,7 @@ class Heros {
     }
 
     testerMonter() {
-        var ok = 1;
-        if(!(this.tabY > 0 && tabNiveau.tab[this.tabX][this.tabY - 1] != 1)) ok = 0;
-        //if(!testerObstacles(this.tabX - 1, this.tabY))
-        return ok;
+        return (!testerObstacle(this.tabX, this.tabY - 1));
     }
 
     descendre() {
