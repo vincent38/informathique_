@@ -5,6 +5,8 @@
 });*/
 
 //alert(tabNiveau);
+alert('HELLEA');
+
 
 var lvl = document.getElementById('lvl').value;
 var jsonData = loadMap(lvl);
@@ -144,4 +146,6 @@ function testerGagne(heros) {
     }
 }
 
+
 startGame();
+setTimeout('startGame()', 1000);

@@ -40,6 +40,8 @@
     "yTab" : 1,
     "x" : 520,
     "y" : 43,
+    "tailleX" : 150,
+    "tailleY" : 150,
     "imgFermee" : "porte-fermee-droite.png",
     "imgOuverte" : "porte-ouverte-droite.png"
   }

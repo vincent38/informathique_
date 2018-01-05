@@ -115,3 +115,15 @@ Blockly.Blocks['m_levier'] = {
         this.setHelpUrl("");
     }
 };
+
+Blockly.Blocks['m_ramasser'] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField("Ramasser");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
