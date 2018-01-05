@@ -3,10 +3,10 @@ span.bouton {
   text-decoration: underline;
 }
 
-.btn {
+/*.btn {
   margin-top: 10px !important;
   margin-bottom: 0;
-}
+}*/
 
 span.bouton:hover {
 }

@@ -5,6 +5,10 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
+    <noscript>
+      <!-- Un lien vers un site externe -->
+      <div class="alert alert-info"><span class="glyphicon glyphicon-info-sign"></span> Kinimi a besoin d'exécuter du Javascript pour fonctionner. Nous te recommandons d'utiliser <a href="https://www.mozilla.org/fr/firefox/new/" target="_blank">Firefox</a> ou <a href="https://www.google.fr/chrome/browser/desktop/index.html" target="_blank">Chrome</a> pour profiter pleinement de Kinimi. Si tu possèdes déjà un de ces deux navigateurs, vérifie que le Javascript est bien autorisé dans les paramètres de ton navigateur, ou contacte les administrateurs.</div>
+    </noscript>
     <script src="../js/google-blockly/blockly/blockly_uncompressed.js"></script>
     <script src="../js/google-blockly/blockly/javascript_compressed.js">
     </script>

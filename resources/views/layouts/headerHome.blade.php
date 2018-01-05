@@ -25,7 +25,9 @@
     <header>
       <div id="mainHeader">
         @if (preg_match('/maths-th\d/' , Route::current()->getName()))
-          <a href="{{ route("mathematiques") }}">Retour au menu Mathématiques</a>
+          <div class=" pull-left header-profil">
+            <a class="btn btn-info" style="margin: 0;" href="{{ route("mathematiques") }}">Retour au menu Mathématiques</a>
+          </div>
         @endif
         <!-- Boutons Connexion / Inscription / Profil / Déconnexion pas affichés si histoire interactive -->
         @if (! preg_match('/maths-th\d/' , Route::current()->getName()))
@@ -49,8 +51,8 @@
 
       <!-- Affichage du message d'avertissement si utilisateur pas connecté -->
       @if (!Auth::check())
-        @if (Route::current()->getName() == 'home')
-          <div class="alert alert-danger alert-dismissible">
+        @if (Route::current()->getName() == 'home' or Route::current()->getName() == 'logout')
+          <div class="alert alert-danger alert-dismissible" style="margin-bottom: 0px;">
             Attention, tu n'es pas connecté. Tu peux jouer sans compte, mais tu ne pourras pas sauvegarder ta progression. Pour accéder à toutes les fonctionnalités de {{ config('app.name', '') }}, <a href="{{ route('login') }}" class="alert-link">connecte-toi</a> ou <a href="{{ route('register') }}" class="alert-link">crée un compte</a> maintenant.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -58,6 +60,9 @@
           </div>
         @endif
       @endif
+      <noscript>
+        <div class="alert alert-info" style="margin-top: 0px;"><span class="glyphicon glyphicon-info-sign"></span> Kinimi a besoin d'exécuter du Javascript pour fonctionner. Nous te recommandons d'utiliser <a href="https://www.mozilla.org/fr/firefox/new/" target="_blank">Firefox</a> ou <a href="https://www.google.fr/chrome/browser/desktop/index.html" target="_blank">Chrome</a> pour profiter pleinement de Kinimi. Si tu possèdes déjà un de ces deux navigateurs, vérifie que le Javascript est bien autorisé dans les paramètres de ton navigateur, ou contacte les administrateurs.</div>
+      </noscript>
     </header>
 
 
