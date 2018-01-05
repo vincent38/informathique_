@@ -5,6 +5,7 @@
 });*/
 
 //alert(tabNiveau);
+//TODO : ajouter les swal au début pour les instructions spécifiques à chaque niveau
 
 
 var lvl = document.getElementById('lvl').value;
@@ -28,6 +29,7 @@ function startGame() {
     dessins.push(fond);
     heros = new Heros();
     personnages = setupPersonnages(jsonData, dessins);
+    obstacles = setupObstacles(jsonData, dessins);
     dessins.push(heros);
     leviers = setupLeviers(jsonData, dessins);
     porte = setupPorte(jsonData, dessins);

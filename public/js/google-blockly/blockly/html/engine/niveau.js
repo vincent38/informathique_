@@ -40,6 +40,14 @@ function testerObstacle(x, y){
         if(personnages[i].xTab == x && personnages[i].yTab == y) obstacle = 1;
     }
 
+    //on regarde si un obstacle classique est sur le chemin
+    for(var i = 0; i < obstacles.length; i++){
+        if(obstacles[i].xTab == x && obstacles[i].yTab == y) obstacle = 1;
+    }
+
+
+
+
 
 
 

@@ -7,14 +7,14 @@
     [0,0,0],
     [0,0,0],
     [0,0,0],
-    [0,0,1],
-    [0,0,1],
     [0,0,0],
     [0,0,0],
-    [1,0,0],
     [0,0,0],
     [0,0,0],
-    [0,0,1]
+    [0,0,0],
+    [0,0,0],
+    [0,0,0],
+    [0,0,0]
   ],
   "spawnTabX" : 1,
   "spawnTabY" : 14,
@@ -44,6 +44,39 @@
       "tailleX" : 65,
       "tailleY" : 65,
       "image" : "fille-attente-face.png"
+    },
+    {
+      "xTab" : 2,
+      "yTab" : 14,
+      "x" : 180,
+      "y" : 645,
+      "tailleX" : 48,
+      "tailleY" : 48,
+      "image" : "garcon-attente-droite.png"
+    }
+  ],
+  "obstacles" :[
+    {
+      "xTab" : 2,
+      "yTab" : 7,
+      "x" : 160,
+      "y" : 340,
+      "tailleX" : 75,
+      "tailleY" : 100,
+      "image" : "table.png"
+    },
+    {
+      "xTab" : 0,
+      "yTab" : 11,
+      "x" : 70,
+      "y" : 515,
+      "tailleX" : 70,
+      "tailleY" : 50,
+      "image" : "table.png"
+    },
+    {
+      "xTab" : 2,
+      "yTab" : 8
     }
   ],
   "dataReal" : [
