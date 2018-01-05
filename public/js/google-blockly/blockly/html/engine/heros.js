@@ -52,7 +52,7 @@ class Heros {
     }
 
     testerDescendre() {
-        return (this.tabY < tabNiveau.yMax - 1 && tabNiveau.tab[this.tabX][this.tabY + 1] != 1);
+        return (!testerObstacle(this.tabX, this.tabY + 1));
     }
 
     goGauche() {
@@ -68,7 +68,7 @@ class Heros {
     }
 
     testerGoGauche() {
-        return (this.tabX > 0 && tabNiveau.tab[this.tabX - 1][this.tabY] != 1);
+        return (!testerObstacle(this.tabX - 1, this.tabY));
     }
 
     goDroite() {
@@ -85,7 +85,7 @@ class Heros {
 
     testerGoDroite() {
         //alert(tabNiveau.tab[this.tabX+1][this.tabY]);
-        return (this.tabX < tabNiveau.xMax - 1 && tabNiveau.tab[this.tabX + 1][this.tabY] != 1);
+        return (!testerObstacle(this.tabX + 1, this.tabY));
     }
 
     repaint() {

@@ -6,3 +6,5 @@ var perdu;
 var leviers;
 var porte;
 var personnages;
+var obstacles;
+var dev = 1;
