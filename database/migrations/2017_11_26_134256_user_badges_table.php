@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class UserBadgesTable extends Migration
 {
@@ -19,6 +20,15 @@ class UserBadgesTable extends Migration
             $table->integer('id_badge')->index();
             $table->timestamps();
         });
+        DB::table('user_badges')->insert(
+            array(
+                'id' => 1,
+                'id_user' => 1,
+                'id_badge' => 1,
+                'created_at' => DB::raw('now()'),
+                'updated_at' => DB::raw('now()')
+            )
+        );
     }
 
     /**

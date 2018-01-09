@@ -576,7 +576,7 @@
       "texte": "Une fois sur le toit de la tour, Kini est époustouflé par la vue : la ville s'étend à perte de vue, et certains bâtiments ont des formes très étranges. Une des constructions est même une sphère qui semble tenir en l'air comme par magie.<br>Après cette longue journée d'aventures, Kini se réveille, la tête remplie de souvenirs.",
       "boutons": [{
         "texte": "Continuer",
-        "pageLien": 9999
+        "pageLien": 43
       }],
       "exercice": false
 
@@ -628,8 +628,14 @@
     },{
 
       "numeroPage": 43,
-      "titre": "",
-      "texte": ""
+      "titre": "Histoire terminée !",
+      "texte": "Félicitations, tu es arrivé au bout de l'histoire ! A bientôt pour d'autres aventures :) <br>N'oublie pas d'envoyer ton score en cliquant sur le bouton en dessous !",
+      "boutons": [{
+        "texte": "Envoyer mes scores et quitter",
+        "pageLien": 4269404
+        }],
+      "exercice": false
+
     }
   ]
 }

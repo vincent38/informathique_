@@ -5,7 +5,7 @@
     <title>{{ config('app.name', '') }} - Page d'accueil</title>
     <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
     <link rel="stylesheet" href="{{ asset("css/master.css") }}">
-    @if (preg_match('/maths-th\d/' , Route::current()->getName()))
+    @if (preg_match('/launchStory/' , Route::current()->getName()))
       <link rel="stylesheet" href="{{ asset("css/mathematiques.css") }}">
     @endif
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Bannière pas affichée si histoire interactive -->
-    @if (! preg_match('/maths-th\d/' , Route::current()->getName()))
+    @if (! preg_match('/launchStory/' , Route::current()->getName()))
       <div class="banniere">
         <a href="{{ route("home") }}">
           <img class="banniere" src="{{ asset("img/Banniere.jpg") }}" alt="banniere">
@@ -24,13 +24,13 @@
     @endif
     <header>
       <div id="mainHeader">
-        @if (preg_match('/maths-th\d/' , Route::current()->getName()))
+        @if (preg_match('/launchStory/' , Route::current()->getName()))
           <div class=" pull-left header-profil">
             <a class="btn btn-info" style="margin: 0;" href="{{ route("mathematiques") }}">Retour au menu Mathématiques</a>
           </div>
         @endif
         <!-- Boutons Connexion / Inscription / Profil / Déconnexion pas affichés si histoire interactive -->
-        @if (! preg_match('/maths-th\d/' , Route::current()->getName()))
+        @if (! preg_match('/launchStory/' , Route::current()->getName()))
           <div class=" pull-right header-profil">
             @if (Route::has('login'))
               @auth

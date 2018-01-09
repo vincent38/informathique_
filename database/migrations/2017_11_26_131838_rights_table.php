@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class RightsTable extends Migration
 {
@@ -18,6 +19,13 @@ class RightsTable extends Migration
             $table->integer('id_user')->index();
             $table->integer('privilege');
         });
+        DB::table('user_rights')->insert(
+            array(
+                'id' => 1,
+                'id_user' => 1,
+                'privilege' => 1
+            )
+        );
     }
 
     /**

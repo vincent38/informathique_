@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Webpatser\Uuid\Uuid;
 use Illuminate\Support\Facades\DB;
 
-class UserLevelTable extends Migration
+class UserUuid extends Migration
 {
     /**
      * Run the migrations.
@@ -14,20 +15,16 @@ class UserLevelTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_lvl', function (Blueprint $table) {
+        Schema::create('user_uuid', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user')->index();
-            $table->integer('exp');
-            $table->integer('lvl');
-            $table->integer('exp_sum');
+            $table->integer('id_user');
+            $table->string('uuid');
         });
-        DB::table('user_lvl')->insert(
+        DB::table('user_uuid')->insert(
             array(
                 'id' => 1,
                 'id_user' => 1,
-                'exp' => 10,
-                'lvl' => 1,
-                'exp_sum' => 10
+                'uuid' => Uuid::generate(5, 1, Uuid::NS_DNS)->string
             )
         );
     }
@@ -39,6 +36,6 @@ class UserLevelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_lvl');
+        //
     }
 }

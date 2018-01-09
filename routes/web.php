@@ -34,27 +34,12 @@ Route::get('/escape/{id}', 'Escape@index')->name('launchGame');
 
 Route::get('/escape/finish/{uuid}/{id_exo}/{time}/{lvl_difficulty}', 'Escape@finish')->name('finishGameAndSave');
 
+Route::get('/maths/{id}', 'Maths@index')->name('launchStory');
+
+Route::get('/maths/finish/{uuid}/{id_sto}/{time}/{g}/{b}', 'Maths@finish')->name('finishStoryAndSave');
+
 Route::get('/logout', function () {
     Auth::logout();
     return view('home');
 })->name('logout');
 
-/*
-| Routes thèmes maths
-*/
-
-Route::get('/mathematiques-theme-1', function () {
-    return view('maths-th1');
-})->name('maths-th1');
-
-Route::get('/mathematiques-theme-2', function () {
-    return view('maths-th2');
-})->name('maths-th2');
-
-Route::get('/mathematiques-theme-3', function () {
-    return view('maths-th3');
-})->name('maths-th3');
-
-Route::get('/mathematiques-theme-4', function () {
-    return view('maths-th4');
-})->name('maths-th4');

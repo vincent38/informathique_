@@ -11,7 +11,7 @@ use Webpatser\Uuid\Uuid;
 
 class RegisterController extends Controller
 {
-    /*
+    /* 
     |--------------------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------

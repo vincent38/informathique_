@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateUsersTable extends Migration
 {
@@ -21,6 +22,15 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        DB::table('users')->insert(
+            array(
+                'name' => 'admin',
+                'email' => 'admin@kinimi.local',
+                'password' => '$2y$10$i2OIyQ1c6kELIr0mjWK9meyPBSOnanpOaWnJKBSF.IAUouI.DH2EG',
+                'created_at' => DB::raw('now()'),
+                'updated_at' => DB::raw('now()')
+            )
+        );
     }
 
     /**

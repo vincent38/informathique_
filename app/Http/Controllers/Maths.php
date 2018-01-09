@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-class Escape extends Controller
+class Maths extends Controller
 {
     function index(Request $request) {
         $myId = $request->route('id', 0);
@@ -20,12 +20,12 @@ class Escape extends Controller
             $user = -1;
             $uuid = "user-not-logged-in";
         }
-        return view('escape',compact('myId', 'user', 'uuid'));
+        return view('maths',compact('myId', 'user', 'uuid'));
     }
 
     function finish(Request $request) {
         /*
-        * Fin jeu informatique - callback de traitement des résultats
+        * Fin jeu mathématiques - callback de traitement des résultats
         * Get : id_user, uuid, token_laravel, formatted_id, lvl_exercice, nb_etapes
         * Op : Add experience to user table if not exists, or update if better
         * Op : Add level to user with levelling up if useful ONLY IF DONE OR UPDATED
@@ -39,14 +39,12 @@ class Escape extends Controller
             'time_spent' => 'required'
         ]);*/
         /*
-            Score calculation : Time based scoring system -> the less time you spend, better the score is (5 minutes max, after there is no score given)
-            Less points given on harder exercises (id)
-            Multiplier for number of levers (1 + nb_levers * 0.2)
+            Score calculation : Time based scoring system -> the less time you spend, better the score is
+            Less points given for each bad response
+            More points given for good responses
+            Multiplier for ?
         */
-        $scoreModifier = (($request->route('time') * 100) / 300);
-        $scoreInterm = 100 - $scoreModifier;
-        if ($request->route('lvl_difficulty') == 0) {$d = 1;} else {$d = 1 + ($request->route('lvl_difficulty')*0.2);}
-        $score = ($scoreInterm - $request->route('id_exo')) * $d;
+        $score = 1;
         $score = round($score);
         if ($score < 0) { $score = 0;}
         /*
