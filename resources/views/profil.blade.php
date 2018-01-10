@@ -46,7 +46,7 @@
         <div class="col-lg-12">
           <h3>Tes badges</h3>
           @foreach($user_badges as $ub)
-            <img style="width: 10%" src="./img/badges/{{ $badges[$ub->id_badge][0]->action }}.png" onerror="this.src='./img/badges/default.png'"" alt="{{ $badges[$ub->id_badge][0]->name }}" title="Badge {{ $badges[$ub->id_badge][0]->name }} obtenu le {{ date('d/m/Y',  strtotime($ub->created_at)) }} - {{ $badges[$ub->id_badge][0]->data }}">
+            <img style="width: 10%" src="{{ URL::to('/') }}/img/badges/{{ $badges[$ub->id_badge][0]->action }}.png" onerror="this.src='{{ URL::to('/') }}/img/badges/default.png'"" alt="{{ $badges[$ub->id_badge][0]->name }}" title="Badge {{ $badges[$ub->id_badge][0]->name }} obtenu le {{ date('d/m/Y',  strtotime($ub->created_at)) }} - {{ $badges[$ub->id_badge][0]->data }}">
           @endforeach
           <br>
           <br>
@@ -94,6 +94,7 @@
           <span class="btn btn-success" id="btnChgPseudo">Changer de pseudo</span>
           <span class="btn btn-success" id="btnChgMail">Changer d'adresse e-mail</span>
           <span class="btn btn-success" id="btnChgPw">Changer de mot de passe</span>
+          <span class="btn btn-success" id="btnContact">Contacter les administrateurs</span>
         </div> <!-- col #chgInfo -->
 
         <!-- Changement de pseudo -->
@@ -163,6 +164,29 @@
             <input type="submit" class="btn btn-primary btn-success" id="btnChgPwSubmit" value="Valider">
           </form> <!-- form-group -->
         </div> <!-- col #chgPw -->
+
+        <!-- Contact via mail -->
+        <div class="col-xs-9" id="contact">
+          <h4>Contacter les administrateurs</h4>
+          <p>Laisse ton message ici, on reviendra vers toi par mail rapidement :)</p><br>
+          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
+            {!! csrf_field() !!}
+            <input type="hidden" name="typeOfForm" value="contact">
+            <label for="text" class="col-lg-4 control-label">Ton email</label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" name="email" value="{{ $user->email }}" readonly>
+            </div>
+
+            <label for="text" class="col-lg-4 control-label">Ton message</label>
+            <div class="col-lg-8">
+              <textarea class="form-control" name="message" rows="3"></textarea>
+            </div>
+
+            <span class="btn btn-primary btn-danger" id="btnContactCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
+            <input type="submit" class="btn btn-primary btn-success" id="btnChgMailSubmit" value="Valider">
+          </form> <!-- form-group -->
+
+        </div> <!-- col #contact -->
 
         <script id="jsChangementProfil" src="{{ asset("js/leChangementCestMaintenant.js")}}"></script>
       </div> <!-- row -->

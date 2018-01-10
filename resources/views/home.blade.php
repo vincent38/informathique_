@@ -6,7 +6,10 @@
   <div class="row">
     <div class="col-lg-12">
       <h2>Bienvenue sur {{ config('app.name', '') }} !</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Tu es en troisième ? Le brevet approche vite ? Trop vite ? <br> 
+        Pas de panique ! <br> 
+        Avec {{ config('app.name', '') }}, révise les mathématiques et l'informatique simplement et en t'amusant ! Et pour ceux qui cherchent juste à réviser, on a ce qu'il vous faut :)
+      </p>
     </div> <!-- col -->
   </div> <!-- row -->
 </div> <!-- container -->
@@ -17,12 +20,18 @@
     <div class="col-sm-6">
       <h2 class="menu-title">Mathématiques</h2>
       <a href="{{ route("mathematiques")}}" class="btn btn-success btn-lg btn-block">Accéder aux exercices</a>
-      <p class="menu-desc">On a des supers exos de maths avec des histoires et tout et tout, et même des exos classiques sans histoire, parfait pour réviser ! Oui cette description va changer mais pour l'instant on sait pas quoi mettre. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="menu-desc">Besoin de réviser les maths en t'amusant ? C'est ici que ça se passe ! <br>
+        Notre équipe te propose d'incarner notre héros maison, Kini, à travers quatre aventures fantastiques (qui arriveront au fur et à mesure) pour travailler le calcul littéral, les fonctions, la géométrie, et bien plus encore. <br>
+        Tu retrouveras ici aussi des séries d'exercices tirées des aventures si tu souhaites réviser efficacement !
+      </p>
     </div> <!-- col -->
     <div class="col-sm-6">
       <h2 class="menu-title">Informatique</h2>
       <a href="{{ route("informatique")}}" class="btn btn-success btn-lg btn-block">Accéder à Escape-Colle</a>
-      <p class="menu-desc">Si tu cherches des idées pour t'échapper de classe, ce jeu est parfait pour te l'apprendre ! Oui cette description va changer aussi. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+      <p class="menu-desc">Envie de découvrir (ou redécouvrir) l'algorithmique ? Alors ce jeu est fait pour toi ! <br>
+        Guide Kini à travers des salles remplies de mécanismes, trappes et autres dangers et deviens le roi de l'Escape-Colle ! <br>
+        Un bon moyen d'appliquer ces boucles et conditions qui paraissaient si abstraites sur le papier ;)
+      </p>
     </div> <!-- col -->
   </div> <!-- row -->
 </div> <!-- container -->

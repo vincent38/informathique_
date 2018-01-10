@@ -15,13 +15,13 @@
        <p>Bienvenue sur la partie « Informatique » de Kinimi ! Ici, tu vas pouvoir jouer au jeu Escape-Colle&nbsp;: tu dois aider Kini à s'échapper de là où il se trouve, en lui indiquant les mouvements qu'il doit faire.</p>
        <dl class="dl-horizontal">
          <dt>Niveaux faciles</dt>
-         <dd>Les niveaux faciles sont destinés à t'apprendre le fonctionnement du jeu Escape-Colle. Tu vas devoir utiliser les blocs de base pour déplacer ton personnage et terminer les niveaux.</dd>
+         <dd>Les niveaux faciles sont destinés à t'apprendre le fonctionnement du jeu Escape-Colle. Tu vas devoir utiliser les blocs de base pour déplacer ton personnage et terminer les niveaux. Pas de panique, nous te donnerons quelques aides et conseils pour que tu puisses te repérer rapidement dans l'interface :)</dd>
 
          <dt>Niveaux moyens</dt>
          <dd>Les niveaux moyens vont commencer à te donner du fil à retordre. Utilise les boucles et les conditions pour déplacer ton personnage et éviter les pièges, et ne te fais pas repérer par les surveillants.</dd>
 
          <dt>Niveaux difficiles</dt>
-         <dd>Les niveaux difficiles sont difficiles. Je sais pas quoi dire d'autre, mais on mettra quand même du texte parce que c'est important de bien expliquer ce que c'est.</dd>
+         <dd>Les niveaux difficiles ont été conçus par nos meilleurs experts en bâtiments haute sécurité. Tout ce que tu as pu voir précédemment, c'était du gâteau à côté de ce qui t'attend maintenant. Prêt à démontrer ta réputation de roi de l'Escape-Colle ?</dd>
        </dl>
      </div> <!-- col -->
    </div> <!-- row -->
