@@ -35,16 +35,18 @@ class Maths extends Controller
         /*$validatedData = $request->validate([
             'id' => 'required',
             'uuid' => 'required',
-            'id_exo' => 'required',
+            'id_sto' => 'required',
             'time_spent' => 'required'
         ]);*/
         /*
             Score calculation : Time based scoring system -> the less time you spend, better the score is
-            Less points given for each bad response
-            More points given for good responses
+            Less points given for each bad response ()
             Multiplier for ?
         */
-        $score = 1;
+        $scoreModifier = (($request->route('time') * 100) / 1200);
+        $scoreInterm = 100 - $scoreModifier;
+        if ($request->route('b') == 0) {$m = 1;} else {$m = 1 - ($request->route('b')*0.05);}
+        $score = $scoreInterm * $m;
         $score = round($score);
         if ($score < 0) { $score = 0;}
         /*
@@ -55,7 +57,7 @@ class Maths extends Controller
             //Utilisateur non connecté, pas de sauvegarde ni de calculs
             return response()->json([
                 'msg_status' => 'warning',
-                'status' => 'Niveau terminé - Ton score ne sera pas enregistré.',
+                'status' => 'Histoire terminée - Ton score ne sera pas enregistré.',
                 'infoplus' => 'Tu as fait un score de '.$score.', mais celui-ci ne sera pas enregistré, car tu n\'es pas connecté. Tu peux créer un compte pour enregistrer tes prochains scores, et accéder à toutes les fonctionnalités.',
                 'score' => $score,
             ]);
@@ -65,49 +67,48 @@ class Maths extends Controller
             $uid = $id[0]->id_user;
             if (isset($uid)) {
                 //User existant
-                $exists = DB::select('select * from user_info where id_user = ? and id_exercise = ?', [$uid, $request->route('id_exo')]);
+                $exists = DB::select('select * from user_maths where id_user = ? and id_story = ?', [$uid, $request->route('id_sto')]);
                 //var_dump($exists);
                 if ($exists != null) {
                     //Score déjà présent... Mettre à jour ?
-                    $old_score = DB::select('select score from user_info where id_user = ? and id_exercise = ?', [$uid, $request->route('id_exo')]);
+                    $old_score = DB::select('select score from user_maths where id_user = ? and id_story = ?', [$uid, $request->route('id_sto')]);
                     if ($score > $old_score[0]->score) {
                         //On a fait mieux, on met à jour + éventuellement badge better than before
-                        DB::table('user_info')->where('id_user', $uid)->where('id_exercise', $request->route('id_exo'))->update(['score' => $score]);
-                        $b = Badges::unlock("improve_score_info", 1, $uid);
+                        DB::table('user_maths')->where('id_user', $uid)->where('id_story', $request->route('id_sto'))->update(['score' => $score]);
+                        //$b = Badges::unlock("improve_score_info", 1, $uid);
                         return response()->json([
                             'msg_status' => 'success',
-                            'status' => 'Niveau terminé - Tu as amélioré ton précédent record !',
-                            'infoplus' => 'Ton score est passé de '.$old_score[0]->score.' à '.$score.' . Tu peux continuer au niveau suivant !',
-                            'score' => $score,
-                            'badge' => $b->original
+                            'status' => 'Histoire terminée - Tu as amélioré ton précédent record !',
+                            'infoplus' => 'Ton score est passé de '.$old_score[0]->score.' à '.$score.'. Bravo :)',
+                            'score' => $score
+                            //'badge' => $b->original
                         ]);
                     } else {
                         //Meh, on ne fait rien et on se contente de dire que le jeu est fini sans sauvegarde
-                        $str = 'Niveau terminé - Tu n\'as pas battu ton record';
+                        $str = 'Histoire terminée - Tu n\'as pas battu ton record';
                         return response()->json([
                             'msg_status' => 'info',
                             'status' => $str,
-                            'infoplus' => 'Tu as fait un score de '.$score.', ton précédent score étant de '.$old_score[0]->score.'.Tu peux réessayer une nouvelle fois, ou bien passer à la suite.',
+                            'infoplus' => 'Tu as fait un score de '.$score.', ton précédent score étant de '.$old_score[0]->score.'.Tu peux réessayer une nouvelle fois l\'histoire, et peut-être débloquer une autre fin, qui sait !',
                             'score' => $score
                         ]);
                     }
                 } else {
                     //Score non présent, ajout
-                    DB::table('user_info')->insert([
+                    DB::table('user_maths')->insert([
                         'id_user' => $uid,
-                        'id_exercise' => $request->route('id_exo'),
-                        'lvl_exercise' => 0,
+                        'id_story' => $request->route('id_sto'),
                         'score' => $score,
                         'created_at' => NOW(),
                         'updated_at' => NOW()
                     ]);
                     //On débloque le badge et on attend le résultat
-                    $b = Badges::unlock("end_info_".$request->route('id_exo'), 1, $uid);
+                    $b = Badges::unlock("end_math_".$request->route('id_sto'), 1, $uid);
                     //On génère le retour (JSON)
                     return response()->json([
                         'msg_status' => 'success',
-                        'status' => 'Niveau terminé - Nouveau record !',
-                        'infoplus' => 'Tu as terminé le niveau avec un score de '.$score.'. Bravo ! Tu peux passer à la suite.',
+                        'status' => 'Histoire terminée - Nouveau record !',
+                        'infoplus' => 'Tu as terminé le niveau avec un score de '.$score.'. Bravo ! Tu peux passer à la suite, ou réessayer pour peut-être découvrir d\'autres fins !',
                         'score' => $score,
                         'badge' => $b->original
                     ]);
@@ -117,7 +118,7 @@ class Maths extends Controller
                 response()->json([
                     'msg_status' => 'error',
                     'status' => 'Erreur, ton identifiant n\'est rattaché à aucun compte.',
-                    'infoplus' => 'Nous t\'invitons à contacter un administrateur depuis ton profil',
+                    'infoplus' => 'Nous t\'invitons à contacter un administrateur depuis ton profil, en indiquant que "l\' uuid utilisé ne correspond à aucun id connu".',
                     'score' => 0
                 ]);
             }

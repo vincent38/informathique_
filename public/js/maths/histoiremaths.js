@@ -1,9 +1,32 @@
 var errorDiv = document.getElementById("jserror");
 var script = document.getElementById("script");
 
+//Data displayer
+var idh = document.getElementById("idh");
+idh.innerText = document.getElementById("numHistoire").getAttribute("value");
+var gh = document.getElementById("gh");
+var bh = document.getElementById("bh");
+var th = document.getElementById("th");
+
 // SCORING SYSTEM
 var g = 0;
 var b = 0;
+var tStart, tEnd, tTotal;
+tStart = new Date().getTime() / 1000;
+console.log(tStart);
+
+setInterval(function(){
+	tInter = new Date().getTime() / 1000;
+	tInter = Math.round(tInter - tStart);
+	min = 0;
+	while (tInter >= 60) {
+		tInter = tInter - 60;
+		min = min + 1;
+	}
+	if (min < 10) { min = "0" + min;}
+	if (tInter < 10) { tInter = "0" + tInter;}
+	th.innerText = min + ":" + tInter;
+}, 1000);
 
 var debug = true;
 //var mainDiv = document.getElementById("mainDiv");
@@ -40,8 +63,10 @@ function loadJSON(cb) {
 loadJSON(function (json) {
 
 	function finish() {
+		var uuid = document.getElementById("u").value;
+		var id = document.getElementById("numHistoire").getAttribute("value");
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', './finish/' + uuid + '/' + 1 + '/' + 1 + '/' + 1, false);
+		xhr.open('GET', './finish/' + uuid + '/' + id + '/' + tTotal + '/' + g + '/' + b, false);
 		xhr.send();
 		if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
 			throw new Error("impossible de charger le lien : " + xhr.status);
@@ -49,10 +74,20 @@ loadJSON(function (json) {
 		var r = JSON.parse(xhr.responseText);
 		if (r.badge != undefined && r.badge['status'] === 'badge_unlocked') {
 			swal(r.badge["badge_name"], r.badge["badge_data"], 'info').then(() => {
-				swal(r.status, r.infoplus, r.msg_status);
+				swal(r.status, r.infoplus, r.msg_status).then((value) => {
+					switch (value){
+						default:
+							window.location.replace("./");
+					}
+				});
 			});
 		} else {
-			swal(r.status, r.infoplus, r.msg_status);
+			swal(r.status, r.infoplus, r.msg_status).then((value) => {
+				switch (value){
+					default:
+						window.location.replace("./");
+				}
+			});
 		}
 	}
 
@@ -86,6 +121,10 @@ loadJSON(function (json) {
 				if (lienBouton != 4269404) {
 					afficherDiv(lienBouton);
 				} else {
+					tEnd = new Date().getTime() / 1000;
+					console.log(tStart);
+					console.log(tEnd);
+					tTotal = Math.round(tEnd - tStart);
 					finish();
 				}
 			});
@@ -98,7 +137,7 @@ loadJSON(function (json) {
 			var bouton = document.createElement("span");
 			bouton.setAttribute("class", "btn btn-danger btn-sm");
 			bouton.id = "debug-retour-debut";
-			bouton.innerHTML = "(debug) Retour au début";
+			bouton.innerHTML = "(Debug) Retourner au début";
 			bouton.addEventListener("click", function () {
 				afficherDiv(0);
 			});
@@ -122,11 +161,22 @@ loadJSON(function (json) {
 				bouton.addEventListener("click", function () {
 					if (correcte) {
 						bouton.setAttribute("class", "btn btn-bonne-reponse btn-lg btn-block");
-						g = g + 1;
+						if (bouton.getAttribute("disabled") == undefined || bouton.getAttribute("disabled") != "true") {
+							g = g + 1;
+							gh.innerText = g;
+						}
+						bouton.setAttribute("disabled", "true");
+						for (var i = 0; i < json.textes[numPage].reponses.length; i++) {
+							document.getElementById(i).setAttribute("disabled", "true");
+						}
 						afficherBoutonContinuer(pageLien);
 					} else {
 						bouton.setAttribute("class", "btn btn-mauvaise-reponse btn-lg btn-block");
-						b = b + 1;
+						if (bouton.getAttribute("disabled") == undefined || bouton.getAttribute("disabled") != "true") {
+							b = b + 1;
+							bh.innerText = b;
+						}
+						bouton.setAttribute("disabled", "true");
 					}
 				});
 
