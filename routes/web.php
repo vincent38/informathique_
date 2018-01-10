@@ -34,9 +34,9 @@ Route::get('/escape/{id}', 'Escape@index')->name('launchGame');
 
 Route::get('/escape/finish/{uuid}/{id_exo}/{time}/{lvl_difficulty}', 'Escape@finish')->name('finishGameAndSave');
 
-Route::get('/maths/{id}', 'Maths@index')->name('launchStory');
+Route::get('/mathematiques/{id}', 'Maths@index')->name('launchStory');
 
-Route::get('/maths/finish/{uuid}/{id_sto}/{time}/{g}/{b}', 'Maths@finish')->name('finishStoryAndSave');
+Route::get('/mathematiques/finish/{uuid}/{id_sto}/{time}/{g}/{b}', 'Maths@finish')->name('finishStoryAndSave');
 
 Route::get('/logout', function () {
     Auth::logout();
