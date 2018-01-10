@@ -844,7 +844,9 @@
       "boutons": [{
         "texte": "Continuer",
         "pageLien": 56
-      }]
+      }],
+      "exercice": false
+      
     },{
 
       "numeroPage": 56,
