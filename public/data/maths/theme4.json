@@ -576,7 +576,7 @@
       "texte": "Une fois sur le toit de la tour, Kini est époustouflé par la vue : la ville s'étend à perte de vue, et certains bâtiments ont des formes très étranges. Une des constructions est même une sphère qui semble tenir en l'air comme par magie.<br>Après cette longue journée d'aventures, Kini se réveille, la tête remplie de souvenirs.",
       "boutons": [{
         "texte": "Continuer",
-        "pageLien": 43
+        "pageLien": 999
       }],
       "exercice": false
 
@@ -587,13 +587,13 @@
       "texte": "Le son de la musique est de plus en plus faible.",
       "boutons": [{
         "texte": "Continuer tout droit",
-        "pageLien": 0
+        "pageLien": 42
       },{
         "texte": "Aller à droite",
-        "pageLien": 41
+        "pageLien": 43
       },{
         "texte": "Faire demi-tour",
-        "pageLien": 42
+        "pageLien": 44
       }],
       "exercice": false
 
@@ -604,16 +604,38 @@
       "texte": "Le son de la musique s'intensifie.",
       "boutons": [{
         "texte": "Continuer tout droit",
-        "pageLien": 0
-      },{
+        "pageLien": 45
+        },{
         "texte": "Aller à gauche",
-        "pageLien": 0
+        "pageLien": 46
       }],
       "exercice": false
 
     },{
 
       "numeroPage": 42,
+      "titre": "",
+      "texte": "Le son de la musique ne semble pas se rapprocher. Kini ne peut emprunter qu'une route sur sa droite.",
+      "boutons": [{
+        "texte": "Aller à droite",
+        "pageLien": 43
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 43,
+      "titre": "",
+      "texte": "Le son de la musique s'intensifie. « J'y suis presque ! » se dit Kini.",
+      "boutons": [{
+        "texte": "Continuer tout droit",
+        "pageLien": 47
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 44,
       "titre": "",
       "texte": "Kini se retrouve à l'entrée du parc.",
       "boutons": [{
@@ -627,7 +649,37 @@
 
     },{
 
-      "numeroPage": 43,
+      "numeroPage": 45,
+      "titre": "",
+      "texte": "Le son de la musique ne semble pas se rapprocher. Kini ne peut emprunter qu'une route sur sa gauche.",
+      "boutons": [{
+        "texte": "Aller à gauche",
+        "pageLien": 46
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 46,
+      "titre": "",
+      "texte": "Le son de la musique est de plus en plus fort. « J'y suis presque ! » se dit Kini.",
+      "boutons": [{
+        "texte": "Continuer tout droit",
+        "pageLien": 47
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 47,
+      "titre": "arrivAIENT",
+      "texte": "u",
+      "boutons": [],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 999,
       "titre": "Histoire terminée !",
       "texte": "Félicitations, tu es arrivé au bout de l'histoire ! A bientôt pour d'autres aventures :) <br>N'oublie pas d'envoyer ton score en cliquant sur le bouton en dessous !",
       "boutons": [{
