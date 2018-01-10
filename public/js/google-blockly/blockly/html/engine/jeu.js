@@ -174,5 +174,8 @@ function afficherAlertesDebut(alertes){
     //swal('pour réussir ce niveau tu dois ramasser ton carnet de liaison et t\'échapper', '', 'info').then(() => { swal('attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge', '', 'info')});
 }
 
+
+
+afficherAlertesDebut(jsonData.alertesDebut);
 startGame();
 setTimeout('startGame()', 1000);

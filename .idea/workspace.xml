@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62332cfd-ac51-4118-bf6f-f157140d6345" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/carnet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/ds.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/porte-fermee-bas.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/porte-fermee-haut.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/porte-ouverte-bas.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/porte-ouverte-haut.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/stylo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/ramassable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/niveaux/2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-attente-dos.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-attente-dos.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-attente-droite.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-attente-droite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-attente-face.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-attente-face.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-droite.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/fille-droite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/garcon-attente-dos.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/garcon-attente-dos.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/garcon-attente-droite.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/garcon-attente-droite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/garcon-attente-face.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/garcon-attente-face.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/prof-droite.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/prof-droite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/prof2-droite.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/prof2-droite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/table.png" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/images/table.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/blocks/m_blocks.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/blocks/m_blocks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/generators/javascript/m_blocks.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/generators/javascript/m_blocks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/globalVars.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/globalVars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/heros.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/heros.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/jeu.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/jeu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/levier.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/levier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/obstacle.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/obstacle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/personnage.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/personnage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/scene.js" afterPath="$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/scene.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/escape.blade.php" afterPath="$PROJECT_DIR$/resources/views/escape.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +17,28 @@
       <file leaf-file-name="jeu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/jeu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="170" column="12" lean-forward="false" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
+            <state relative-caret-position="358">
+              <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/niveaux/1.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/niveaux/2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="70" column="72" lean-forward="false" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -58,8 +48,13 @@
         <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/scene.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="47">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <marker date="1515597821081" expanded="true" signature="14:1185" ph="{...}" />
+                <marker date="1515597821081" expanded="true" signature="307:390" ph="//..." />
+                <marker date="1515597821081" expanded="true" signature="671:1066" ph="{...}" />
+                <marker date="1515597821081" expanded="true" signature="742:1045" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,17 +83,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/porte.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/niveaux/2.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="70" column="72" lean-forward="false" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
+              <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -108,18 +93,10 @@
         <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ramassable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/ramassable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-              <folding />
+              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+              <folding>
+                <marker date="1515597821041" expanded="true" signature="579:688" ph="//..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,8 +105,10 @@
         <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/heros.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-              <folding />
+              <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+              <folding>
+                <marker date="1515597821041" expanded="true" signature="3124:3215" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/globalVars.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -307,6 +286,27 @@
               <item name="html" type="462c0819:PsiDirectoryNode" />
               <item name="engine" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="informathique_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="informathique_" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="google-blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="informathique_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="informathique_" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="google-blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="niveaux" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -372,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77172000" />
+    <option name="totallyTimeSpent" value="77507000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -602,8 +602,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/niveaux/1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="372">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -634,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="140" column="2" lean-forward="true" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,18 +669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/globalVars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/porte.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -689,24 +680,33 @@
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/heros.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-          <folding />
+          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding>
+            <marker date="1515597821041" expanded="true" signature="3124:3215" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/scene.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1515597821081" expanded="true" signature="14:1185" ph="{...}" />
+            <marker date="1515597821081" expanded="true" signature="307:390" ph="//..." />
+            <marker date="1515597821081" expanded="true" signature="671:1066" ph="{...}" />
+            <marker date="1515597821081" expanded="true" signature="742:1045" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/include.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <marker date="1515597821041" expanded="true" signature="579:688" ph="//..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -718,9 +718,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/globalVars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/resources/niveaux/2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
+        <state relative-caret-position="355">
           <caret line="70" column="72" lean-forward="false" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
           <folding />
         </state>
@@ -728,8 +736,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/google-blockly/blockly/html/engine/jeu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="170" column="12" lean-forward="false" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
+        <state relative-caret-position="358">
+          <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
           <folding />
         </state>
       </provider>
