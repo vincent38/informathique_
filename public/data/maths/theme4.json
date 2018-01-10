@@ -576,7 +576,7 @@
       "texte": "Une fois sur le toit de la tour, Kini est époustouflé par la vue : la ville s'étend à perte de vue, et certains bâtiments ont des formes très étranges. Une des constructions est même une sphère qui semble tenir en l'air comme par magie.<br>Après cette longue journée d'aventures, Kini se réveille, la tête remplie de souvenirs.",
       "boutons": [{
         "texte": "Continuer",
-        "pageLien": 999
+        "pageLien": 56
       }],
       "exercice": false
 
@@ -835,9 +835,19 @@
       }],
       "pageLien": 55
 
+
     },{
 
-      "numeroPage": "999",
+      "numeroPage": 55,
+      "titre": "",
+      "texte": "Une douce mélodie sort de l'instrument.<br>« Quelle jolie mélodie ! » s'exclame le musicien. Bravo jeune homme !<br>Après cette longue journée d'aventures, Kini se réveille, la tête remplie de souvenirs.",
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 56
+      }]
+    },{
+
+      "numeroPage": 56,
       "titre": "Histoire terminée !",
       "texte": "Félicitations, tu es arrivé au bout de l'histoire ! A bientôt pour d'autres aventures :) <br>N'oublie pas d'envoyer ton score en cliquant sur le bouton en dessous !",
       "boutons": [{
