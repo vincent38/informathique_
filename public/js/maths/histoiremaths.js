@@ -53,11 +53,11 @@ loadJSON(function (json) {
 		}
 		var r = JSON.parse(xhr.responseText);
 		if (r.badge != undefined && r.badge['status'] === 'badge_unlocked') {
-			swal(r.badge["badge_name"], r.badge["badge_data"], 'info').swal(r.status, r.infoplus, r.msg_status).then((value) => {
-				switch (value){
-					default:
-						window.location.replace("./");
-				}
+			swal(r.badge["badge_name"], r.badge["badge_data"], 'info').then((value) => {
+					switch (value){
+						default:
+							window.location.replace("./");
+					}
 			});
 		} else {
 			swal(r.status, r.infoplus, r.msg_status).then((value) => {
