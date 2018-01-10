@@ -6,7 +6,7 @@ var g = 0;
 var b = 0;
 var tStart, tEnd, tTotal;
 tStart = new Date().getTime() / 1000;
-console.log(tStart); 
+console.log(tStart);
 
 var debug = true;
 //var mainDiv = document.getElementById("mainDiv");
