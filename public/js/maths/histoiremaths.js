@@ -5,7 +5,7 @@ var script = document.getElementById("script");
 var idh = document.getElementById("idh");
 idh.innerText = document.getElementById("numHistoire").getAttribute("value");
 var gh = document.getElementById("gh");
-var gh = document.getElementById("bh");
+var bh = document.getElementById("bh");
 var th = document.getElementById("th");
 
 // SCORING SYSTEM
