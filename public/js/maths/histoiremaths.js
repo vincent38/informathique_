@@ -161,22 +161,22 @@ loadJSON(function (json) {
 				bouton.addEventListener("click", function () {
 					if (correcte) {
 						bouton.setAttribute("class", "btn btn-bonne-reponse btn-lg btn-block");
-						bouton.setAttribute("disabled", "true");
-						for (var i = 0; i < json.textes[numPage].reponses.length; i++) {
-							document.getElementById(i).setAttribute("disabled", "true");
-						}
 						if (bouton.getAttribute("disabled") == undefined || bouton.getAttribute("disabled") != "true") {
 							g = g + 1;
 							gh.innerText = g;
 						}
+						bouton.setAttribute("disabled", "true");
+						for (var i = 0; i < json.textes[numPage].reponses.length; i++) {
+							document.getElementById(i).setAttribute("disabled", "true");
+						}
 						afficherBoutonContinuer(pageLien);
 					} else {
 						bouton.setAttribute("class", "btn btn-mauvaise-reponse btn-lg btn-block");
-						bouton.setAttribute("disabled", "true");
 						if (bouton.getAttribute("disabled") == undefined || bouton.getAttribute("disabled") != "true") {
 							b = b + 1;
 							bh.innerText = b;
 						}
+						bouton.setAttribute("disabled", "true");
 					}
 				});
 
