@@ -36,6 +36,71 @@ class Ramassable{
             this.yTab = -1;
             return true;
         }
+        if(this.xTab == x-1 && this.yTab == y) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+        if(this.xTab == x+1 && this.yTab == y) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+        if(this.xTab == x && this.yTab == y-1) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+        if(this.xTab == x-1 && this.yTab == y-1) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+        if(this.xTab == x+1 && this.yTab == y-1) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+        if(this.xTab == x-1 && this.yTab == y+1) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+        if(this.xTab == x+1 && this.yTab == y+1) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+        if(this.xTab == x && this.yTab == y+1) {
+            eval(this.action);
+            this.ramassed = true;
+            this.img.src = "";
+            this.xTab = -1;
+            this.yTab = -1;
+            return true;
+        }
+
 
         return false;
     }
