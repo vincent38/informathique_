@@ -27,6 +27,7 @@
         @if (preg_match('/launchStory/' , Route::current()->getName()))
           <div class=" pull-left header-profil">
             <a class="btn btn-info" style="margin: 0;" href="{{ route("mathematiques") }}">Retour au menu Mathématiques</a>
+            <p>Histoire n°<span id="idh">0</span> - Bonnes réponses : <span id="gh">0</span> - Mauvaises réponses : <span id="bh">0</span> - Temps écoulé : <span id="th">0</span></p>
           </div>
         @endif
         <!-- Boutons Connexion / Inscription / Profil / Déconnexion pas affichés si histoire interactive -->

@@ -1,12 +1,30 @@
 var errorDiv = document.getElementById("jserror");
 var script = document.getElementById("script");
 
+//Data displayer
+var idh = document.getElementById("idh");
+idh.innerText = document.getElementById("numHistoire").getAttribute("value");
+var gh = document.getElementById("gh");
+var gh = document.getElementById("bh");
+var th = document.getElementById("th");
+
 // SCORING SYSTEM
 var g = 0;
 var b = 0;
 var tStart, tEnd, tTotal;
 tStart = new Date().getTime() / 1000;
 console.log(tStart);
+
+setInterval(function(){
+	tInter = new Date().getTime() / 1000;
+	tInter = Math.round(tInter - tStart);
+	min = 0;
+	while (tInter >= 60) {
+		tInter = tInter - 60;
+		min = min + 1;
+	}
+	th.innerText = min + ":" + tInter;
+}, 1000);
 
 var debug = true;
 //var mainDiv = document.getElementById("mainDiv");
@@ -142,10 +160,12 @@ loadJSON(function (json) {
 					if (correcte) {
 						bouton.setAttribute("class", "btn btn-bonne-reponse btn-lg btn-block");
 						g = g + 1;
+						gh.innerText = g;
 						afficherBoutonContinuer(pageLien);
 					} else {
 						bouton.setAttribute("class", "btn btn-mauvaise-reponse btn-lg btn-block");
 						b = b + 1;
+						bh.innerText = b;
 					}
 				});
 
