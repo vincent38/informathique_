@@ -165,14 +165,18 @@ loadJSON(function (json) {
 						for (var i = 0; i < json.textes[numPage].reponses.length; i++) {
 							document.getElementById(i).setAttribute("disabled", "true");
 						}
-						g = g + 1;
-						gh.innerText = g;
+						if (bouton.getAttribute("disabled") == undefined || bouton.getAttribute("disabled") != "true") {
+							g = g + 1;
+							gh.innerText = g;
+						}
 						afficherBoutonContinuer(pageLien);
 					} else {
 						bouton.setAttribute("class", "btn btn-mauvaise-reponse btn-lg btn-block");
 						bouton.setAttribute("disabled", "true");
-						b = b + 1;
-						bh.innerText = b;
+						if (bouton.getAttribute("disabled") == undefined || bouton.getAttribute("disabled") != "true") {
+							b = b + 1;
+							bh.innerText = b;
+						}
 					}
 				});
 
