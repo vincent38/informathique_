@@ -23,6 +23,8 @@ setInterval(function(){
 		tInter = tInter - 60;
 		min = min + 1;
 	}
+	if (min < 10) { min = "0" + min;}
+	if (tInter < 10) { tInter = "0" + tInter;}
 	th.innerText = min + ":" + tInter;
 }, 1000);
 
