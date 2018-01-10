@@ -4,6 +4,9 @@ var script = document.getElementById("script");
 // SCORING SYSTEM
 var g = 0;
 var b = 0;
+var tStart, tEnd, tTotal;
+tStart = new Date().getTime() / 1000;
+console.log(tStart); 
 
 var debug = true;
 //var mainDiv = document.getElementById("mainDiv");
@@ -40,19 +43,29 @@ function loadJSON(cb) {
 loadJSON(function (json) {
 
 	function finish() {
+		var uuid = document.getElementById("u").value;
+		var id = document.getElementById("numHistoire").getAttribute("value");
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', './finish/' + uuid + '/' + 1 + '/' + 1 + '/' + 1, false);
+		xhr.open('GET', './finish/' + uuid + '/' + id + '/' + tTotal + '/' + g + '/' + b, false);
 		xhr.send();
 		if (xhr.readyState != 4 || (xhr.status != 200 && xhr.status != 0)) {
 			throw new Error("impossible de charger le lien : " + xhr.status);
 		}
 		var r = JSON.parse(xhr.responseText);
 		if (r.badge != undefined && r.badge['status'] === 'badge_unlocked') {
-			swal(r.badge["badge_name"], r.badge["badge_data"], 'info').then(() => {
-				swal(r.status, r.infoplus, r.msg_status);
+			swal(r.badge["badge_name"], r.badge["badge_data"], 'info').then((value) => {
+					switch (value){
+						default:
+							window.location.replace("./");
+					}
 			});
 		} else {
-			swal(r.status, r.infoplus, r.msg_status);
+			swal(r.status, r.infoplus, r.msg_status).then((value) => {
+				switch (value){
+					default:
+						window.location.replace("./");
+				}
+			});
 		}
 	}
 
@@ -86,6 +99,10 @@ loadJSON(function (json) {
 				if (lienBouton != 4269404) {
 					afficherDiv(lienBouton);
 				} else {
+					tEnd = new Date().getTime() / 1000;
+					console.log(tStart);
+					console.log(tEnd);
+					tTotal = Math.round(tEnd - tStart);
 					finish();
 				}
 			});

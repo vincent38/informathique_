@@ -57,60 +57,13 @@
       <div class="row">
         <div class="col-md-6">
           <h3>Exercices terminés (mathématiques)</h3>
-          <h4>Aventures</h4>
-          <p>Kini au monde du thème 1</p>
-          <p>Kini au monde du thème 2</p>
-          <p>Kini au monde du thème 3</p>
-          <p>Kini dans la ville de Géométra</p>
-          <h4>Exercices - Thème 1</h4>
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Exercice 1</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Exercice 2</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Exercice 3</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-success">Terminé</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Exercice 4</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-warning">Terminé avec aide</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Exercice 5</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-danger">Abandonné</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-xs-6">
-              <p>Exercice 6</p>
-            </div> <!-- col -->
-            <div class="col-xs-6">
-              <p><span class="label label-default">Non débuté</span></p>
-            </div> <!-- col -->
-          </div> <!-- row -->
+          @if ($user_maths == null)
+              <p>Pas d'exercice terminé à afficher pour le moment...</p>
+            @else
+              @foreach($user_maths as $um)
+                <p>Exercice {{ $um->id_story }} terminé le {{ date('d/m/Y',  strtotime($um->created_at)) }} avec un score de {{ $um->score }}</p>
+              @endforeach
+            @endif
         </div> <!-- col -->
 
         <div class="col-md-6">

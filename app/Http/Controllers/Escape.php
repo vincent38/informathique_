@@ -119,7 +119,7 @@ class Escape extends Controller
                 response()->json([
                     'msg_status' => 'error',
                     'status' => 'Erreur, ton identifiant n\'est rattaché à aucun compte.',
-                    'infoplus' => 'Nous t\'invitons à contacter un administrateur depuis ton profil',
+                    'infoplus' => 'Nous t\'invitons à contacter un administrateur depuis ton profil, en indiquant que "l\' uuid utilisé ne correspond à aucun id connu".',
                     'score' => 0
                 ]);
             }
