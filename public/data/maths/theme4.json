@@ -672,14 +672,172 @@
     },{
 
       "numeroPage": 47,
-      "titre": "arrivAIENT",
-      "texte": "u",
-      "boutons": [],
+      "titre": "",
+      "texte": "Kini se retrouve devant un groupe de musiciens qui jouent avec des instruments étranges. Il s'installe sur un muret en face du groupe, et il profite du spectacle.<br>Une fois leur représentation terminée, Kini s'avance et dit : « Bravo, c'était super ! Pourriez-vous m'apprendre à jouer de vos instruments ? »<br>« Bien sûr ! » répond le musicien. « Tous ces instruments sont alimentés par les mathématiques. Tu veux commencer par lequel ? »",
+      "boutons": [{
+        "texte": "Celui en forme de cône",
+        "pageLien": 48
+        },{
+        "texte": "Celui en forme de cube",
+        "pageLien": 48
+        },{
+        "texte": "Celui en forme de sphère",
+        "pageLien": 48
+      }],
       "exercice": false
 
     },{
 
-      "numeroPage": 999,
+      "numeroPage": 48,
+      "titre": "",
+      "texte": "« Cet instrument transforme les exercices de mathématiques en musique. Plus tu l'alimentes, plus le son qui en sortira sera pur et agréable. En tant que débutant, tu peux commencer avec le nombre d'exercices que tu veux. »",
+      "boutons": [{
+        "texte": "Je vais commencer doucement avec 2 exercices.",
+        "pageLien": 53
+      },{
+        "texte": "4 exercices, c'est déjà bien pour commencer.",
+        "pageLien": 51
+      },{
+        "texte": "Je me sens capable de faire une super musique ! Je vais faire 6 exercices.",
+        "pageLien": 49
+      }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 49,
+      "titre": "",
+      "texte": "ex 1",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 50
+
+    },{
+
+      "numeroPage": 50,
+      "titre": "",
+      "texte": "ex 2",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 51
+
+    },{
+
+      "numeroPage": 51,
+      "titre": "",
+      "texte": "ex 3",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 52
+
+    },{
+
+      "numeroPage": 52,
+      "titre": "",
+      "texte": "ex 4",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 53
+
+    },{
+
+      "numeroPage": 53,
+      "titre": "",
+      "texte": "ex 5",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 54
+
+    },{
+
+      "numeroPage": 54,
+      "titre": "",
+      "texte": "ex 6",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "Réponse 1",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "Réponse 2 (la bonne)",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Réponse 3",
+        "correct": false
+      }],
+      "pageLien": 55
+
+    },{
+
+      "numeroPage": "999",
       "titre": "Histoire terminée !",
       "texte": "Félicitations, tu es arrivé au bout de l'histoire ! A bientôt pour d'autres aventures :) <br>N'oublie pas d'envoyer ton score en cliquant sur le bouton en dessous !",
       "boutons": [{
