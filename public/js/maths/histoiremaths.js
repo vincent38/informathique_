@@ -137,7 +137,7 @@ loadJSON(function (json) {
 			var bouton = document.createElement("span");
 			bouton.setAttribute("class", "btn btn-danger btn-sm");
 			bouton.id = "debug-retour-debut";
-			bouton.innerHTML = "(debug) Retour au début";
+			bouton.innerHTML = "(Debug) Retourner au début";
 			bouton.addEventListener("click", function () {
 				afficherDiv(0);
 			});
@@ -161,11 +161,16 @@ loadJSON(function (json) {
 				bouton.addEventListener("click", function () {
 					if (correcte) {
 						bouton.setAttribute("class", "btn btn-bonne-reponse btn-lg btn-block");
+						bouton.setAttribute("disabled", "true");
+						for (var i = 0; i < json.textes[numPage].reponses.length; i++) {
+							document.getElementById(i).setAttribute("disabled", "true");
+						}
 						g = g + 1;
 						gh.innerText = g;
 						afficherBoutonContinuer(pageLien);
 					} else {
 						bouton.setAttribute("class", "btn btn-mauvaise-reponse btn-lg btn-block");
+						bouton.setAttribute("disabled", "true");
 						b = b + 1;
 						bh.innerText = b;
 					}
