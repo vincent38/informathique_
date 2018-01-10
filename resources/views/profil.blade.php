@@ -57,11 +57,11 @@
       <div class="row">
         <div class="col-md-6">
           <h3>Exercices terminés (mathématiques)</h3>
-          @if ($user_info == null)
+          @if ($user_maths == null)
               <p>Pas d'exercice terminé à afficher pour le moment...</p>
             @else
               @foreach($user_maths as $um)
-                <p>Exercice {{ $um->id_exercise }} terminé le {{ date('d/m/Y',  strtotime($um->created_at)) }} avec un score de {{ $um->score }}</p>
+                <p>Exercice {{ $um->id_story }} terminé le {{ date('d/m/Y',  strtotime($um->created_at)) }} avec un score de {{ $um->score }}</p>
               @endforeach
             @endif
         </div> <!-- col -->
