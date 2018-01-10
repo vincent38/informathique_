@@ -19,7 +19,8 @@ class Profile extends Controller
             $badges[$ub->id_badge] = DB::select('select * from storage_badges where id = ?', [$ub->id_badge]);
         }
         $user_info = DB::select('select * from user_info where id_user = ?', [$user->id]);
-        return view('profil', compact('user','user_lvl','user_badges', 'badges', 'user_info'));
+        $user_maths = DB::select('select * from user_maths where id_user = ?', [$user->id]);
+        return view('profil', compact('user','user_lvl','user_badges', 'badges', 'user_info', 'user_maths'));
     }
 
     function indexMsg($message){
@@ -31,7 +32,8 @@ class Profile extends Controller
             $badges[$ub->id_badge] = DB::select('select * from storage_badges where id = ?', [$ub->id_badge]);
         }
         $user_info = DB::select('select * from user_info where id_user = ?', [$user->id]);
-        return view('profil', compact('user','user_lvl','user_badges', 'badges', 'message', 'user_info'));
+        $user_maths = DB::select('select * from user_maths where id_user = ?', [$user->id]);
+        return view('profil', compact('user','user_lvl','user_badges', 'badges', 'message', 'user_info', 'user_maths'));
     }
 
     function update(Request $request) {
