@@ -38,6 +38,8 @@
         </category>
 
         <category name = "Actions" colour = "300">
+          <block type="m_idle"></block>
+          <block type="m_ramasser"></block>
           <block type="m_echappe"></block>
           <block type="m_levier"></block>
         </category>

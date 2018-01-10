@@ -127,3 +127,27 @@ Blockly.Blocks['m_ramasser'] = {
         this.setHelpUrl("");
     }
 };
+
+Blockly.Blocks['m_ramasser'] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField("Ramasser");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+
+Blockly.Blocks['m_idle'] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField("Attendre");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};

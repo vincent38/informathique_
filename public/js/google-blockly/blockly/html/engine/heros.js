@@ -5,8 +5,8 @@ class Heros {
         this.tabY = jsonData.spawnTabY;
         this.x = jsonData.spawnX;
         this.y = jsonData.spawnY;
-        this.width = 50;
-        this.height = 50;
+        this.width = jsonData.tailleXHeros || 50;
+        this.height = jsonData.tailleYHeros || 50;
         this.img = new Image();
         this.img.src = '../js/google-blockly/blockly/html/resources/images/heros.png';
 
@@ -86,6 +86,21 @@ class Heros {
     testerGoDroite() {
         //alert(tabNiveau.tab[this.tabX+1][this.tabY]);
         return (!testerObstacle(this.tabX + 1, this.tabY));
+    }
+
+    idle(){}
+
+    ramasser(){
+        if(!perdu) {
+            var ramasser = false;
+            for (var i = 0; i < ramassables.length; i++) {
+                ramasser = ramassables[i].testerRamasse(this.tabX, this.tabY);
+            }
+            if (!ramasser) {
+                swal("Rien à ramasser", "Ton héros ne voit rien de ramassable autour de lui", "error");
+                perdu = true;
+            }
+        }
     }
 
     repaint() {

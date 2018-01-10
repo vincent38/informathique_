@@ -14,6 +14,7 @@ includeJs("fond.js");
 includeJs("dessins.js");
 includeJs("heros.js");
 includeJs("personnage.js");
+includeJs("ramassable.js");
 includeJs("obstacle.js");
 includeJs("levier.js");
 includeJs("porte.js");
