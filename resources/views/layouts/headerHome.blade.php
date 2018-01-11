@@ -57,6 +57,11 @@
             <a class="btn btn-info" style="margin: 0;" href="{{ route("home") }}">Retour au menu principal</a>
           </div>
         @endif
+        @if (Route::current()->getName() == 'escape')
+          <div class=" pull-left header-profil">
+            <a class="btn btn-info" style="margin: 0;" href="{{ route("informatique") }}">Retour au menu Escape-Colle</a>
+          </div>
+        @endif
         <!-- Boutons Connexion / Inscription / Profil / Déconnexion pas affichés si histoire interactive -->
         @if (! preg_match('/launchStory/' , Route::current()->getName()))
           <div class=" pull-right header-profil">
