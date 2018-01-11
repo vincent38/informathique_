@@ -14,14 +14,17 @@ class TabNiveau {
         this.yMax = parsedJson.yMax;
     }
     rearrangeJsonTab(data) {
-        var dataTemp = clone(data);
+        var dataTemp = new Array();
         for (var i = 0; i < data.length; i++) {
+          dataTemp.push(new Array());
+          for(var j = 0; j < data[i].length; j++){
+            dataTemp[i].push(data[j][i]);
+          }
                 //alert(i + ' ' + j);
-                dataTemp.push(data[i]);
                 //dataTemp[j][i] = data[i][j];
         }
-        data = dataTemp;
-        return data;
+        alert(dataTemp[0][2]);
+        return dataTemp;
     }
 }
 

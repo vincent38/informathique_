@@ -17,7 +17,7 @@ Scoring system - variables for timers
 */
 var tStart, tEnd, tTotal;
 tStart = new Date().getTime() / 1000;
-console.log(tStart); 
+console.log(tStart);
 
 function startGame() {
     scene.start();
@@ -63,6 +63,7 @@ function getXMLHttpRequest2() {
 
 function testerGagne(heros) {
     if (!perdu) {
+      alert(tabNiveau.tab[heros.tabX][heros.tabY]);
         if (tabNiveau.tab[heros.tabX][heros.tabY] == -1) {
             gagne = true;
             tEnd = new Date().getTime() / 1000;
