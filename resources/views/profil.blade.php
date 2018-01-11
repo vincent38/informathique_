@@ -8,7 +8,7 @@
         <div class="col-lg-12">
           <h2>Bienvenue {{ $user->name }}</h2>
           @if (isset($message))
-          <div class="alert alert-success">
+          <div class="alert alert-info">
              {{ $message }}
           </div>
           @endif

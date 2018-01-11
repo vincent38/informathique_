@@ -58,7 +58,7 @@
 
 
 
-      <input type="button" value="Lancer le programme" id="run">
+      <input class="btn btn-info" type="button" value="Lancer le programme" id="run">
       <div style="width: 45%" id="blocklyDiv"></div>
 
       <canvas id="scene"></canvas>
