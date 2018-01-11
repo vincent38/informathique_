@@ -80,7 +80,6 @@
       "imageG" : "garcon-attente-gauche.png",
       "imageH" : "garcon-attente-dos.png",
       "onTick" : "",
-      "surveillant" : 1,
       "CVB" : [
         [11,9]
       ],
@@ -104,33 +103,13 @@
         [7,5],
         [8,5],
         [7,4]
-      ],
-      "CVH" : [
-        [9,4],
-        [10,4],
-        [10,5],
-        [11,4],
-        [11,5],
-        [11,6],
-        [12,4],
-        [12,5],
-        [12,6],
-        [12,7],
-        [13,4],
-        [13,5],
-        [13,6],
-        [14,4],
-        [14,5]
-
-
-      ],
-      "onTick" : "if(typeof this.phase === 'undefined'){this.phase = 1;}switch(this.phase){case 1:this.img.src = this.imgG.src;this.tailleX = 40;this.tailleY = 40;this.testerDetectionHeros(this.CVG);this.phase++;break;case 6:this.img.src = this.imgH.src;this.tailleX = 50;this.tailleY = 50;this.testerDetectionHeros(this.CVH);this.phase++;break;case 11:this.img.src = this.imgG.src;this.tailleX = 40;this.tailleY = 40;this.testerDetectionHeros(this.CVG);this.phase++;break;case 16:this.img.src = this.imgB.src;this.tailleX = 50;this.tailleY = 50;this.testerDetectionHeros(this.CVB);this.phase = 1;break;default:this.phase++;}"
+      ]
     }
   ],
   "alertesDebut-" : [
-    "Pour réussir ce niveau, tu dois ramasser ton carnet de liaison et sortir de la pièce.",
-    "Tu peux ramasser les objets sur lesquels tu es et ceux à coté de toi en sélectionnant Ramasser dans la catégorie Actions.",
-    "Attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge !",
-    "Tu peux attendre un tour en sélectionnant Attendre dans Actions."
+    "Pour réussir ce niveau tu dois ramasser ton carnet de liaison et sortir de la pièce",
+    "Tu peux ramasser les objets sur lesquels tu es et ceux à coté de toi en séléctionnant Ramasser dans Actions",
+    "Attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge",
+    "Tu peux attendre un tour en séléctionnant Attendre dans Actions"
   ]
 }

@@ -48,8 +48,8 @@
   }
 ],
 "porte" : {
-  "xTab" : 0,
-  "yTab" : 1,
+  "xTab" : 1,
+  "yTab" : 20,
   "x" : 21,
   "y" : 425,
   "tailleX" : 81,
@@ -60,12 +60,13 @@
 "ramassables" : [
     {
       "xTab" : 17,
-      "yTab" : 1,
+      "yTab" : 2,
       "x" : 350,
       "y" : 53 ,
       "tailleX" : 25,
       "tailleY" : 25,
-      "img" : "plateau.png"
+      "img" : "plateau.png",
+      "action" : "personnages[0].x +=20;\npersonnages[0].xTab +=1;\nalert(personnages[0].xTab);"
     }
   ],
   "personnages" : [
@@ -77,6 +78,54 @@
       "tailleX" : 45,
       "tailleY" : 45,
       "image" : "garcon-attente-face.png"
+    },{
+      "xTab" : 8,
+      "yTab" : 3,
+      "x" : 174,
+      "y" : 74,
+      "tailleX" : 45,
+      "tailleY" : 45,
+      "image" : "fille-attente-face.png"
+    },{
+      "xTab" : 8,
+      "yTab" : 6,
+      "x" : 174,
+      "y" : 124,
+      "tailleX" : 45,
+      "tailleY" : 45,
+      "image" : "garcon-attente-dos.png"
+    },{
+      "xTab" : 8,
+      "yTab" : 14,
+      "x" : 180,
+      "y" : 282,
+      "tailleX" : 37,
+      "tailleY" : 37,
+      "image" : "garcon-attente-droite.png"
+    },{
+      "xTab" : 11,
+      "yTab" : 14,
+      "x" : 237,
+      "y" : 282,
+      "tailleX" : 37,
+      "tailleY" : 37,
+      "image" : "garcon-attente-gauche.png"
+    },{
+      "xTab" : 0,
+      "yTab" : 6,
+      "x" : 180,
+      "y" : 312,
+      "tailleX" : 37,
+      "tailleY" : 37,
+      "image" : "fille-attente-droite.png"
+    },{
+      "xTab" : 21,
+      "yTab" : 7,
+      "x" : 420,
+      "y" : 152,
+      "tailleX" : 45,
+      "tailleY" : 45,
+      "image" : "garcon-attente-dos.png"
     }
   ]
 
