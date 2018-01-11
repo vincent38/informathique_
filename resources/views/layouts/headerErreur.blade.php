@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ config('app.name', '') }} - Erreur 404</title>
+    <title>{{ config('app.name', '') }} - Erreur</title>
     <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
     <link rel="stylesheet" href="{{ asset("css/master.css") }}">
     <link rel="stylesheet" href="{{ asset("css/mathinfo.css") }}">
