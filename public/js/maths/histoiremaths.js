@@ -28,7 +28,7 @@ setInterval(function(){
 	th.innerText = min + ":" + tInter;
 }, 1000);
 
-var debug = true;
+var debug = false;
 //var mainDiv = document.getElementById("mainDiv");
 
 // On retire le message d'erreur affiché par défaut
