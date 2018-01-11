@@ -47,7 +47,7 @@
             <span>Histoire n°<span id="idh">0</span> - Bonnes réponses : <span id="gh">0</span> - Mauvaises réponses : <span id="bh">0</span> - Temps écoulé : <span id="th">00:00</span></spanp>
           </div>
         @endif
-        @if (Route::current()->getName() == 'escape')
+        @if (Route::current()->getName() == 'informatique')
           <div class=" pull-left header-profil">
             <a class="btn btn-info" style="margin: 0;" href="{{ route("home") }}">Retour au menu principal</a>
           </div>
@@ -62,7 +62,7 @@
             <a class="btn btn-info" style="margin: 0;" href="{{ route("home") }}">Retour au menu principal</a>
           </div>
         @endif
-        @if (Route::current()->getName() == 'escape')
+        @if (Route::current()->getName() == 'launchGame')
           <div class=" pull-left header-profil">
             <a class="btn btn-info" style="margin: 0;" href="{{ route("informatique") }}">Retour au menu Escape-Colle</a>
           </div>
