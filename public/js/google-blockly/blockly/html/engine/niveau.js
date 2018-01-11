@@ -6,7 +6,6 @@ function clone(obj) {
     }
     return copy;
 }
-
 class TabNiveau {
     constructor(parsedJson) {
         this.tab = this.rearrangeJsonTab(parsedJson.data);
@@ -14,14 +13,21 @@ class TabNiveau {
         this.yMax = parsedJson.yMax;
     }
     rearrangeJsonTab(data) {
-        var dataTemp = clone(data);
-        for (var i = 0; i < data.length; i++) {
-            for (var j = 0; j < data[i].length; j++) {
-                //alert(i + ' ' + j);
-                dataTemp.push(data[i]);
-                //dataTemp[j][i] = data[i][j];
+        var dataTemp = new Array();
+        /*for (var i = 0; i < data.length; i++) {
+            for(var j = 0; j < data[i].length; j++){
+                if(i == 0){
+                    dataTemp[j] = new Array();
+                }
+            }
+        }*/
+        for(var i = 0; i < data[0].length; i++){
+            dataTemp[i] = new Array();
+            for(var j = 0; j < data.length; j++){
+                dataTemp[i].push(data[j][i]);
             }
         }
+        //for(var i = 0; i < dataTemp.length; i++)alert(dataTemp[i]);
         data = dataTemp;
         return data;
     }

@@ -6,10 +6,10 @@ function includeJs(url){
 
 }
 
+includeJs("niveau.js");
 includeJs("globalVars.js");
 includeJs("includeJson.js");
 includeJs("scene.js");
-includeJs("niveau.js");
 includeJs("fond.js");
 includeJs("dessins.js");
 includeJs("heros.js");
@@ -18,6 +18,7 @@ includeJs("ramassable.js");
 includeJs("obstacle.js");
 includeJs("levier.js");
 includeJs("porte.js");
+includeJs("tick.js");
 
 setTimeout('includeJs("jeu.js")', 1000);//pour etre sur de ne pas créer d'erreurs par l'appel de fonctions pas encore incluses
 //includeJs("jeu.js");

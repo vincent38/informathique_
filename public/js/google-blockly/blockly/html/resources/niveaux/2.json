@@ -67,7 +67,46 @@
       "action" : "porte.ouvre();\nporte.x+= 8;\n"
     }
   ],
-  "alertesDebut" : [
+  "personnages" : [
+    {
+      "xTab" : 12,
+      "yTab" : 8,
+      "x" : 435,
+      "y" : 310,
+      "tailleX" : 50,
+      "tailleY" : 50,
+      "image" : "garcon-attente-face.png",
+      "imageB" : "garcon-attente-face.png",
+      "imageG" : "garcon-attente-gauche.png",
+      "imageH" : "garcon-attente-dos.png",
+      "onTick" : "",
+      "CVB" : [
+        [11,9]
+      ],
+      "CVG" : [
+        [7,9],
+        [8,9],
+        [9,9],
+        [10,9],
+        [7,8],
+        [8,8],
+        [9,8],
+        [10,8],
+        [11,8],
+        [7,7],
+        [8,7],
+        [9,7],
+        [10,7],
+        [7,6],
+        [8,6],
+        [9,6],
+        [7,5],
+        [8,5],
+        [7,4]
+      ]
+    }
+  ],
+  "alertesDebut-" : [
     "Pour réussir ce niveau tu dois ramasser ton carnet de liaison et sortir de la pièce",
     "Tu peux ramasser les objets sur lesquels tu es et ceux à coté de toi en séléctionnant Ramasser dans Actions",
     "Attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge",

@@ -139,6 +139,7 @@ function testerGagne(heros) {
             btn.setAttribute("type", "button");
             btn.setAttribute("value", "prochain niveau");
             div.appendChild(btn);
+            tick();
         } else if (tabNiveau.tab[heros.tabX][heros.tabY] == -2) {
             swal("Porte fermée", "Impossible de s'echapper, la porte est fermée... As-tu rempli tous les objectifs ?", "error");
             perdu = true
