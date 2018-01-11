@@ -122,7 +122,7 @@ class Personnage{
         for(var i = 0; i < CV.length; i++){
             if(heros.tabX == CV[i][0] && heros.tabY == CV[i][1]){
                 perdu = 1;
-                swal("Le surveillant vous a repéré dans la zone interdite, vous avez perdu", "", 'error');
+                swal("Repéré", "Le surveillant vous a repéré dans la zone interdite, vous avez perdu", 'error');
             }
         }
     }
