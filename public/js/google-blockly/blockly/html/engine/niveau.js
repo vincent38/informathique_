@@ -16,11 +16,9 @@ class TabNiveau {
     rearrangeJsonTab(data) {
         var dataTemp = clone(data);
         for (var i = 0; i < data.length; i++) {
-            for (var j = 0; j < data[i].length; j++) {
                 //alert(i + ' ' + j);
                 dataTemp.push(data[i]);
                 //dataTemp[j][i] = data[i][j];
-            }
         }
         data = dataTemp;
         return data;
