@@ -49,5 +49,6 @@ function actionLevier() {
             swal("Pas de levier ici", "", "error");
             perdu = true;
         }
+        tick();
     }
 }

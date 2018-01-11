@@ -35,12 +35,6 @@ Blockly.JavaScript['m_heros_droite'] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['m_jarno'] = function(block) {
-  var value_bite = Blockly.JavaScript.valueToCode(block, 'bite', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = 'alert(\'bite\');\n';
-  return code;
-};
-
 Blockly.JavaScript['m_echappe'] = function(block) {
     // TODO: Assemble JavaScript into code variable.
     var code = 'timeout += delay;\nsetTimeout(\'testerGagne(heros)\', timeout);\n';

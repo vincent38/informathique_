@@ -25,6 +25,7 @@ class Heros {
         if (this.testerMonter() && !perdu) {
             this.y -= this.tailleDeplacement;
             this.tabY--;
+            tick();
         } else if (perdu) {
         }
         else {
@@ -43,6 +44,7 @@ class Heros {
         if (this.testerDescendre() && !perdu) {
             this.y += this.tailleDeplacement;
             this.tabY++;
+            tick();
         } else if (perdu) {
         }
         else {
@@ -59,6 +61,7 @@ class Heros {
         if (this.testerGoGauche() && !perdu) {
             this.x -= this.tailleDeplacement;
             this.tabX--;
+            tick();
         } else if (perdu) {
         }
         else {
@@ -75,6 +78,7 @@ class Heros {
         if (this.testerGoDroite() && !perdu) {
             this.x += this.tailleDeplacement;
             this.tabX++;
+            tick();
         } else if (perdu) {
         }
         else {
@@ -88,7 +92,9 @@ class Heros {
         return (!testerObstacle(this.tabX + 1, this.tabY));
     }
 
-    idle(){}
+    idle(){
+        tick();
+    }
 
     ramasser(){
         if(!perdu) {
@@ -100,6 +106,7 @@ class Heros {
                 swal("Rien à ramasser", "Ton héros ne voit rien de ramassable autour de lui", "error");
                 perdu = true;
             }
+            tick();
         }
     }
 
@@ -107,3 +114,5 @@ class Heros {
         scene.context.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
 }
+
+//todo : faire se tourner le heros quand il change de direction
