@@ -1,4 +1,4 @@
-@extends('layouts.header404')
+@extends('layouts.headerErreur')
 @section('site')
 
 <div class="container menu" style="margin-top: 50px;">
