@@ -45,7 +45,7 @@ class StorageBadgesTable extends Migration
                 'name' => 'Escape the geometrix',
                 'action' => 'end_math_4',
                 'count_action' => 1,
-                'data' => 'Terminer l\'histoire \'Kimi dans la ville de Géométra\''
+                'data' => 'Terminer l\'histoire \'Kini dans la ville de Géométra\''
             )
         );
         DB::table('storage_badges')->insert(

@@ -43,7 +43,7 @@ class Escape extends Controller
             Less points given on harder exercises (id)
             Multiplier for number of levers (1 + nb_levers * 0.2)
         */
-        $scoreModifier = (($request->route('time') * 100) / 300);
+        $scoreModifier = (($request->route('time') * 100) / 1200);
         $scoreInterm = 100 - $scoreModifier;
         if ($request->route('lvl_difficulty') == 0) {$d = 1;} else {$d = 1 + ($request->route('lvl_difficulty')*0.2);}
         $score = ($scoreInterm - $request->route('id_exo')) * $d;

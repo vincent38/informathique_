@@ -44,5 +44,11 @@
     "tailleY" : 150,
     "imgFermee" : "porte-fermee-droite.png",
     "imgOuverte" : "porte-ouverte-droite.png"
-  }
+  },
+  "alertesDebut" : [
+    "Il est temps de te présenter les leviers",
+    "Active le levier pour ouvrir la porte",
+    "Une fois la porte ouverte, tu pourras sortir !",
+    "Pour savoir si le levier est actif, regarde la couleur du manche."
+  ]
 }
