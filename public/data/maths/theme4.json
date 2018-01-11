@@ -63,9 +63,9 @@
 
       "numeroPage": 5,
       "titre": "",
-      "texte": "Après que Kini ait bien mangé, le chef lui dit : « Ça te fera 3 exercices !",
+      "texte": "Après que Kini ait bien mangé, le chef lui dit : « Ça te fera 1 exercice !",
       "boutons": [{
-        "texte": "Quoi ? Des exercices ? Mais comment ça ?",
+        "texte": "Quoi ? Un exercice ? Mais comment ça ?",
         "pageLien": 6
       },{
         "texte": "D'accord, c'est parti !",
@@ -101,22 +101,22 @@
     },{
 
       "numeroPage": 8,
-      "titre": "Exercice - Calculs fractionnaires",
-      "texte": "Cet exercice est un exemple. <br>Pour calculer l'expression ci-dessous, l'opération à effectuer en priorité est : <br>",
+      "titre": "Exercice - Théorème de Thalès",
+      "texte": "Sur la figure, les droites (SJ) et (LC) sont parallèles. <br><img src='../img/4/8.png' alt='Figure géométrique complexe'><br>Vous disposez des données suivantes : US = 2,5cm, UJ = 2,8cm, SJ = 2,7cm et LS = 3,8cm. <br> Donnez les valeurs approximatives de UC et LC",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "La soustraction",
+        "texteReponse": "UC = 1,339 et LC = 1,404",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "La multiplication",
-        "correct": true
+        "texteReponse": "UC = 1,653 et LC = 1,330",
+        "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "Il n'y a pas de priorité particulière",
-        "correct": false
+        "texteReponse": "UC = 1,455 et LC = 1,404",
+        "correct": true
       }],
       "pageLien": 9
 
@@ -198,25 +198,25 @@
     },{
 
       "numeroPage": 15,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (2x - 4)²",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "JUL est un triangle rectangle en U tel que JU = 3,9 cm et l'angle ULJ mesure 75°. <br> Calculez la longuur JL arrondie au millième",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "2x² - 16x + 16",
+        "texteReponse": "JL = 4,138",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "4x² + 16x - 16",
+        "texteReponse": "JL = 3,938",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "2x² + 16x - 16",
+        "texteReponse": "JL = 4,028",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "4x² - 16x + 16",
+          "texteReponse": "JL = 4,038",
           "correct": true
         }],
       "pageLien": 17
@@ -224,25 +224,25 @@
     }, {
 
       "numeroPage": 16,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (2x - 4)²",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "JUL est un triangle rectangle en U tel que JU = 3,9 cm et l'angle ULJ mesure 75°. <br> Calculez la longuur JL arrondie au millième",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "2x² - 16x + 16",
+        "texteReponse": "JL = 4,138",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "4x² + 16x - 16",
+        "texteReponse": "JL = 3,938",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "2x² + 16x - 16",
+        "texteReponse": "JL = 4,028",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "4x² - 16x + 16",
+          "texteReponse": "JL = 4,038",
           "correct": true
         }],
       "pageLien": 18
@@ -283,25 +283,25 @@
     },{
 
       "numeroPage": 20,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 16x² - 25",
+      "titre": "Exercice - Réciproque du théorème de Thalès",
+      "texte": "<img src='../img/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(4x - 5)²",
+        "texteReponse": "AV/KD = YD/YA",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(4x - 5)(4x - 5)",
+        "texteReponse": "YA/YD = YV/YK",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "(4x + 5)(4x - 5)",
+        "texteReponse": "YD/YA = YK/YV",
         "correct": true
         },{
           "numReponse": 3,
-          "texteReponse": "(4x + 5)²",
+          "texteReponse": "KV/KY = DA/DY",
           "correct": false
         }],
       "pageLien": 22
@@ -309,25 +309,25 @@
     },{
 
       "numeroPage": 21,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 16x² - 25",
+      "titre": "Exercice - Réciproque du théorème de Thalès",
+      "texte": "<img src='../img/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(4x - 5)²",
+        "texteReponse": "AV/KD = YD/YA",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(4x - 5)(4x - 5)",
+        "texteReponse": "YA/YD = YV/YK",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "(4x + 5)(4x - 5)",
+        "texteReponse": "YD/YA = YK/YV",
         "correct": true
         },{
           "numReponse": 3,
-          "texteReponse": "(4x + 5)²",
+          "texteReponse": "KV/KY = DA/DY",
           "correct": false
         }],
       "pageLien": 23
