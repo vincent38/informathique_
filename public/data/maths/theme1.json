@@ -27,13 +27,19 @@
       "numeroPage": 2,
       "titre": "Super",
       "texte": "Tu as choisis le premier choix.",
-      "boutons": [],
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 5
+        }],
       "exercice": false
     },{
       "numeroPage": 3,
-      "titre": "Géniol",
+      "titre": "Génial",
       "texte": "Tu as choisis le deuxième choix.",
-      "boutons": [],
+      "boutons": [{
+        "texte": "Continuer",
+        "pageLien": 5
+        }],
       "exercice": false
     },{
       "numeroPage": 4,
@@ -55,6 +61,17 @@
         "correct": false
       }],
       "pageLien": 1
-    }
+    },{
+      
+            "numeroPage": 5,
+            "titre": "Fin de la démonstration",
+            "texte": "Pour l'instant, cette histoire permet de démontrer les possibilités du moteur gérant les exercices de mathématiques. Vous pouvez avoir un exemple plus détaillé avec des exercices d'exemple sur le thème 4.",
+            "boutons": [{
+              "texte": "Envoyer un score de test et quitter",
+              "pageLien": 4269404
+              }],
+            "exercice": false
+      
+          }
   ]
 }

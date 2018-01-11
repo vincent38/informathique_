@@ -45,7 +45,8 @@ class Maths extends Controller
         */
         $scoreModifier = (($request->route('time') * 100) / 1200);
         $scoreInterm = 100 - $scoreModifier;
-        if ($request->route('b') == 0) {$m = 1;} else {$m = 1 + ($request->route('b')*0.1);}
+        if ($request->route('b') == 0) {$m = 1;} else {$m = 1 - ($request->route('b')*0.05);}
+        $b = 1 + ($request->route('g')*0.08);
         $score = $scoreInterm * $m;
         $score = round($score);
         if ($score < 0) { $score = 0;}
@@ -79,7 +80,7 @@ class Maths extends Controller
                         return response()->json([
                             'msg_status' => 'success',
                             'status' => 'Histoire terminée - Tu as amélioré ton précédent record !',
-                            'infoplus' => 'Ton score est passé de '.$old_score[0]->score.' à '.$score.' . Tu peux continuer au niveau suivant !',
+                            'infoplus' => 'Ton score est passé de '.$old_score[0]->score.' à '.$score.'. Bravo :)',
                             'score' => $score
                             //'badge' => $b->original
                         ]);
@@ -89,7 +90,7 @@ class Maths extends Controller
                         return response()->json([
                             'msg_status' => 'info',
                             'status' => $str,
-                            'infoplus' => 'Tu as fait un score de '.$score.', ton précédent score étant de '.$old_score[0]->score.'.Tu peux réessayer une nouvelle fois, ou bien passer à la suite.',
+                            'infoplus' => 'Tu as fait un score de '.$score.', ton précédent score étant de '.$old_score[0]->score.'.Tu peux réessayer une nouvelle fois l\'histoire, et peut-être débloquer une autre fin, qui sait !',
                             'score' => $score
                         ]);
                     }
@@ -108,7 +109,7 @@ class Maths extends Controller
                     return response()->json([
                         'msg_status' => 'success',
                         'status' => 'Histoire terminée - Nouveau record !',
-                        'infoplus' => 'Tu as terminé le niveau avec un score de '.$score.'. Bravo ! Tu peux passer à la suite.',
+                        'infoplus' => 'Tu as terminé le niveau avec un score de '.$score.'. Bravo ! Tu peux passer à la suite, ou réessayer pour peut-être découvrir d\'autres fins !',
                         'score' => $score,
                         'badge' => $b->original
                     ]);

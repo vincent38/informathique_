@@ -7,4 +7,5 @@ var leviers;
 var porte;
 var personnages;
 var obstacles;
+var ramassables;
 var dev = 1;

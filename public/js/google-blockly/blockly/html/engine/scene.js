@@ -14,6 +14,7 @@ var scene = {
     },*/
 
     start: function () {
+
         //this.canvas.setAttribute('width', '1000');
         //alert(jsonData.tailleFondX);
         this.canvas.width = jsonData.tailleFondX;

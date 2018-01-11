@@ -1,0 +1,330 @@
+{
+  "textes": [{
+      "numeroPage": 0,
+      "titre": "Bienvenue",
+      "texte": "Cette série spéciale va te permettre de t'entraîner sur les sujets suivants : résolution de problèmes, calcul littéral. <br> Clique sur le bouton pour commencer !",
+      "boutons": [{
+        "texte": "Commencer",
+        "pageLien": 1
+        }],
+      "exercice": false
+
+    },{
+
+      "numeroPage": 1,
+      "titre": "Exercice - Calculs fractionnaires",
+      "texte": "Cet exercice est un exemple. <br>Pour calculer l'expression ci-dessous, l'opération à effectuer en priorité est : <br>",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "La soustraction",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "La multiplication",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "Il n'y a pas de priorité particulière",
+        "correct": false
+      }],
+      "pageLien": 2
+
+    },{
+
+      "numeroPage": 2,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (2x - 4)²",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "2x² - 16x + 16",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "4x² + 16x - 16",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "2x² + 16x - 16",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "4x² - 16x + 16",
+          "correct": true
+        }],
+      "pageLien": 3
+
+    },{
+
+      "numeroPage": 3,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 16x² - 25",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "(4x - 5)²",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "(4x - 5)(4x - 5)",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "(4x + 5)(4x - 5)",
+        "correct": true
+        },{
+          "numReponse": 3,
+          "texteReponse": "(4x + 5)²",
+          "correct": false
+        }],
+      "pageLien": 4
+
+    },{
+
+      "numeroPage": 4,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (3x + 6)²",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "9x² + 36x + 36",
+        "correct": true
+        },{
+        "numReponse": 1,
+        "texteReponse": "9x² + 18x + 36",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "3x² + 36x + 36",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "9x² + 36x + 18",
+          "correct": false
+        }],
+      "pageLien": 5
+
+    },{
+
+      "numeroPage": 5,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 4x² + 25 + 20x",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "(2x - 4)²",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "(4x + 5)²",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "(2x + 5)(2x - 5)",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "(5 + 2x)²",
+          "correct": true
+        }],
+      "pageLien": 6
+
+    },{
+
+      "numeroPage": 6,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : -100x + 25x² + 100",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "(10x - 10)²",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "(5x - 10)²",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "(5x - 10)",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "(5x - 10)²",
+          "correct": false
+        }],
+      "pageLien": 7
+
+    },{
+
+      "numeroPage": 7,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (7x - 8)(7x + 8)",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "49x² - 112x + 64",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "-64 + 49x²",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "7x² - 8",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "64 - 49x²",
+          "correct": false
+        }],
+      "pageLien": 8
+
+    },{
+
+      "numeroPage": 8,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 2x² - 36",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "(√(2x) - 6)(√(2x) + 6)",
+        "correct": true
+        },{
+        "numReponse": 1,
+        "texteReponse": "(2x - 6)(2x + 6)",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "(2x - 6)²",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "(2x + 6)²",
+          "correct": false
+        }],
+      "pageLien": 9
+
+    },{
+
+      "numeroPage": 9,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (4x - 5)(4x - 5)",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "16x² - 25",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "16x² + 25",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "16x² + 40x + 25",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "16x² - 40x + 25",
+          "correct": true
+        }],
+      "pageLien": 10
+
+    },{
+
+      "numeroPage": 10,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 49x² + 16 - 56x",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "(7x + 4)²",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "(7x - 4)²",
+        "correct": true
+        },{
+        "numReponse": 2,
+        "texteReponse": "(7x - 4)(7x - 4)",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "(7x - 4)(7x + 4)",
+          "correct": false
+        }],
+      "pageLien": 11
+
+    },{
+
+      "numeroPage": 11,
+      "titre": "Exercice - Développement et factorisation",
+      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (4x - 5)(4x + 2)",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "16x² - 12x - 10",
+        "correct": true
+        },{
+        "numReponse": 1,
+        "texteReponse": "16x² - 40x + 25",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "16x² - 16x + 4",
+        "correct": false
+        },{
+          "numReponse": 3,
+          "texteReponse": "16x² - 10",
+          "correct": false
+        }],
+      "pageLien": 12
+
+    },{
+
+      "numeroPage": 12,
+      "titre": "Exercice - Trigonométrie",
+      "texte": "Cet exercice est un exemple <br> BEA est un triangle rectangle en B tel que : EA = 2 cm et l'angle EBA vaut 36°. <br>Calculez la longueur EB",
+      "boutons": [],
+      "exercice": true,
+      "reponses": [{
+        "numReponse": 0,
+        "texteReponse": "EB vaut environ 3,75 cm",
+        "correct": false
+        },{
+        "numReponse": 1,
+        "texteReponse": "EB vaut environ 1,75 cm",
+        "correct": false
+        },{
+        "numReponse": 2,
+        "texteReponse": "EB vaut environ 2,75 cm",
+        "correct": true
+      }],
+      "pageLien": 13
+
+
+    },{
+
+      "numeroPage": 13,
+      "titre": "Série terminée !",
+      "texte": "Félicitations, tu es arrivé au bout de cette série ! Pour t'entraîner encore plus, n'hésite pas à consulter lesautres sessions spéciales ;) <br>N'oublie pas d'envoyer ton score en cliquant sur le bouton en dessous !",
+      "boutons": [{
+        "texte": "Envoyer mes scores et quitter",
+        "pageLien": 4269404
+        }],
+      "exercice": false
+
+    }
+  ]
+}

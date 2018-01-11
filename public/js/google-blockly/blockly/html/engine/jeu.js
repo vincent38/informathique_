@@ -30,12 +30,14 @@ function startGame() {
     heros = new Heros();
     personnages = setupPersonnages(jsonData, dessins);
     obstacles = setupObstacles(jsonData, dessins);
+    ramassables = setupRamassables(jsonData, dessins);
     dessins.push(heros);
     leviers = setupLeviers(jsonData, dessins);
     porte = setupPorte(jsonData, dessins);
     //alert('u');
 
     setTimeout('updateGameArea()', timeout + 10);
+    //afficherAlertesDebut(jsonData.alertesDebut);
     timeout = 0;
 }
 
@@ -148,6 +150,33 @@ function testerGagne(heros) {
     }
 }
 
+function afficherAlertesDebut(alertes){
+    if(alertes) {
+        var mesAlertes = '';
+        var nb = 0;
+        for (var i = 0; i < alertes.length; i++) {
+            if (nb == 0) {
+                mesAlertes = "swal('"+alertes[i]+"', '', 'info')";
+                nb++;
+            } else {
+                mesAlertes +=".then(() => { swal('"+alertes[i]+"', '', 'info')";
+                nb ++;
+            }
+            //alert(alertes[i]);
+        }
+        for(var i = 0; i < alertes.length - 1; i++){
+            mesAlertes += "})";
+        }
+        mesAlertes+=";";
+        eval(mesAlertes);
+    }
+    //swal('Pour réussir ce niveau tu dois ramasser ton carnet de liaison et sortir de la pièce', '', 'info').then(() => { swal('Tu peux ramasser les objets sur lesquels tu es et ceux à coté de toi en séléctionnant Ramasser dans Actions', '', 'info').then(() => { swal('Attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge', '', 'info').then(() => { swal('Tu peux attendre un tour en séléctionnant Attendre dans Actions', '', 'info')})})});
+    //swal('pour réussir ce niveau tu dois ramasser ton carnet de liaison et t échapper', '', 'info').then(() => { swal('attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge', '', 'info')});
+    //swal('pour réussir ce niveau tu dois ramasser ton carnet de liaison et t\'échapper', '', 'info').then(() => { swal('attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge', '', 'info')});
+}
 
+
+
+afficherAlertesDebut(jsonData.alertesDebut);
 startGame();
 setTimeout('startGame()', 1000);

@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\contactAdmins;
 
 class Profile extends Controller
 {
@@ -94,6 +96,15 @@ class Profile extends Controller
             } else {
                 $message = 'Erreur lors de la modification : les mots de passe divergent';
             }
+        } else if ($request->typeOfForm == "contact") {
+            $validatedData = $request->validate([
+                'email' => 'required',
+                'message' => 'required'
+            ]);
+            $mail = $request->input('email');
+            $mess = $request->input('message');
+            Mail::to(env('MAIL_FROM_ADDRESS', 'admins@kinimi.fr'))->send(new contactAdmins($mail, $mess));
+            $message = "Ton message a été envoyé, les administrateurs reviennent vers toi dans quelques jours tout au plus !";
         }
                 
         return $this->indexMsg($message);
