@@ -8,7 +8,11 @@ class Heros {
         this.width = jsonData.tailleXHeros || 50;
         this.height = jsonData.tailleYHeros || 50;
         this.img = new Image();
-        this.img.src = '../js/google-blockly/blockly/html/resources/images/heros.png';
+        this.img.src = '../js/google-blockly/blockly/html/resources/images/heros-face.png';
+        this.imgB = new Image();this.imgB.src = '../js/google-blockly/blockly/html/resources/images/heros-face.png';
+        this.imgG = new Image();this.imgG.src = '../js/google-blockly/blockly/html/resources/images/heros-gauche.png';
+        this.imgH = new Image();this.imgH.src = '../js/google-blockly/blockly/html/resources/images/heros-dos.png';
+        this.imgD = new Image();this.imgD.src = '../js/google-blockly/blockly/html/resources/images/heros-droite.png';
 
         setTimeout(this.afficher(), 2000);
 
@@ -25,6 +29,7 @@ class Heros {
         if (this.testerMonter() && !perdu) {
             this.y -= this.tailleDeplacement;
             this.tabY--;
+            this.img.src = this.imgH.src;
             tick();
         } else if (perdu) {
         }
@@ -42,6 +47,7 @@ class Heros {
 
     descendre() {
         if (this.testerDescendre() && !perdu) {
+            this.img.src = this.imgB.src;
             this.y += this.tailleDeplacement;
             this.tabY++;
             tick();
@@ -59,6 +65,7 @@ class Heros {
 
     goGauche() {
         if (this.testerGoGauche() && !perdu) {
+            this.img.src = this.imgG.src;
             this.x -= this.tailleDeplacement;
             this.tabX--;
             tick();
@@ -76,6 +83,7 @@ class Heros {
 
     goDroite() {
         if (this.testerGoDroite() && !perdu) {
+            this.img.src = this.imgD.src;
             this.x += this.tailleDeplacement;
             this.tabX++;
             tick();
