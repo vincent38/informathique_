@@ -41,7 +41,7 @@
     <div class="col-md-6">
       <h3>Kini dans la ville de Géométra</h3>
       <a href="{{ route("launchStory", ['id' => 4]) }}" class="btn btn-success btn-lg  btn-block">Commencer l'aventure</a>
-      <p><span class="badge badge-pill badge-success">Nouveau !</span> Après une séance intensive de révisions, Kini s'endort, l'esprit occupé par ses cours de géométrie.<br>
+      <p><span class="badge badge-success">Nouveau !</span> Après une séance intensive de révisions, Kini s'endort, l'esprit occupé par ses cours de géométrie.<br>
         Le voici propulsé dans une ville où les bâtiments ont milles formes, et répondant au nom de Géométra. <br>
         Quelles surprises renferment cet étrange lieu ? A vous de le découvrir !
       </p>
@@ -59,7 +59,7 @@
     <div class="col-md-6">
       <h3>Thème 1</h3>
       <a href="{{ route("launchStory", ['id' => 101]) }}" class="btn btn-success btn-lg  btn-block">Accéder aux exercices</a>
-      <p><span class="badge badge-pill badge-success">Nouveau !</span> Cette session spéciale reprend les principaux exercices de l'aventure "Kini et le mystérieux problème", mais sans devoir suivre l'histoire ! <br>
+      <p><span class="badge badge-success">Nouveau !</span> Cette session spéciale reprend les principaux exercices de l'aventure "Kini et le mystérieux problème", mais sans devoir suivre l'histoire ! <br>
       Parfait pour réviser la résolution de problèmes, les nombres premiers et le calcul littéral.</p>
     </div> <!-- col -->
     <div class="col-md-6">
