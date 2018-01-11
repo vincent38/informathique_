@@ -11,7 +11,7 @@
     },{
       "numeroPage": 1,
       "titre": "Bravo",
-      "texte": "C'est bien, t'as réussi à cliquer sur un bouton. Maintenant, choisis un des boutons ci-dessous.",
+      "texte": "C'est bien. Maintenant, choisis un des boutons ci-dessous.",
       "boutons": [{
         "texte": "Choix 1",
         "pageLien": 2
@@ -60,18 +60,18 @@
         "texteReponse": "Réponse 3",
         "correct": false
       }],
-      "pageLien": 1
+      "pageLien": 5
     },{
-      
-            "numeroPage": 5,
-            "titre": "Fin de la démonstration",
-            "texte": "Pour l'instant, cette histoire permet de démontrer les possibilités du moteur gérant les exercices de mathématiques. Vous pouvez avoir un exemple plus détaillé avec des exercices d'exemple sur le thème 4.",
-            "boutons": [{
-              "texte": "Envoyer un score de test et quitter",
-              "pageLien": 4269404
-              }],
-            "exercice": false
-      
-          }
+
+      "numeroPage": 5,
+      "titre": "Fin de la démonstration",
+      "texte": "Pour l'instant, cette histoire permet de démontrer les possibilités du moteur gérant les exercices de mathématiques. Vous pouvez avoir un exemple plus détaillé avec des exercices d'exemple sur le thème 4.",
+      "boutons": [{
+        "texte": "Envoyer un score de test et quitter",
+        "pageLien": 4269404
+        }],
+      "exercice": false
+
+    }
   ]
 }

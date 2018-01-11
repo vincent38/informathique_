@@ -124,7 +124,7 @@
 
       "numeroPage": 9,
       "titre": "",
-      "texte": "Après être sorti du restaurant, Kini remarque sur sa droite une gigantesque tour, dont il ne pouvait même pas distinguer le sommet. Au moment de continuer son chemin, son œil est attiré par un parc avec des animaux étranges.",
+      "texte": "Après être sorti du restaurant, Kini remarque sur sa droite une gigantesque tour, dont il ne peut même pas distinguer le sommet. Au moment de continuer son chemin, son œil est attiré par un parc avec des animaux étranges.",
       "boutons": [{
         "texte": "Aller vers la tour",
         "pageLien": 10
@@ -906,7 +906,7 @@
         "pageLien": 56
       }],
       "exercice": false
-      
+
     },{
 
       "numeroPage": 56,
