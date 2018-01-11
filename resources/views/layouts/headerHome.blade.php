@@ -47,6 +47,16 @@
             <span>Histoire n°<span id="idh">0</span> - Bonnes réponses : <span id="gh">0</span> - Mauvaises réponses : <span id="bh">0</span> - Temps écoulé : <span id="th">00:00</span></spanp>
           </div>
         @endif
+        @if (Route::current()->getName() == 'profil')
+          <div class=" pull-left header-profil">
+            <a class="btn btn-info" style="margin: 0;" href="{{ route("home") }}">Retour au menu principal</a>
+          </div>
+        @endif
+        @if (Route::current()->getName() == 'mathematiques')
+          <div class=" pull-left header-profil">
+            <a class="btn btn-info" style="margin: 0;" href="{{ route("home") }}">Retour au menu principal</a>
+          </div>
+        @endif
         <!-- Boutons Connexion / Inscription / Profil / Déconnexion pas affichés si histoire interactive -->
         @if (! preg_match('/launchStory/' , Route::current()->getName()))
           <div class=" pull-right header-profil">
