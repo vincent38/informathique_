@@ -102,7 +102,7 @@
 
       "numeroPage": 8,
       "titre": "Exercice - Théorème de Thalès",
-      "texte": "Sur la figure, les droites (SJ) et (LC) sont parallèles. <br><img src='../img/4/8.png' alt='Figure géométrique complexe'><br>Vous disposez des données suivantes : US = 2,5cm, UJ = 2,8cm, SJ = 2,7cm et LS = 3,8cm. <br> Donnez les valeurs approximatives de UC et LC",
+      "texte": "Sur la figure, les droites (SJ) et (LC) sont parallèles. <br><img src='../img/maths/4/8.png' alt='Figure géométrique complexe'><br>Vous disposez des données suivantes : US = 2,5cm, UJ = 2,8cm, SJ = 2,7cm et LS = 3,8cm. <br> Donnez les valeurs approximatives de UC et LC",
       "boutons": [],
       "exercice": true,
       "reponses": [{
@@ -284,7 +284,7 @@
 
       "numeroPage": 20,
       "titre": "Exercice - Réciproque du théorème de Thalès",
-      "texte": "<img src='../img/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
+      "texte": "<img src='../img/maths/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
@@ -310,7 +310,7 @@
 
       "numeroPage": 21,
       "titre": "Exercice - Réciproque du théorème de Thalès",
-      "texte": "<img src='../img/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
+      "texte": "<img src='../img/maths/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
