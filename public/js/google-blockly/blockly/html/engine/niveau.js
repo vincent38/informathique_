@@ -18,7 +18,8 @@ class TabNiveau {
         for (var i = 0; i < data.length; i++) {
             for (var j = 0; j < data[i].length; j++) {
                 //alert(i + ' ' + j);
-                dataTemp[j][i] = data[i][j];
+                dataTemp.push(data[i]);
+                //dataTemp[j][i] = data[i][j];
             }
         }
         data = dataTemp;
@@ -29,20 +30,20 @@ class TabNiveau {
 function testerObstacle(x, y){
     var obstacle = 0;
     //on teste qu'on  sort pas de la map
-    if (x < 0 || x > tabNiveau.xMax) obstacle = 1;
-    if (y < 0 || y > tabNiveau.yMax) obstacle = 1;
+    if (x < 0 || x > tabNiveau.xMax) return 1;
+    if (y < 0 || y > tabNiveau.yMax) return 1;
 
     //on teste les obstacles non-objets
-    if(tabNiveau.tab[x][y] == 1) obstacle = 1;
+    if(tabNiveau.tab[x][y] == 1) return 1;
 
     //on regarde si un personnage est sur le chemin
     for(var i = 0; i < personnages.length; i++){
-        if(personnages[i].xTab == x && personnages[i].yTab == y) obstacle = 1;
+        if(personnages[i].xTab == x && personnages[i].yTab == y) return 1;
     }
 
     //on regarde si un obstacle classique est sur le chemin
     for(var i = 0; i < obstacles.length; i++){
-        if(obstacles[i].xTab == x && obstacles[i].yTab == y) obstacle = 1;
+        if(obstacles[i].xTab == x && obstacles[i].yTab == y) return 1;
     }
 
 
@@ -51,5 +52,5 @@ function testerObstacle(x, y){
 
 
 
-    return obstacle;
+    return 0;
 }
