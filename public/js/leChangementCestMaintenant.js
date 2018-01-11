@@ -12,7 +12,7 @@ var boutonContact     = document.getElementById("btnContact");
 var boutonPseudoCancel = document.getElementById("btnChgPseudoCancel");
 var boutonMailCancel   = document.getElementById("btnChgMailCancel");
 var boutonMdpCancel    = document.getElementById("btnChgPwCancel");
-var boutonContactCancel    = document.getElementById("btnContactCancel");
+var boutonContactCancel = document.getElementById("btnContactCancel");
 
 
 // Initialisation de l'affichage
