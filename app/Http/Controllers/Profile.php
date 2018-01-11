@@ -76,8 +76,8 @@ class Profile extends Controller
             }
         } else if ($request->typeOfForm == "password") {
             $validatedData = $request->validate([
-                'newPassword' => 'required',
-                'confirmNewPassword' => 'required',
+                'newPassword' => 'required|min:6',
+                'confirmNewPassword' => 'required|min:6',
                 'currentPassword' => 'required',
             ]);
             $newPass = $request->input('newPassword');

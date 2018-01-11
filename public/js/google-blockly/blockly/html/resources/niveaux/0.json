@@ -95,5 +95,11 @@
     [0,0,0],
     [0,0,0],
     [0,0,1]
+  ],
+  "alertesDebut" : [
+    "Bienvenue dans ce didacticiel",
+    "Déplacez-vous avec les blocs de déplacement",
+    "Echappez-vous lorsque vous êtes devant une porte",
+    "Evitez les obstacles et autres personnages !"
   ]
 }
