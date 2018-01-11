@@ -2,7 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ config('app.name', '') }} - Page d'accueil</title>
+    <title>
+      {{ config('app.name', '') }}
+      @if (Route::current()->getName() == 'home' or Route::current()->getName() == 'logout')
+         - Page d'accueil
+      @endif
+      @if (Route::current()->getName() == 'mathematiques')
+         - Mathématiques
+      @endif
+      @if (Route::current()->getName() == 'informatique')
+         - Escape Colle
+      @endif
+      @if (Route::current()->getName() == 'profil')
+         - Profil
+      @endif
+    </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset("css/master.css") }}">
     @if (preg_match('/launchStory/' , Route::current()->getName()))
