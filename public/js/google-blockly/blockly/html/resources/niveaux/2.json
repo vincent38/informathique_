@@ -1,0 +1,115 @@
+{
+  "data" :
+    [
+      [1,1,1,1,1,1,1,0,0,0,0,0,0,0,0],
+      [1,1,1,1,1,1,1,0,0,0,0,0,0,0,0],
+      [1,1,1,1,1,1,1,1,1,1,1,0,0,1,1],
+      [1,1,1,1,1,1,1,1,1,1,1,0,0,1,1],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+      [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+      [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,1,1,1,1,1,1,1,1],
+      [0,1,1,1,0,0,0,1,1,1,1,1,1,1,1],
+      [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0,0,0,0,0,0,-2,0,0]
+  ],
+  "data-real" :[
+    [1,1,1,1,1,1,1,0,0,0,0,0,0,0,0],
+    [1,1,1,1,1,1,1,0,0,0,0,0,0,0,0],
+    [1,1,1,1,1,1,1,1,1,1,1,0,0,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,0,0,1,1],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,1,1,1,1,1,1,1],
+    [0,1,1,1,0,0,0,1,1,1,1,1,1,1,1],
+    [0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,-2,0,0]
+  ],
+  "spawnTabX" : 12,
+  "spawnTabY" : 14,
+  "spawnX" : 441,
+  "spawnY" : 505,
+  "tailleXHeros" : 40,
+  "tailleYHeros" : 40,
+  "xMax" : 14,
+  "yMax" : 14,
+  "tailleFondX" : 600,
+  "tailleFondY" : 600,
+  "tailleDeplacement" : 32.1,
+  "porte" : {
+    "xTab" : 12,
+    "yTab" : 14,
+    "x" : 385,
+    "y" : 538,
+    "tailleX" : 144,
+    "tailleY" : 50,
+    "imgFermee" : "porte-fermee-bas.png",
+    "imgOuverte" : "porte-ouverte-bas.png"
+  },
+  "ramassables" : [
+    {
+      "xTab" : 6,
+      "yTab" : 1,
+      "x" : 233,
+      "y" : 65,
+      "tailleX" : 40,
+      "tailleY" : 40,
+      "img" : "carnet.png",
+      "action" : "porte.ouvre();\nporte.x+= 8;\n"
+    }
+  ],
+  "personnages" : [
+    {
+      "xTab" : 12,
+      "yTab" : 8,
+      "x" : 435,
+      "y" : 310,
+      "tailleX" : 50,
+      "tailleY" : 50,
+      "image" : "garcon-attente-face.png",
+      "imageB" : "garcon-attente-face.png",
+      "imageG" : "garcon-attente-gauche.png",
+      "imageH" : "garcon-attente-dos.png",
+      "onTick" : "",
+      "CVB" : [
+        [11,9]
+      ],
+      "CVG" : [
+        [7,9],
+        [8,9],
+        [9,9],
+        [10,9],
+        [7,8],
+        [8,8],
+        [9,8],
+        [10,8],
+        [11,8],
+        [7,7],
+        [8,7],
+        [9,7],
+        [10,7],
+        [7,6],
+        [8,6],
+        [9,6],
+        [7,5],
+        [8,5],
+        [7,4]
+      ]
+    }
+  ],
+  "alertesDebut-" : [
+    "Pour réussir ce niveau tu dois ramasser ton carnet de liaison et sortir de la pièce",
+    "Tu peux ramasser les objets sur lesquels tu es et ceux à coté de toi en séléctionnant Ramasser dans Actions",
+    "Attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge",
+    "Tu peux attendre un tour en séléctionnant Attendre dans Actions"
+  ]
+}
