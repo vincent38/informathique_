@@ -110,9 +110,9 @@
     }
   ],
   "alertesDebut-" : [
-    "Pour réussir ce niveau tu dois ramasser ton carnet de liaison et sortir de la pièce",
-    "Tu peux ramasser les objets sur lesquels tu es et ceux à coté de toi en séléctionnant Ramasser dans Actions",
-    "Attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge",
-    "Tu peux attendre un tour en séléctionnant Attendre dans Actions"
+    "Pour réussir ce niveau, tu dois ramasser ton carnet de liaison et sortir de la pièce.",
+    "Tu peux ramasser les objets sur lesquels tu es et ceux à coté de toi en sélectionnant Ramasser dans la catégorie Actions.",
+    "Attention au surveillant, il ne doit pas pouvoir te voir quand tu es dans la zone rouge !",
+    "Tu peux attendre un tour en sélectionnant Attendre dans Actions."
   ]
 }
