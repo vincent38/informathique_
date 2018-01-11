@@ -6,10 +6,10 @@ function includeJs(url){
 
 }
 
+includeJs("niveau.js");
 includeJs("globalVars.js");
 includeJs("includeJson.js");
 includeJs("scene.js");
-includeJs("niveau.js");
 includeJs("fond.js");
 includeJs("dessins.js");
 includeJs("heros.js");
