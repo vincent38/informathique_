@@ -111,8 +111,8 @@
       "tailleY" : 37,
       "image" : "garcon-attente-gauche.png"
     },{
-      "xTab" : 0,
-      "yTab" : 6,
+      "xTab" : 8,
+      "yTab" : 15,
       "x" : 180,
       "y" : 312,
       "tailleX" : 37,
