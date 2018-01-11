@@ -44,7 +44,7 @@
       <?php
       for($i = 2; $i <= $nbNiveauxFaciles; $i++) {
         $numNiveau = $i; ?>
-        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" disabled class="btn btn-informatique btn-success btn-lg  btn-block">Niveau <?php echo $i; ?></a>
+        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" class="btn btn-informatique btn-success btn-lg btn-block disabled">Niveau <?php echo $i; ?></a>
       <?php } ?>
     </div> <!-- col -->
     <div class="col-md-4">
@@ -53,16 +53,16 @@
       <?php
       for($i = 2; $i <= $nbNiveauxMoyens; $i++) {
         $numNiveau = $i + $nbNiveauxFaciles+1; ?>
-        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" disabled class="btn btn-informatique btn-warning btn-lg  btn-block">Niveau <?php echo $i+$nbNiveauxFaciles+1; ?></a>
+        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" class="btn btn-informatique btn-warning btn-lg btn-block disabled">Niveau <?php echo $i+$nbNiveauxFaciles+1; ?></a>
       <?php } ?>
     </div> <!-- col -->
     <div class="col-md-4">
       <h2>Niveaux difficiles</h2>
-      <a href="{{ route('launchGame', ['id' => 41]) }}" class="btn btn-informatique btn-danger btn-lg  btn-block">Niveau 41</a>
+      <a href="{{ route('launchGame', ['id' => 41]) }}" class="btn btn-informatique btn-danger btn-lg btn-block">Niveau 41</a>
       <?php
       for($i = 2; $i <= $nbNiveauxDifficiles; $i++) {
         $numNiveau = $i + $nbNiveauxFaciles + $nbNiveauxMoyens+2;?>
-        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" disabled class="btn btn-informatique btn-danger btn-lg  btn-block">Niveau <?php echo $i+$nbNiveauxFaciles+$nbNiveauxMoyens+2; ?></a>
+        <a href="{{ route('launchGame', ['id' => $numNiveau]) }}" class="btn btn-informatique btn-danger btn-lg btn-block disabled">Niveau <?php echo $i+$nbNiveauxFaciles+$nbNiveauxMoyens+2; ?></a>
       <?php } ?>
     </div> <!-- col -->
   </div> <!-- row -->
