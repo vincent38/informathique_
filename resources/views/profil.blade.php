@@ -21,7 +21,7 @@
                   </ul>
               </div>
           @endif
-          <p>Sur cette page, tu peux consulter ton avancement, mais également faire tout un tas d'autres trucs vachement cools.</p>
+          <p>Sur cette page, tu peux consulter ton avancement, modifier tes informations personnelles (mot de passe, pseudo, adresse mail) et contacter les administrateurs si tu as rencontré un problème sur le site.</p>
         </div> <!-- col -->
       </div> <!-- row -->
     </div> <!-- container -->
@@ -115,7 +115,7 @@
             <span class="btn btn-primary btn-danger" id="btnChgPseudoCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
             <input type="submit" class="btn btn-primary btn-success" id="btnChgPseudoSubmit" value="Valider"> <!-- <span class='glyphicon glyphicon-ok'></span> -->
           </form> <!-- form-group -->
-          
+
         </div> <!-- col #chgPseudo -->
 
         <!-- Changement e-mail -->
