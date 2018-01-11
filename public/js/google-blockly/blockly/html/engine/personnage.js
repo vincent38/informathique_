@@ -24,6 +24,7 @@
 
 class Personnage{
     constructor(jsonPersonnage){
+
         if(jsonPersonnage.surveillant){
             this.surveillant = true;
             if(jsonPersonnage.CVB){
@@ -31,6 +32,8 @@ class Personnage{
                 for(var i = 0; i < jsonPersonnage.CVB.length; i++){
                     this.CVB[i] = new Array(jsonPersonnage.CVB[i][0], jsonPersonnage.CVB[i][1]);
                 }
+                /*this.imgCVG = new Image();
+                this.imgCVG.src */
             }
             if(jsonPersonnage.CVG){
                 this.CVG = new Array();
@@ -51,6 +54,7 @@ class Personnage{
                 }
             }
         }
+
         this.onTick = jsonPersonnage.onTick || "";
         this.xTab = jsonPersonnage.xTab;
         this.yTab = jsonPersonnage.yTab;
@@ -78,7 +82,8 @@ class Personnage{
     }
 
     tick(){
-        //eval(this.onTick);
+        eval(this.onTick);
+/*
         if(typeof this.phase === 'undefined'){
             this.phase = 1;
         }
@@ -87,26 +92,38 @@ class Personnage{
                 this.img.src = this.imgG.src;
                 this.tailleX = 40;
                 this.tailleY = 40;
+                this.testerDetectionHeros(this.CVG);
                 this.phase++;
                 break;
             case 2:
                 this.img.src = this.imgH.src;
                 this.tailleX = 50;
                 this.tailleY = 50;
+                this.testerDetectionHeros(this.CVH);
                 this.phase++;
                 break;
             case 3:
                 this.img.src = this.imgG.src;
                 this.tailleX = 40;
                 this.tailleY = 40;
+                this.testerDetectionHeros(this.CVG);
                 this.phase++;
                 break;
             case 4:
                 this.img.src = this.imgB.src;
-                this.tailleX = 50;
-                this.tailleY = 50;
+                this.tailleX = 50;this.tailleY = 50;
+                this.testerDetectionHeros(this.CVB);
                 this.phase = 1;
                 break;
+        }*/
+
+    }
+    testerDetectionHeros(CV){
+        for(var i = 0; i < CV.length; i++){
+            if(heros.tabX == CV[i][0] && heros.tabY == CV[i][1]){
+                perdu = 1;
+                swal("Le surveillant vous a repéré dans la zone interdite, vous avez perdu", "", 'error');
+            }
         }
     }
 }
@@ -120,4 +137,7 @@ function setupPersonnages(jsonData, dessins){
         }
     }
     return tabPersonnages;
+}
+
+function test(){
 }

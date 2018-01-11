@@ -80,6 +80,7 @@
       "imageG" : "garcon-attente-gauche.png",
       "imageH" : "garcon-attente-dos.png",
       "onTick" : "",
+      "surveillant" : 1,
       "CVB" : [
         [11,9]
       ],
@@ -103,7 +104,9 @@
         [7,5],
         [8,5],
         [7,4]
-      ]
+      ],
+      "CVH" : [[0,0]],
+      "onTick" : "if(typeof this.phase === 'undefined'){this.phase = 1;}switch(this.phase){case 1:this.img.src = this.imgG.src;this.tailleX = 40;this.tailleY = 40;this.testerDetectionHeros(this.CVG);this.phase++;break;case 2:this.img.src = this.imgH.src;this.tailleX = 50;this.tailleY = 50;this.testerDetectionHeros(this.CVH);this.phase++;break;case 3:this.img.src = this.imgG.src;this.tailleX = 40;this.tailleY = 40;this.testerDetectionHeros(this.CVG);this.phase++;break;case 4:this.img.src = this.imgB.src;this.tailleX = 50;this.tailleY = 50;this.testerDetectionHeros(this.CVB);this.phase = 1;break;}"
     }
   ],
   "alertesDebut-" : [
