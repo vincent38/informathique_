@@ -127,6 +127,10 @@
       "tailleY" : 45,
       "image" : "garcon-attente-dos.png"
     }
+  ],
+  "alertesDebut-" : [
+    "Tu peux ramasser les objets à coté de toi en séléctionnant Ramasser dans Actions",
+    "Bonne appétit et surtout n'oublie pas ton plateau!"
   ]
 
 
