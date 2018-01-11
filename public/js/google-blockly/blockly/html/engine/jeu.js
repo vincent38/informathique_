@@ -73,7 +73,6 @@ function testerGagne(heros) {
             On ajoute ici le message gagné - perdu et si le score est sauvegardé ou non
             */
             var uuid = document.getElementById("u").value;
-            console.log(uuid);
             var id = document.getElementById("lvl").value;
             var xhr = getXMLHttpRequest2();
             xhr.open('GET','./finish/'+uuid+'/'+id+'/'+tTotal+'/'+leviers.length, false);

@@ -199,7 +199,7 @@
 
       "numeroPage": 15,
       "titre": "Exercice - Trigonométrie",
-      "texte": "JUL est un triangle rectangle en U tel que JU = 3,9 cm et l'angle ULJ mesure 75°. <br> Calculez la longuur JL arrondie au millième",
+      "texte": "JUL est un triangle rectangle en U tel que JU = 3,9 cm et l'angle ULJ mesure 75°. <br> Calculez la longueur JL arrondie au millième",
       "boutons": [],
       "exercice": true,
       "reponses": [{
@@ -225,7 +225,7 @@
 
       "numeroPage": 16,
       "titre": "Exercice - Trigonométrie",
-      "texte": "JUL est un triangle rectangle en U tel que JU = 3,9 cm et l'angle ULJ mesure 75°. <br> Calculez la longuur JL arrondie au millième",
+      "texte": "JUL est un triangle rectangle en U tel que JU = 3,9 cm et l'angle ULJ mesure 75°. <br> Calculez la longueur JL arrondie au millième",
       "boutons": [],
       "exercice": true,
       "reponses": [{
@@ -284,7 +284,7 @@
 
       "numeroPage": 20,
       "titre": "Exercice - Réciproque du théorème de Thalès",
-      "texte": "<img src='../img/maths/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
+      "texte": "<img src='../img/maths/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> Quelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
@@ -310,7 +310,7 @@
 
       "numeroPage": 21,
       "titre": "Exercice - Réciproque du théorème de Thalès",
-      "texte": "<img src='../img/maths/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> QUelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
+      "texte": "<img src='../img/maths/4/20.png' alt='Figure géométrique complexe'><br>On a les données suivntes : AD = 6cm, YK = 9,6 cm, YV = 6,4cm et YA = 2,4cm. <br> Quelle équation doit-on utiliser pour démontrer que les droites (DK) et (AV) sont parallèles ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
@@ -357,25 +357,25 @@
     },{
 
       "numeroPage": 24,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (3x + 6)²",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "DYC est un triangle rectangle en Y. Nous avons les données suivantes : CD = 4cm et l'angle YCD mesure 23°. Quelle est la longueur YC, arrondie au centième ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "9x² + 36x + 36",
+        "texteReponse": "YC = 3,68 cm",
         "correct": true
         },{
         "numReponse": 1,
-        "texteReponse": "9x² + 18x + 36",
+        "texteReponse": "YC = 3,48 cm",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "3x² + 36x + 36",
+        "texteReponse": "YC = 3,6 cm",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "9x² + 36x + 18",
+          "texteReponse": "YC = 3,483 cm",
           "correct": false
         }],
       "pageLien": 26
@@ -405,25 +405,25 @@
     },{
 
       "numeroPage": 27,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (3x + 6)²",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "DYC est un triangle rectangle en Y. Nous avons les données suivantes : CD = 4cm et l'angle YCD mesure 23°. Quelle est la longueur YC, arrondie au centième ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "9x² + 36x + 36",
+        "texteReponse": "YC = 3,68 cm",
         "correct": true
         },{
         "numReponse": 1,
-        "texteReponse": "9x² + 18x + 36",
+        "texteReponse": "YC = 3,48 cm",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "3x² + 36x + 36",
+        "texteReponse": "YC = 3,6 cm",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "9x² + 36x + 18",
+          "texteReponse": "YC = 3,483 cm",
           "correct": false
         }],
       "pageLien": 29
@@ -431,25 +431,25 @@
     },{
 
       "numeroPage": 28,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 4x² + 25 + 20x",
+      "titre": "Exercice - Théorème de Thalès",
+      "texte": "<img src='../img/maths/4/28.png' alt='Figure géométrique complexe'><br>Les droites (KH) et (DP) sont parallèles. <br>On a les données suivantes : MK = 3,6cm , MP = 2,1cm , DP = 3,4cm et DK = 1,2cm.<br>QUelles sont les valeurs approchées de MH et KH ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(2x - 4)²",
+        "texteReponse": "MH = 3,35cm et KH = 4,9cm",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(4x + 5)²",
+        "texteReponse": "MH = 2,85cm et KH = 5,3cm",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "(2x + 5)(2x - 5)",
+        "texteReponse": "MH = 5,3cm et KH = 2,85cm",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "(5 + 2x)²",
+          "texteReponse": "MH = 3,15cm et KH = 5,1cm",
           "correct": true
         }],
       "pageLien": 30
@@ -490,52 +490,52 @@
     },{
 
       "numeroPage": 32,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : -100x + 25x² + 100",
+      "titre": "Exercice - Théorème de Thalès",
+      "texte": "<img src='../img/maths/4/28.png' alt='Figure géométrique complexe'><br>Les droites (KH) et (DP) sont parallèles. <br>On a les données suivantes : MK = 3,6cm , MP = 2,1cm , DP = 3,4cm et DK = 1,2cm.<br>QUelles sont les valeurs approchées de MH et KH ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(10x - 10)²",
+        "texteReponse": "MH = 3,35cm et KH = 4,9cm",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(5x - 10)²",
-        "correct": true
+        "texteReponse": "MH = 2,85cm et KH = 5,3cm",
+        "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "(5x - 10)",
+        "texteReponse": "MH = 5,3cm et KH = 2,85cm",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "(5x - 10)²",
-          "correct": false
+          "texteReponse": "MH = 3,15cm et KH = 5,1cm",
+          "correct": true
         }],
       "pageLien": 34
 
     },{
 
       "numeroPage": 33,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 4x² + 25 + 20x",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "OTA est un triangle rectangle en O.<br>On a les données suivantes : OA = 10,2cm et OT = 11,7cm. <br>Quelle est la mesure de l'angle OTA, arrondie au centième ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(2x - 4)²",
+        "texteReponse": "OTA = 42,08°",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(4x + 5)²",
-        "correct": false
+        "texteReponse": "OTA = 41,08°",
+        "correct": true
         },{
         "numReponse": 2,
-        "texteReponse": "(2x + 5)(2x - 5)",
+        "texteReponse": "OTA = 40,08°",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "(5 + 2x)²",
-          "correct": true
+          "texteReponse": "OTA = 39,08°",
+          "correct": false
         }],
       "pageLien": 35
 
@@ -575,25 +575,25 @@
     },{
 
       "numeroPage": 37,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : -100x + 25x² + 100",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "OTA est un triangle rectangle en O.<br>On a les données suivantes : OA = 10,2cm et OT = 11,7cm. <br>Quelle est la mesure de l'angle OTA, arrondie au centième ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(10x - 10)²",
+        "texteReponse": "OTA = 42,08°",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(5x - 10)²",
+        "texteReponse": "OTA = 41,08°",
         "correct": true
         },{
         "numReponse": 2,
-        "texteReponse": "(5x - 10)",
+        "texteReponse": "OTA = 40,08°",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "(5x + 10)²",
+          "texteReponse": "OTA = 39,08°",
           "correct": false
         }],
       "pageLien": 38
@@ -746,51 +746,51 @@
     },{
 
       "numeroPage": 49,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (7x - 8)(7x + 8)",
+      "titre": "Exercice - Réciproque du théorème de Thalès",
+      "texte": "<img src='../img/maths/4/49.png' alt='Figure géométrique complexe'><br>On a les données suivantes : UE = 2,5cm , UH = 8 cm , UV = 11,2cm et BV = 14,7cm. <br>Quelle équation doit-on utiliser pour démontrer que les droites (HV) et (EB) sont parallèles ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "49x² - 112x + 64",
+        "texteReponse": "UV/UB = VH/EB",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "-64 + 49x²",
-        "correct": true
+        "texteReponse": "UB/UV = EB/VH",
+        "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "7x² - 8",
+        "texteReponse": "UB/UV = UE/UH",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "64 - 49x²",
-          "correct": false
+          "texteReponse": "UH/UE = UV/UB",
+          "correct": true
         }],
       "pageLien": 50
 
     },{
 
       "numeroPage": 50,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 2x² - 36",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "FRS est un triangle rectangle en S tel que SR = 6,6cm et SF = 6,7cm. <br>Quelle est la mesure de l'angle SFR, arrondie au millième ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(√(2x) - 6)(√(2x) + 6)",
-        "correct": true
+        "texteReponse": "SFR = 45,200",
+        "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(2x - 6)(2x + 6)",
+        "texteReponse": "SFR = 45,100°",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "(2x - 6)²",
-        "correct": false
+        "texteReponse": "SFR = 45°",
+        "correct": true
         },{
           "numReponse": 3,
-          "texteReponse": "(2x + 6)²",
+          "texteReponse": "SFR = 45,013°",
           "correct": false
         }],
       "pageLien": 51
@@ -798,25 +798,25 @@
     },{
 
       "numeroPage": 51,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (4x - 5)(4x - 5)",
+      "titre": "Exercice - Théorème de Thalès",
+      "texte": "<img src='../img/maths/4/51.png' alt='Figure géométrique complexe'><br>Les droites (JF) et (IO) sont parallèles.<br>On a les données suivantes : RF = 4,1cm, JF = 3,3cm, RI = 2,3cm et OF = 6cm. Calculer RJ et IO.",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "16x² - 25",
+        "texteReponse": "RJ = 4,693cm et IO = 1,529cm",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "16x² + 25",
+        "texteReponse": "RJ = 4,963cm et IO = 1,259cm",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "16x² + 40x + 25",
+        "texteReponse": "RJ = 3,963cm et IO = 2,259cm",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "16x² - 40x + 25",
+          "texteReponse": "RJ = 3,963cm et IO = 2,259cm",
           "correct": true
         }],
       "pageLien": 52
@@ -824,25 +824,25 @@
     },{
 
       "numeroPage": 52,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Factorisez l'expression suivante : 49x² + 16 - 56x",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "DHY est un triangle rectangle en D. On a les données suivantes : DY = 4,8cm et DH = 4,8cm.<br>Quelle est la mesure de l'angle DHY ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "(7x + 4)²",
+        "texteReponse": "22°",
         "correct": false
         },{
         "numReponse": 1,
-        "texteReponse": "(7x - 4)²",
+        "texteReponse": "45°",
         "correct": true
         },{
         "numReponse": 2,
-        "texteReponse": "(7x - 4)(7x - 4)",
+        "texteReponse": "90°",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "(7x - 4)(7x + 4)",
+          "texteReponse": "100°",
           "correct": false
         }],
       "pageLien": 53
@@ -850,25 +850,25 @@
     },{
 
       "numeroPage": 53,
-      "titre": "Exercice - Développement et factorisation",
-      "texte": "Cet exercice est un exemple. <br>Développez l'expression suivante : (4x - 5)(4x + 2)",
+      "titre": "Exercice - Trigonométrie",
+      "texte": "GQR est un triangle rectangle en G. On a les données suivantes : GR = 3,6cm et l'angle GQR mesure 72°.<br>Que vaut la longueur QR ?",
       "boutons": [],
       "exercice": true,
       "reponses": [{
         "numReponse": 0,
-        "texteReponse": "16x² - 12x - 10",
+        "texteReponse": "QR = 3,78cm",
         "correct": true
         },{
         "numReponse": 1,
-        "texteReponse": "16x² - 40x + 25",
+        "texteReponse": "QR = 3,80cm",
         "correct": false
         },{
         "numReponse": 2,
-        "texteReponse": "16x² - 16x + 4",
+        "texteReponse": "QR = 3,76cm",
         "correct": false
         },{
           "numReponse": 3,
-          "texteReponse": "16x² - 10",
+          "texteReponse": "QR = 3,74cm",
           "correct": false
         }],
       "pageLien": 54
