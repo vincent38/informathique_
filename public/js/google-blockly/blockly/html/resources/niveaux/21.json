@@ -23,32 +23,62 @@
   [0,-2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1]
 ],
 
-"spawnTabX" : 25,
-"spawnTabY" : 11,
-"spawnX" : 100,
-"spawnY" : 100,
-"tailleFondX" : 700,
-"tailleFondY" : 400,
+"spawnTabX" : 26,
+"spawnTabY" : 12,
+"spawnX" : 520,
+"spawnY" : 247 ,
+"tailleXHeros" : 35,
+"tailleYHeros" : 35,
+"tailleFondX" : 600,
+"tailleFondY" : 466.5,
 "xMax" : 27,
 "yMax" : 20,
-"tailleDeplacement" : 35,
+"tailleDeplacement" : 19,
 "leviers" : [
   {
     "xTab" : 0,
     "yTab" : 4,
+    "x" : 20,
+    "y" : 107,
+    "tailleX" : 25,
+    "tailleY" : 25,
     "imgHaut" : "red_buton.png",
-    "imgBas" : "green_buton.png"
+    "imgBas" : "green_buton.png",
+    "action" : "porte.ouvre();\nporte.x+=4;\n"
   }
 ],
 "porte" : {
   "xTab" : 0,
   "yTab" : 1,
-  "x" : 20,
-  "y" : 450,
-  "tailleX" : 150,
-  "tailleY" : 150,
+  "x" : 21,
+  "y" : 425,
+  "tailleX" : 81,
+  "tailleY" : 75,
   "imgFermee" : "porte-fermee-bas.png",
   "imgOuverte" : "porte-ouverte-bas.png"
-}
+},
+"ramassables" : [
+    {
+      "xTab" : 17,
+      "yTab" : 1,
+      "x" : 350,
+      "y" : 53 ,
+      "tailleX" : 25,
+      "tailleY" : 25,
+      "img" : "plateau.png"
+    }
+  ],
+  "personnages" : [
+    {
+      "xTab" : 0,
+      "yTab" : 6,
+      "x" : 22,
+      "y" : 133,
+      "tailleX" : 45,
+      "tailleY" : 45,
+      "image" : "garcon-attente-face.png"
+    }
+  ]
+
 
 }

@@ -4,6 +4,8 @@ class Levier {
         this.yTab = jsonLevier.yTab;
         this.x = jsonLevier.x;
         this.y = jsonLevier.y;
+        this.tailleX = jsonLevier.tailleX || 70;
+        this.tailleY = jsonLevier.tailleY || 70;
         this.action = jsonLevier.action;
         this.img = new Image();
         this.img.src = '../js/google-blockly/blockly/html/resources/images/'+jsonLevier.imgHaut;
@@ -14,12 +16,12 @@ class Levier {
     affiche() {
         var sup = this;
         this.img.onload = function () {
-            scene.context.drawImage(this, sup.x, sup.y, 70, 70);
+            scene.context.drawImage(this, sup.x, sup.y, this.tailleX, this.tailleY);
         }
     }
 
     repaint() {
-        scene.context.drawImage(this.img, this.x, this.y, 70, 70);
+        scene.context.drawImage(this.img, this.x, this.y, this.tailleX, this.tailleY);
     }
 }
 
