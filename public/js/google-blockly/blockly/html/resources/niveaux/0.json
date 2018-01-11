@@ -98,10 +98,9 @@
   ],
   "alertesDebut" : [
     "Faisons un rapide tour des bases",
-    "Pour te déplacer, il suffit d'utiliser les blocs dans la catégorie 'déplacements'",
+    "Pour te déplacer, il suffit d'utiliser les blocs dans la catégorie déplacements",
     "Chaque bloc te déplace de une case dans l direction souhaitée.",
-    "Tu peux utiliser la boucle répéter dans 'Mathématiques' pour exécuter la même action plusieurs fois",
-    "L'action S'échapper permet d'emprunter la porte et de finir le niveau. Veille à l'utiliser à côté de la porte ;)",
-    "Bien, je pense que tu es prêt. Ah, et une dernière chose : le score se base sur le temps passé sur un niveau. Alors, qu'est-e que tu attends ? Le chrono tourne !"
+    "Tu peux utiliser la boucle répéter dans Mathématiques pour exécuter la même action plusieurs fois",
+    "L'action S'échapper permet d'emprunter la porte et de finir le niveau. Veille à l'utiliser à côté de la porte !"
   ]
 }
