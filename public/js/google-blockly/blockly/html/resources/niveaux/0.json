@@ -96,11 +96,5 @@
     [0,0,0],
     [0,0,1]
   ],
-  "alertesDebut" : [
-    "Faisons un rapide tour des bases",
-    "Pour te déplacer, il suffit de te servir des blocs dans la catégorie déplacements",
-    "Chaque bloc te déplace de une case dans l direction souhaitée.",
-    "Tu peux utiliser la boucle répéter dans Mathématiques pour exécuter la même action plusieurs fois",
-    "L'action échapper permet d'emprunter la porte et de finir le niveau. Veille à utiliser ce bloc à côté de la porte !"
-  ]
+  
 }
