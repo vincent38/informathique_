@@ -44,7 +44,7 @@
         @if (preg_match('/launchStory/' , Route::current()->getName()))
           <div class=" pull-left header-profil">
             <a class="btn btn-info" style="margin: 0;" href="{{ route("mathematiques") }}">Retour au menu Mathématiques</a>
-            <span>Histoire n°<span id="idh">0</span> - Bonnes réponses : <span id="gh">0</span> - Mauvaises réponses : <span id="bh">0</span> - Temps écoulé : <span id="th">00:00</span></spanp>
+            <span>Histoire n°<span id="idh">0</span> - Bonnes réponses : <span id="gh">0</span> - Mauvaises réponses : <span id="bh">0</span> - Temps écoulé : <span id="th">00:00</span></span>
           </div>
         @endif
         @if (Route::current()->getName() == 'informatique')
@@ -101,12 +101,18 @@
       <noscript>
         <div class="alert alert-info" style="margin-top: 0px;"><span class="glyphicon glyphicon-info-sign"></span> Kinimi a besoin d'exécuter du Javascript pour fonctionner. Nous te recommandons d'utiliser <a href="https://www.mozilla.org/fr/firefox/new/" target="_blank" class="alert-link">Firefox</a> ou <a href="https://www.google.fr/chrome/browser/desktop/index.html" target="_blank" class="alert-link">Chrome</a> pour profiter pleinement de Kinimi. Si tu possèdes déjà un de ces deux navigateurs, vérifie que le Javascript est bien autorisé dans les paramètres de ton navigateur, ou contacte les administrateurs.</div>
       </noscript>
+      <!--[if IE]>
+      <div class="alert alert-danger" style="margin-bottom: 0px;">
+        Attention, tu utilises un navigateur qui n'est pas compatible avec Kinimi. Nous te recommandons d'utiliser <a href="https://www.mozilla.org/fr/firefox/new/" target="_blank" class="alert-link">Firefox</a> ou <a href="https://www.google.fr/chrome/browser/desktop/index.html" target="_blank" class="alert-link">Chrome</a> pour profiter pleinement de Kinimi.
+      </div>
+      <![endif]-->
     </header>
 
-
+    <!--[if ! IE]>
     <div id="content">
       @yield ('site')
     </div>
+    <![endif]-->
 
   </body>
 </html>
