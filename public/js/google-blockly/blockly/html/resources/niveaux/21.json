@@ -66,7 +66,7 @@
       "tailleX" : 25,
       "tailleY" : 25,
       "img" : "plateau.png",
-      "action" : "personnages[0].x +=20;\npersonnages[0].xTab +=1;\nalert(personnages[0].xTab);"
+      "action" : "personnages[0].x +=20;\npersonnages[0].xTab +=1;"
     }
   ],
   "personnages" : [
