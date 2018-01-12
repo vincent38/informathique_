@@ -44,7 +44,7 @@
         @if (preg_match('/launchStory/' , Route::current()->getName()))
           <div class=" pull-left header-profil">
             <a class="btn btn-info" style="margin: 0;" href="{{ route("mathematiques") }}">Retour au menu Mathématiques</a>
-            <span>Histoire n°<span id="idh">0</span> - Bonnes réponses : <span id="gh">0</span> - Mauvaises réponses : <span id="bh">0</span> - Temps écoulé : <span id="th">00:00</span></spanp>
+            <span>Histoire n°<span id="idh">0</span> - Bonnes réponses : <span id="gh">0</span> - Mauvaises réponses : <span id="bh">0</span> - Temps écoulé : <span id="th">00:00</span></span>
           </div>
         @endif
         @if (Route::current()->getName() == 'informatique')
@@ -115,7 +115,7 @@
       </div>
       <![endif]-->
     @endif
-    
+
     @if (Route::current()->getName() != 'home')
       <div id="content">
         @yield ('site')
