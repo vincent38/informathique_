@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::get('/profil', 'Profile@index')->middleware('auth')->name('profil');
 
-Route::post('/profil/update', 'Profile@update')->middleware('auth', 'web')->name('updateProfil');
+Route::post('/profil', 'Profile@update')->middleware('auth', 'web')->name('updateProfil');
 
 Route::get('/mathematiques', function () {
     return view('mathematiques');
