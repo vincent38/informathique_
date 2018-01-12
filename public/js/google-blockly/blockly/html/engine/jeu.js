@@ -94,11 +94,14 @@ function testerGagne(heros) {
                                 window.location.replace("./"+id);
                                 break;
                             case "next":
-                                id = parseInt(id) + 1;
-                                window.location.replace("./"+(id));
+                                id = jsonData.nextLvl;
+                                if (id == -1) {
+                                    window.location.replace("../escapecolle");
+                                } else {
+                                    window.location.replace("./"+(id));
+                                }
                                 break;
                             default:
-                                id = parseInt(id) + 1;
                                 window.location.replace("./"+(id));
                         }
                       });
@@ -115,8 +118,12 @@ function testerGagne(heros) {
                             window.location.replace("./"+id);
                             break;
                         case "next":
-                            id = parseInt(id) + 1;
-                            window.location.replace("./"+(id));
+                            id = jsonData.nextLvl;
+                            if (id == -1) {
+                                window.location.replace("../escapecolle");
+                            } else {
+                                window.location.replace("./"+(id));
+                            }
                             break;
                         default:
                             //id = parseInt(id) + 1;

@@ -79,7 +79,7 @@
     <div class="col-md-6">
       <h3>Thème 4</h3>
       <a href="" class="btn btn-success btn-lg btn-block disabled">Accéder aux exercices</a>
-      <p>Cette session spéciale reprend les principaux exercices de l'aventure "Kini dans la ville de Géométra", mais sans devoir suivre l'histoire ! <br>
+      <p>(Session en cours de construction) Cette session spéciale reprend les principaux exercices de l'aventure "Kini dans la ville de Géométra", mais sans devoir suivre l'histoire ! <br>
       Parfait pour réviser les notions d'espace et de géométrie plane.</p>
     </div> <!-- col -->
   </div> <!-- row -->

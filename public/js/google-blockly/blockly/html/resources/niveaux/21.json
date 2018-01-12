@@ -128,10 +128,11 @@
       "image" : "garcon-attente-dos.png"
     }
   ],
-  "alertesDebut-" : [
+  "alertesDebut" : [
     "Tu peux ramasser les objets à coté de toi en séléctionnant Ramasser dans Actions",
-    "Bonne appétit et surtout n'oublie pas ton plateau!"
-  ]
+    "Bon appétit et surtout prends bien ton plateau!"
+  ],
+  "nextLvl" : 41
 
 
 }

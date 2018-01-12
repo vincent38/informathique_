@@ -103,7 +103,7 @@ class Profile extends Controller
             ]);
             $mail = $request->input('email');
             $mess = $request->input('message');
-            Mail::to(env('MAIL_FROM_ADDRESS', 'admins@kinimi.fr'))->send(new contactAdmins($mail, $mess));
+            Mail::to(env('MAIL_ADMIN_ADDRESS', 'admins@kinimi.fr'))->send(new contactAdmins($mail, $mess));
             $message = "Ton message a été envoyé, les administrateurs reviennent vers toi dans quelques jours tout au plus !";
         }
                 
