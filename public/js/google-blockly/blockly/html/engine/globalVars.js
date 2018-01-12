@@ -8,4 +8,4 @@ var porte;
 var personnages;
 var obstacles;
 var ramassables;
-var dev = 1;
+var dev = 0;
