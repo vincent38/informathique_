@@ -43,11 +43,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
+            'host' => "jnc6n3xpbgc3kek2.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
+            'port' => "3306",
+            'database' => "cdwnv0k9qdpbfi4g",
+            'username' => "fm13k6ic620600ut",
+            'password' => "pk38vlom3d2il0hj",
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
