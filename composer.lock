@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "417fbe2e65033eeaf7d199f8c5421993",
+    "content-hash": "2c1a9179af57babf63c08fd6615abe79",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2103,6 +2103,53 @@
             "time": "2016-09-20T12:50:39+00:00"
         },
         {
+            "name": "tzepifan/artisan-web-console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ruperty123/Artisan-Web-Console-For-Laraval-5.git",
+                "reference": "ebdf0b1708f18dda6fcc16f4148f41b279e9885b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ruperty123/Artisan-Web-Console-For-Laraval-5/zipball/ebdf0b1708f18dda6fcc16f4148f41b279e9885b",
+                "reference": "ebdf0b1708f18dda6fcc16f4148f41b279e9885b",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.3.0",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "laravel/framework": ">=5.3.0",
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tzepifan\\ArtisanWebConsole\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ruslan Kulik",
+                    "email": "ruperty123@gmail.com"
+                }
+            ],
+            "description": "Package that allows run artisan commands with simple web interface",
+            "keywords": [
+                "artisan",
+                "console",
+                "laravel",
+                "web console"
+            ],
+            "time": "2017-08-01T12:46:19+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -3887,7 +3934,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tzepifan/artisan-web-console": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

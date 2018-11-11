@@ -11,10 +11,10 @@ class ComposerStaticInit6a7ff7c4bc0809a156b8118b111a6b03
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -33,6 +33,7 @@ class ComposerStaticInit6a7ff7c4bc0809a156b8118b111a6b03
         ),
         'T' => 
         array (
+            'Tzepifan\\ArtisanWebConsole\\' => 27,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
         ),
@@ -107,8 +108,8 @@ class ComposerStaticInit6a7ff7c4bc0809a156b8118b111a6b03
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -121,6 +122,10 @@ class ComposerStaticInit6a7ff7c4bc0809a156b8118b111a6b03
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Tzepifan\\ArtisanWebConsole\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tzepifan/artisan-web-console/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -317,6 +322,7 @@ class ComposerStaticInit6a7ff7c4bc0809a156b8118b111a6b03
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Escape' => __DIR__ . '/../..' . '/app/Http/Controllers/Escape.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\Maths' => __DIR__ . '/../..' . '/app/Http/Controllers/Maths.php',
         'App\\Http\\Controllers\\Profile' => __DIR__ . '/../..' . '/app/Http/Controllers/Profile.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -324,6 +330,7 @@ class ComposerStaticInit6a7ff7c4bc0809a156b8118b111a6b03
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Mail\\contactAdmins' => __DIR__ . '/../..' . '/app/Mail/contactAdmins.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -3489,6 +3496,10 @@ class ComposerStaticInit6a7ff7c4bc0809a156b8118b111a6b03
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'Tzepifan\\ArtisanWebConsole\\ArtisanWebConsoleServiceProvider' => __DIR__ . '/..' . '/tzepifan/artisan-web-console/src/ArtisanWebConsoleServiceProvider.php',
+        'Tzepifan\\ArtisanWebConsole\\ConsoleBase' => __DIR__ . '/..' . '/tzepifan/artisan-web-console/src/ConsoleBase.php',
+        'Tzepifan\\ArtisanWebConsole\\Http\\Controllers\\AjaxRunner' => __DIR__ . '/..' . '/tzepifan/artisan-web-console/src/Http/Controllers/AjaxRunner.php',
+        'Tzepifan\\ArtisanWebConsole\\Http\\Controllers\\BaseController' => __DIR__ . '/..' . '/tzepifan/artisan-web-console/src/Http/Controllers/BaseController.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webpatser\\Uuid\\Uuid' => __DIR__ . '/..' . '/webpatser/laravel-uuid/src/Webpatser/Uuid/Uuid.php',
         'Webpatser\\Uuid\\UuidServiceProvider' => __DIR__ . '/..' . '/webpatser/laravel-uuid/src/Webpatser/Uuid/UuidServiceProvider.php',
