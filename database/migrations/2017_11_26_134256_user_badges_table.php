@@ -20,7 +20,7 @@ class UserBadgesTable extends Migration
             $table->integer('id_badge')->index();
             $table->timestamps();
         });
-        DB::table('user_badges')->insert(
+        /**DB::table('user_badges')->insert(
             array(
                 'id' => 1,
                 'id_user' => 1,
@@ -28,7 +28,7 @@ class UserBadgesTable extends Migration
                 'created_at' => DB::raw('now()'),
                 'updated_at' => DB::raw('now()')
             )
-        );
+        );*/
     }
 
     /**

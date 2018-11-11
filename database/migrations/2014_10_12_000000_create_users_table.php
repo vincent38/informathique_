@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-        DB::table('users')->insert(
+        /**DB::table('users')->insert(
             array(
                 'name' => 'admin',
                 'email' => 'admin@kinimi.local',
@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
                 'created_at' => DB::raw('now()'),
                 'updated_at' => DB::raw('now()')
             )
-        );
+        );*/
     }
 
     /**

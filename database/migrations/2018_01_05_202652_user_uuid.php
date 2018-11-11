@@ -20,13 +20,13 @@ class UserUuid extends Migration
             $table->integer('id_user');
             $table->string('uuid');
         });
-        DB::table('user_uuid')->insert(
+        /**DB::table('user_uuid')->insert(
             array(
                 'id' => 1,
                 'id_user' => 1,
                 'uuid' => Uuid::generate(5, 1, Uuid::NS_DNS)->string
             )
-        );
+        );*/
     }
 
     /**

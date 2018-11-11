@@ -21,7 +21,7 @@ class UserLevelTable extends Migration
             $table->integer('lvl');
             $table->integer('exp_sum');
         });
-        DB::table('user_lvl')->insert(
+        /**DB::table('user_lvl')->insert(
             array(
                 'id' => 1,
                 'id_user' => 1,
@@ -29,7 +29,7 @@ class UserLevelTable extends Migration
                 'lvl' => 1,
                 'exp_sum' => 10
             )
-        );
+        );*/
     }
 
     /**

@@ -19,13 +19,13 @@ class RightsTable extends Migration
             $table->integer('id_user')->index();
             $table->integer('privilege');
         });
-        DB::table('user_rights')->insert(
+        /**DB::table('user_rights')->insert(
             array(
                 'id' => 1,
                 'id_user' => 1,
                 'privilege' => 1
             )
-        );
+        );*/
     }
 
     /**
