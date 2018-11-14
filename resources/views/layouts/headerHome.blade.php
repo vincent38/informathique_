@@ -107,20 +107,10 @@
       </div>
       <![endif]-->
     </header>
-
-    @if (Route::current()->getName() == 'home')
-      <!--[if ! IE]>
-      <div id="content">
-        @yield ('site')
-      </div>
-      <![endif]-->
-    @endif
-
-
+    
       <div id="content">
         @yield ('site')
       </div>
    
-
   </body>
 </html>
