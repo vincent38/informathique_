@@ -5,6 +5,7 @@
         <div class="col-lg-12">
             <h2 style="text-align: center">Connexion</h2>
             <br>
+            <p>Un compte de test est disponible pour cette instance (mail / mot de passe) : admin@kinimi.local / ki-admin-ni-local-mi</p>
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
 

@@ -89,104 +89,10 @@
           <h3>Tes informations</h3>
           <p>Pseudo : {{ $user->name }}</p>
           <p>Adresse e-mail : {{ $user->email }}</p>
+
+          <!--Deleted user options-->
+        <p>Les options de modification du profil sont désactivées.</p>
         </div> <!-- col -->
-        <div class="col-lg-12" id="chgInfo">
-          <span class="btn btn-success" id="btnChgPseudo">Changer de pseudo</span>
-          <span class="btn btn-success" id="btnChgMail">Changer d'adresse e-mail</span>
-          <span class="btn btn-success" id="btnChgPw">Changer de mot de passe</span>
-          <span class="btn btn-success" id="btnContact">Contacter les administrateurs</span>
-        </div> <!-- col #chgInfo -->
-
-        <!-- Changement de pseudo -->
-        <div class="col-xs-9" id="chgPseudo">
-          <h4>Changement de pseudo</h4>
-          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
-            {!! csrf_field() !!}
-            <input type="hidden" name="typeOfForm" value="pseudo">
-            <label for="text" class="col-lg-4 control-label">Nouveau pseudo</label>
-            <div class="col-lg-8">
-              <input type="text" class="form-control" name="newPseudo">
-            </div>
-
-            <label for="text" class="col-lg-4 control-label">Mot de passe</label>
-            <div class="col-lg-8">
-              <input type="password" class="form-control" name="password">
-            </div>
-            <span class="btn btn-primary btn-danger" id="btnChgPseudoCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-            <input type="submit" class="btn btn-primary btn-success" id="btnChgPseudoSubmit" value="Valider"> <!-- <span class='glyphicon glyphicon-ok'></span> -->
-          </form> <!-- form-group -->
-
-        </div> <!-- col #chgPseudo -->
-
-        <!-- Changement e-mail -->
-        <div class="col-xs-9" id="chgMail">
-          <h4>Changement d'adresse e-mail</h4>
-          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
-            {!! csrf_field() !!}
-            <input type="hidden" name="typeOfForm" value="email">
-            <label for="text" class="col-lg-4 control-label">Nouvel e-mail</label>
-            <div class="col-lg-8">
-              <input type="text" class="form-control" name="newEmail">
-            </div>
-
-            <label for="text" class="col-lg-4 control-label">Mot de passe</label>
-            <div class="col-lg-8">
-              <input type="password" class="form-control" name="password">
-            </div>
-
-            <span class="btn btn-primary btn-danger" id="btnChgMailCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-            <input type="submit" class="btn btn-primary btn-success" id="btnChgMailSubmit" value="Valider">
-          </form> <!-- form-group -->
-
-        </div> <!-- col #chgMail -->
-
-        <!-- Changement mot de passe -->
-        <div class="col-xs-9" id="chgPw">
-          <h4>Changement de mot de passe</h4>
-          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
-            {!! csrf_field() !!}
-            <input type="hidden" name="typeOfForm" value="password">
-            <label for="text" class="col-lg-5 control-label">Mot de passe actuel</label>
-            <div class="col-lg-7">
-              <input type="password" class="form-control" name="currentPassword">
-            </div>
-
-            <label for="text" class="col-lg-5 control-label">Nouveau mot de passe</label>
-            <div class="col-lg-7">
-              <input type="password" class="form-control" name="newPassword">
-            </div>
-
-            <label for="text" class="col-lg-5 control-label">Confirme ton nouveau mot de passe</label>
-            <div class="col-lg-7">
-              <input type="password" class="form-control" name="confirmNewPassword">
-            </div>
-            <span class="btn btn-primary btn-danger" id="btnChgPwCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-            <input type="submit" class="btn btn-primary btn-success" id="btnChgPwSubmit" value="Valider">
-          </form> <!-- form-group -->
-        </div> <!-- col #chgPw -->
-
-        <!-- Contact via mail -->
-        <div class="col-xs-9" id="contact">
-          <h4>Contacter les administrateurs</h4>
-          <p>Laisse ton message ici, on reviendra vers toi par mail rapidement :)</p><br>
-          <form action="{{ route('updateProfil') }}" method="post" class="form-group">
-            {!! csrf_field() !!}
-            <input type="hidden" name="typeOfForm" value="contact">
-            <label for="text" class="col-lg-4 control-label">Ton email</label>
-            <div class="col-lg-8">
-              <input type="text" class="form-control" name="email" value="{{ $user->email }}" readonly>
-            </div>
-
-            <label for="text" class="col-lg-4 control-label">Ton message</label>
-            <div class="col-lg-8">
-              <textarea class="form-control" name="message" rows="3"></textarea>
-            </div>
-
-            <span class="btn btn-primary btn-danger" id="btnContactCancel"><span class="glyphicon glyphicon-remove"></span> Annuler</span>
-            <input type="submit" class="btn btn-primary btn-success" id="btnChgMailSubmit" value="Valider">
-          </form> <!-- form-group -->
-
-        </div> <!-- col #contact -->
 
         <script id="jsChangementProfil" src="{{ asset("js/leChangementCestMaintenant.js")}}"></script>
       </div> <!-- row -->

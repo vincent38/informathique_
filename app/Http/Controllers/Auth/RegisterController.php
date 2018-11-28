@@ -64,23 +64,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
-        //Adding 10 exp for new users along with badge "Welcome !"
-        DB::table('user_lvl')->insert(
-            ['id_user' => $user->id, 'exp' => 10, 'lvl' => 1, 'exp_sum' => 10]
-        );
-        DB::table('user_badges')->insert(
-            ['id_user' => $user->id, 'id_badge' => 1, 'created_at' => NOW(), 'updated_at' => NOW()]
-        );
-        //Generate and attributes an UUID to the user
-        $uuid = Uuid::generate(5, $user->id, Uuid::NS_DNS)->string;
-        DB::table('user_uuid')->insert(
-            ['id_user' => $user->id, 'uuid' => $uuid]
-        );
-        return $user;
+        throw "Exception : Can't create user on this instance.";
     }
 }
